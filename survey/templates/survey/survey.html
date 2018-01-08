@@ -1,0 +1,16 @@
+{% extends "global/Page.html" %}
+{% load staticfiles otree %}
+
+{% block title %}
+    Survey
+{% endblock %}
+
+{% block content %}
+
+    {% formfield player.q1 label="Where do you supposedly live?" %}
+
+    {% formfield player.q2 label="What is your supposed average monthly energy usage?" %}
+
+    {% next_button %}
+
+{% endblock %}

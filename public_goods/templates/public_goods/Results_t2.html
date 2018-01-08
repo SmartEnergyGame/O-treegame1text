@@ -1,0 +1,19 @@
+{% extends "global/Page.html" %}
+{% load staticfiles otree %}
+
+{% block title %}
+    Introduction
+{% endblock %}
+
+{% block content %}
+
+    <p>Your remaining endowment: </p>
+    <p>Your previous contributions to conservation fund:</p>
+    <p>Remember, contributing to the collective energy conservation goal is important to protect the environment by saving energy from fossil fuels.</p>
+    <p>Total contributions to the conservation fund to date: </td><td>{{ group.total_savings }}</p>
+
+    <div align="right">
+      {% next_button %}
+    </div>
+
+{% endblock %}

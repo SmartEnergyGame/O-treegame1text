@@ -1,0 +1,30 @@
+{% extends "global/Page.html" %}
+{% load staticfiles otree %}
+
+{% block title %}
+    Results
+{% endblock %}
+
+{% block content %}
+
+
+    <p>Your remaining endowment: </p>
+    <p>Your previous contributions to conservation fund:</p>
+    <p> <table class="table-condensed" style="width:500px; margin-top:20px;">
+        <tr><td>Other participants saved:</td><td></td></tr>
+        {% for p in group.get_players %}
+            <tr><td>Participant {{ p.id_in_group }}:</td><td>{{ p.savings }}</td></tr>
+        {% endfor %}
+
+        <tr><td>Total contributions to the conservation fund to date: </td><td>{{ group.total_savings }}</td></tr>
+
+        <tr><td colspan="2"><hr/></td></tr>
+
+    </table>
+    </p>
+    <div align="right">
+      {% next_button %}
+    </div>
+
+
+{% endblock %}

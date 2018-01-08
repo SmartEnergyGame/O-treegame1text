@@ -1,0 +1,16 @@
+{% extends "global/Page.html" %}
+{% load staticfiles otree %}
+
+{% block title %}
+    Round {{ player.round_number }}
+{% endblock %}
+
+{% block content %}
+
+
+    <p>Your endowment is: {{ Constants.endowment }}</p>
+    <p>{% formfield player.savings label="How much do you choose to contribute to the group energy conservation goal?" %}</p>
+
+    {% next_button %}
+
+{% endblock %}
