@@ -93,6 +93,7 @@ SESSION_CONFIG_DEFAULTS = {
     'participation_fee': 0.000,
     'doc': "",
     'mturk_hit_settings': mturk_hit_settings,
+
 }
 
 
