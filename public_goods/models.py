@@ -18,7 +18,7 @@ class Constants(BaseConstants):
     results_template = 'public_goods/Results_control.html'
 
     """Amount allocated to each player"""
-    endowment = c(10)
+    endowment = c(0)
     max_savings = c(5)
     multiplier = 1
 
@@ -51,6 +51,7 @@ class Subsession(BaseSubsession):
 
                 for p in g.get_players():
                     p.participant.vars['treat'] = treatment
+                    p.participant.vars['consumption'] = c(self.session.config['endowment'])
                     p.treat = treatment
         if self.round_number > 1:
             for p in self.get_players():
@@ -65,29 +66,22 @@ class Group(BaseGroup):
 
     def set_payoffs(self):
         self.total_savings = sum([p.savings for p in self.get_players()]) # C:1 S:4, C:1 S:1, TS:5 SS:5/20 F:
-        self.individual_savings_share = self.total_savings / (Constants.players_per_group * Constants.endowment)
-        for p in self.get_players():
-            p.consumption = Constants.endowment-p.savings
+        self.individual_savings_share = self.total_savings / (Constants.players_per_group * self.session.config['endowment'])
         if self.com_goal > 0:
             if self.individual_savings_share >= self.com_goal:
                 for p in self.get_players():
-                    p.financial_reward = p.consumption.to_real_world_currency(self.session) + (self.total_savings / Constants.players_per_group).to_real_world_currency(self.session)
+                    p.financial_reward = p.participant.vars['consumption'].to_real_world_currency(self.session) - p.savings.to_real_world_currency(self.session) + (self.total_savings / Constants.players_per_group).to_real_world_currency(self.session)
             else:
                 for p in self.get_players():
-                    p.financial_reward = p.consumption.to_real_world_currency(self.session)
-
-# finacial with group
-# reward group (1 has nothing ,1 treatment any group reward, 1 emotional reward, group savings x3 and distributed equally,)
-
-
+                    p.financial_reward = p.participant.vars['consumption'].to_real_world_currency(self.session) - p.savings.to_real_world_currency(self.session)
 
 
 
 class Player(BasePlayer):
     treat = models.CharField(doc="Treatment of each player")
     consumption = models.CurrencyField(
-        min=0, max=Constants.endowment,
-        doc="Consumption by each player"
+        min=0,
+        doc="endowment by each player"
     )
     savings = models.CurrencyField(min=0, max=Constants.max_savings, doc="Savings by each player",choices=[c(0), c(2), c(4)])
     financial_reward = models.FloatField(min=0)
