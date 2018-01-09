@@ -8,7 +8,7 @@
 {% block content %}
 
 
-    <p>Your endowment is: {{ Constants.endowment }}</p>
+    <p>Your endowment is: {{ participant.vars.consumption }}</p>
     <p>{% formfield player.savings label="How much do you choose to contribute to the group energy conservation goal?" %}</p>
 
     {% next_button %}
