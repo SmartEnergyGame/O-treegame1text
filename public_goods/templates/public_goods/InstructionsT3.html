@@ -1,0 +1,37 @@
+{% load otree staticfiles %}
+
+<div class="instructions well well-lg">
+
+    <h3 class="panel-sub-heading">
+        Instructions T3
+    </h3>
+
+    <p  style="text-align:justify">
+        In this study, you will be in a randomly formed group
+        of {{ Constants.players_per_group }} participants. Each participant in
+        the group is given {{ Constants.endowment }}. The group
+        has the opportunity to undertake a joint project. Each participant in
+        the group decides how much she or he is going to contribute to
+        the project. Contribution could be any integer from 0
+        to {{ Constants.endowment }}.
+
+        <br>
+
+        In this experiment, you are part of a community living in a shared apartment complex.
+        You normally use {{ Constants.endowment }} units of energy a month, which provides you an equivalent amount of quality of life.
+        To represent this quality of life, you will receive {{ Constants.endowment }} “energy units” or EU’s in each round of this experiment,
+        and you will be paid $.25 for each EU you invest in your own energy use in each round. Thus,
+        if you simply dedicate all of your EU’s to your own energy needs in every round,
+        you will be paid $30 at the end of the game ($0.25 per EU x {{ Constants.endowment }} EUs x 12 months = $30.00)
+
+        <br>
+        
+        In addition, your community has a goal to reduce its collective energy consumption by 20% over
+        the next 12 months. Every month you have the opportunity to contribute toward this goal by reducing
+        your energy consumption and “donating” 1 or more EU’s toward the group goal, lowering your own personal
+        benefits as represented by your final payment in the experiment. For example, if you donate 2 EU’s toward
+        the group energy reduction goal each month, you will reduce your final payment at the end of the experiment
+        by 2 x $0.25 or $0.50 per month, or $6 for the full experiment.
+
+    </p>
+</div>

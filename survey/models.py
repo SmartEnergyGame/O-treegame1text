@@ -5,7 +5,7 @@ from otree.api import (
 import random
 
 doc = """
-    This application provides introductions for the experiment.
+    This application provides a survey and introductions based on the answers of the survey.
 """
 
 class Constants(BaseConstants):
@@ -22,4 +22,9 @@ class Group(BaseGroup):
 class Player(BasePlayer):
     q1 = models.CharField(doc="Question 1")
     q2 = models.IntegerField(doc="Question 2")
+
+    def role(self):
+        if (self.q1 == "e") and (self.q2 == 1):
+            self.participant.vars['injunctive_norm'] = 'ecologic_inj_role_participant'
+        return self.participant.vars['injunctive_norm'];
 

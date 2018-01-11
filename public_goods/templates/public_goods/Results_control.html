@@ -14,3 +14,19 @@
     {% next_button %}
 
 {% endblock %}
+
+{% block scripts %}
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script type="text/javascript" src="https://xdanielsb.github.io/EnergyVis/base/src/base/b1/code_peak$.js"></script>
+    <script>
+    let data = [
+      {% for key, value in Constants.data.items %}
+        {name:"{{key}}", y : {{value}} },
+      {% endfor %}
+    ]
+    let peak = new Peak(data)
+    let myHouse = 2
+    peak.plot("chart", myHouse, false)
+    </script>
+{% endblock %}
