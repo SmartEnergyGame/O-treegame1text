@@ -1,9 +1,16 @@
-{% load otree staticfiles %}
+{% extends "global/Page.html" %}
+{% load staticfiles otree %}
+
+{% block title %}
+    Results
+{% endblock %}
+
+{% block content %}
 
 <div class="instructions well well-lg">
 
     <h3 class="panel-sub-heading">
-        Instructions
+        Instructions type 2
     </h3>
 
     <p  style="text-align:justify">
@@ -35,3 +42,9 @@
 
     </p>
 </div>
+
+    <div align="right">
+      {% next_button %}
+    </div>
+
+{% endblock %}

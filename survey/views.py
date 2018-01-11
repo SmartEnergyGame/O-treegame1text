@@ -5,20 +5,20 @@ from .models import Constants
 
 class Instructions(Page):
     def is_displayed(self):
-        if self.participant.vars['injunctive_norm'] == "type1":
+        if self.participant.vars['injunctive_norm'] == "control":
             return True
 
 class InstructionsT1(Page):
     def is_displayed(self):
-        if self.participant.vars['injunctive_norm'] == "type2":
+        if self.participant.vars['injunctive_norm'] == "type1":
             return True
 class InstructionsT2(Page):
     def is_displayed(self):
-        if self.participant.vars['injunctive_norm'] == "type3":
+        if self.participant.vars['injunctive_norm'] == "type2":
             return True
 class InstructionsT3(Page):
     def is_displayed(self):
-        if self.participant.vars['injunctive_norm'] == "ecologic_inj_role_participant":
+        if self.participant.vars['injunctive_norm'] == "eco":
             return True
 class survey(Page):
     form_model = models.Player
@@ -30,4 +30,4 @@ class AssignationWaitPage(WaitPage):
 
     body_text = "Waiting for other participants to complete survey."
 
-page_sequence = [survey, AssignationWaitPage,Instructions]
+page_sequence = [survey, AssignationWaitPage,Instructions,InstructionsT1,InstructionsT2,InstructionsT3]

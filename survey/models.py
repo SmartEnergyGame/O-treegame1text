@@ -25,6 +25,8 @@ class Player(BasePlayer):
 
     def role(self):
         if (self.q1 == "e") and (self.q2 == 1):
-            self.participant.vars['injunctive_norm'] = 'ecologic_inj_role_participant'
+            self.participant.vars['injunctive_norm'] = 'eco'
+        else:
+            self.participant.vars['injunctive_norm'] = 'type1'
         return self.participant.vars['injunctive_norm'];
 

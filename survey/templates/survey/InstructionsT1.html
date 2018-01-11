@@ -1,4 +1,11 @@
-{% load otree staticfiles %}
+{% extends "global/Page.html" %}
+{% load staticfiles otree %}
+
+{% block title %}
+    Results
+{% endblock %}
+
+{% block content %}
 
 <div class="instructions well well-lg">
 
@@ -35,3 +42,9 @@
 
     </p>
 </div>
+
+    <div align="right">
+      {% next_button %}
+    </div>
+
+{% endblock %}
