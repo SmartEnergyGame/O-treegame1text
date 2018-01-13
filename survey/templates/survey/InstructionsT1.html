@@ -2,7 +2,7 @@
 {% load staticfiles otree %}
 
 {% block title %}
-    Results
+    Instructions
 {% endblock %}
 
 {% block content %}
@@ -14,31 +14,33 @@
     </h3>
 
     <p  style="text-align:justify">
-        In this study, you will be in a randomly formed group
-        of {{ Constants.players_per_group }} participants. Each participant in
-        the group is given {{ Constants.endowment }}. The group
-        has the opportunity to undertake a joint project. Each participant in
-        the group decides how much she or he is going to contribute to
-        the project. Contribution could be any integer from 0
-        to {{ Constants.endowment }}.
-
-        <br>
-
-        In this experiment, you are part of a community living in a shared apartment complex.
-        You normally use {{ Constants.endowment }} units of energy a month, which provides you an equivalent amount of quality of life.
-        To represent this quality of life, you will receive {{ Constants.endowment }} “energy units” or EU’s in each round of this experiment,
-        and you will be paid $.25 for each EU you invest in your own energy use in each round. Thus,
-        if you simply dedicate all of your EU’s to your own energy needs in every round,
-        you will be paid $30 at the end of the game ($0.25 per EU x {{ Constants.endowment }} EUs x 12 months = $30.00)
-
-        <br>
-        
-        In addition, your community has a goal to reduce its collective energy consumption by 20% over
-        the next 12 months. Every month you have the opportunity to contribute toward this goal by reducing
-        your energy consumption and “donating” 1 or more EU’s toward the group goal, lowering your own personal
-        benefits as represented by your final payment in the experiment. For example, if you donate 2 EU’s toward
-        the group energy reduction goal each month, you will reduce your final payment at the end of the experiment
-        by 2 x $0.25 or $0.50 per month, or $6 for the full experiment.
+       Energy Conservation. Now, we will introduce you to a game simulating a household energy conservation challenge.
+        Household energy use is an important contributor to many environmental problems including local and international
+        air pollution and global warming. Many groups are seeking ways to encourage communities to use less energy.
+        This experiment will simulate this type of exercise.
+    </p>
+    <p>
+        Rules of play. In this game, there are 20 players who represent people living in the same apartment building.
+        Thus, in addition to you, there are 19 other players. The building is trying to meet a collective energy
+        conservation goal of reducing its annual energy use by 20% through the actions of residents. Every player
+        faces the same decision-making problem. At the beginning of the experiment, you will receive a $20 in your
+        private account. During the experiment, you can use money from your account or not. In the end, your account
+        balance will be paid out to you in cash. You will be making your decisions anonymously. During the course of
+        the experiment, you will be playing exactly 12 rounds equivalent to 12 months in a year. In each round, you
+        can invest some of your money into the community’s attempt to reduce energy consumption. Thus, in each round
+        of the game, all 20 players will be asked simultaneously, “How much do you want to invest into energy conservation?”
+    </p><p>
+        Possible answers are $0, $.50, or $1.
+        Only when each player has made his choice will all decisions be displayed simultaneously.
+        After that, the computer will credit all invested amounts to an account for energy conservation (“conservation account”).
+        At the end of the game (after exactly 12 rounds), the computer will compare the conservation account balance
+        with the predetermined goal ($120). This amount is required to make the investments needed to reduce the buildings
+        energy consumption by 20%. It will be earned if every player pays, on average, $.50 per round into the conservation
+        account. If the necessary amount of $120 has been earned, all players will be paid out the amount remaining in their
+        private accounts as well as a group incentive [two conditions possible here: (1) equal cash bonus of three x the
+        conservation account total divided equally among all players. If the conservation account
+        has not reached the necessary amount of $120, no additional incentive payment will be made from the conservation
+        account. All payouts will be made anonymously. Your fellow players will not learn your identity.
 
     </p>
 </div>

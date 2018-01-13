@@ -12,7 +12,11 @@
     <h3 class="panel-sub-heading">
         Instructions type 1
     </h3>
-
+    <p>Welcome to the experiment! General notice. In this experiment, you can earn money.
+        To make this experiment a success, please do not talk to the other participants at
+        all or draw any other attention to yourself. Please read the following rules of the
+        experiment attentively. Should you have any questions, please signal us. At the end
+        of the instructions, you will find several control questions. Please answer all questions, and signal us when you have finished. We will then come to you and check your answers.</p>
     <p  style="text-align:justify">
        Energy Conservation. Now, we will introduce you to a game simulating a household energy conservation challenge.
         Household energy use is an important contributor to many environmental problems including local and international
@@ -20,22 +24,22 @@
         This experiment will simulate this type of exercise.
     </p>
     <p>
-        Rules of play. In this game, there are 20 players who represent people living in the same apartment building.
-        Thus, in addition to you, there are 19 other players. The building is trying to meet a collective energy
-        conservation goal of reducing its annual energy use by 20% through the actions of residents. Every player
-        faces the same decision-making problem. At the beginning of the experiment, you will receive a $20 in your
+        Rules of play. In this game, there are {{ players_in_group }} players who represent people living in the same apartment building.
+        Thus, in addition to you, there are {{ other_players}} other players. The building is trying to meet a collective energy
+        conservation goal of reducing its annual energy use by {{ goal }}% through the actions of residents. Every player
+        faces the same decision-making problem. At the beginning of the experiment, you will receive a {{ endowment }} in your
         private account. During the experiment, you can use money from your account or not. In the end, your account
         balance will be paid out to you in cash. You will be making your decisions anonymously. During the course of
-        the experiment, you will be playing exactly 12 rounds equivalent to 12 months in a year. In each round, you
+        the experiment, you will be playing exactly {{ Constants.num_rounds }} rounds equivalent to {{ Constants.num_rounds }} months in a year. In each round, you
         can invest some of your money into the community’s attempt to reduce energy consumption. Thus, in each round
-        of the game, all 20 players will be asked simultaneously, “How much do you want to invest into energy conservation?”
+        of the game, all {{ players_in_group }} players will be asked simultaneously, “How much do you want to invest into energy conservation?”
     </p><p>
         Possible answers are $0, $.50, or $1.
         Only when each player has made his choice will all decisions be displayed simultaneously.
         After that, the computer will credit all invested amounts to an account for energy conservation (“conservation account”).
-        At the end of the game (after exactly 12 rounds), the computer will compare the conservation account balance
+        At the end of the game (after exactly {{ Constants.num_rounds }} rounds), the computer will compare the conservation account balance
         with the predetermined goal ($120). This amount is required to make the investments needed to reduce the buildings
-        energy consumption by 20%. It will be earned if every player pays, on average, $.50 per round into the conservation
+        energy consumption by {{ goal }}%. It will be earned if every player pays, on average, $.50 per round into the conservation
         account. All payouts will be made anonymously. Your fellow players will not learn your identity.
 
     </p>
