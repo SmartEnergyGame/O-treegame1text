@@ -29,7 +29,7 @@ class Contribute(Page):
     form_fields = [ 'savings']
     def vars_for_template(self):
         month = self.months[self.player.round_number]
-        return {'month': month}
+        return {'month': month, 'endowment':self.player.participant.vars['endowment'].to_real_world_currency(self.session)}
 
 
 class ResultsWaitPage(WaitPage):

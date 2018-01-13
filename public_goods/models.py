@@ -14,8 +14,7 @@ class Constants(BaseConstants):
     players_per_group = 2
     num_rounds = 2
 
-    instructions_template = 'public_goods/Instructions.html'
-    results_template = 'public_goods/Results_control.html'
+    results_template = 'public_goods/Results_c.html'
 
     """Amount allocated to each player"""
     max_savings = c(5)
