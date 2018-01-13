@@ -29,7 +29,8 @@ class Contribute(Page):
     form_fields = [ 'savings']
     def vars_for_template(self):
         month = self.months[self.player.round_number]
-        return {'month': month, 'endowment':self.player.participant.vars['endowment'].to_real_world_currency(self.session)}
+        return {'month': month, 'endowment':self.player.participant.vars['endowment'].to_real_world_currency(self.session),
+                'currency': c(1),'real_value':c(1).to_real_world_currency(self.session)}
 
 
 class ResultsWaitPage(WaitPage):
@@ -39,7 +40,7 @@ class ResultsWaitPage(WaitPage):
     body_text = "Waiting for other participants to contribute."
 
 
-class Results_control(Page):
+class Results_c(Page):
     def vars_for_template(self):
             cum_earnings = (sum([self.group.in_round(round_id).total_savings for round_id in range(1,self.player.round_number+1)])).to_real_world_currency(self.session)
             return {
@@ -100,7 +101,7 @@ class Results_DTI(Page):
 page_sequence = [
     Contribute,
     ResultsWaitPage,
-    Results_control,
+    Results_c,
     Results_D,
     Results_DTI
 ]
