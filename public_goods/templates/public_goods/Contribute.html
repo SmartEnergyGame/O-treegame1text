@@ -10,6 +10,7 @@
 
     <p>Your endowment is: {{ participant.vars.endowment }}</p>
     <p>Remember that {{ currency|c }} is equal to {{ real_value }}</p>
+    <p>{{ injunctive_text }}</p>
     <p>{% formfield player.savings label="How much do you choose to contribute to the group energy conservation goal?" %}</p>
 
     {% next_button %}

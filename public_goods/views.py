@@ -29,8 +29,12 @@ class Contribute(Page):
     form_fields = [ 'savings']
     def vars_for_template(self):
         month = self.months[self.player.round_number]
+        if self.participant.vars['treatment'] == 'DTI':
+            injunctive_text = "Remember, contributing to the collective energy conservation goal is important to protect the environment by saving energy from fossil fuels."
+        else:
+            injunctive_text = ' '
         return {'month': month, 'endowment':self.player.participant.vars['endowment'].to_real_world_currency(self.session),
-                'currency': c(1),'real_value':c(1).to_real_world_currency(self.session)}
+                'currency': c(1),'real_value':c(1).to_real_world_currency(self.session),'injunctive_text':injunctive_text}
 
 
 class ResultsWaitPage(WaitPage):
