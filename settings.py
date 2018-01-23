@@ -96,7 +96,6 @@ SESSION_CONFIG_DEFAULTS = {
 
 }
 
-
 SESSION_CONFIGS = [
     # {
     #     'name': '...',
@@ -115,6 +114,18 @@ SESSION_CONFIGS = [
         },
 ]
 #
+
+ROOM_DEFAULTS = {
+        'doc':"",}
+
+ROOMS = [
+  {
+      'name': 'text_game',
+      'display_name': 'Energy game',
+    'participant_label_file': 'test.txt'
+  },
+]
+
 # anything you put after the below line will override
 # oTree's default settings. Use with caution.
 otree.settings.augment_settings(globals())
