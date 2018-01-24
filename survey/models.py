@@ -14,16 +14,43 @@ class Constants(BaseConstants):
     players_per_group = 2  # 1 group = (4 treatments x 2 people per group)
     num_rounds = 1
 
+class MyException(Exception):
+    pass
 
 class Subsession(BaseSubsession):
+    treatments = ['control', 'D', 'DTI']
+    def quota_completed(self, treatment, quota):
+        counter = 0
+        for p in self.get_players():
+            if p.participant.vars['treatment'] == treatment:
+                counter += 1
+        if counter >= quota:
+            return True
+        else:
+            return False
+
+
     def creating_session(self):
-          treatments = itertools.cycle(['control', 'D', 'DTI'])
-          if self.round_number == 1:
-             for g in self.get_groups():
-                 treat = next(treatments)
-                 for p in g.get_players():
-                     p.participant.vars['treatment'] = treat
-                     p.treatment = treat
+        quota = self.session.config['members_per_treatment']
+        try:
+            if len(self.get_players()) % quota  == 0:
+                if self.round_number == 1:
+                    current_treatments = self.treatments
+                    assigned = False
+
+                    for player in self.get_players():
+                        while not assigned:
+                            treatment = random.choice(current_treatments)
+                            if not quota_completed(treatment,quota):
+                                player.participant.vars['treatment'] = treatment
+                                player.treatment = treatment
+                                assigned = True
+            else:
+                raise MyException
+        except MyException:
+            print('number of members in a treatment must be multiple of the number of participants registered')
+
+
 
 
 class Group(BaseGroup):

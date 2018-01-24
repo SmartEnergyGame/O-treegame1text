@@ -108,6 +108,7 @@ SESSION_CONFIGS = [
             'display_name': "Base Game test case",
             'num_demo_participants': 6,
             'endowment': 20,
+            'members_per_treatment': 1,
             'community_goal_decimal': .20,
             'app_sequence': ['survey', 'public_goods'],
             'doc': """community_goal_decimal limits: [0,1]"""
