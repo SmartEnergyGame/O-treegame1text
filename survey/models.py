@@ -19,6 +19,7 @@ class Subsession(BaseSubsession):
     def creating_session(self):
           treatments = itertools.cycle(['control', 'D', 'DTI'])
           if self.round_number == 1:
+          	 self.group_randomly()
              for g in self.get_groups():
                  treat = next(treatments)
                  for p in g.get_players():
