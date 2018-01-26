@@ -11,20 +11,43 @@ doc = """
 
 class Constants(BaseConstants):
     name_in_url = 'instructions_n_survey'
-    players_per_group = 2  # 1 group = (4 treatments x 2 people per group)
+    players_per_group = None  # 1 group = (4 treatments x 2 people per group)
     num_rounds = 1
+    treatments = ['control', 'D', 'DTI']
 
+class unbalance_group_creation(Exception):
+    print("Error when creating same size of treatment group")
 
 class Subsession(BaseSubsession):
+
     def creating_session(self):
-          treatments = itertools.cycle(['control', 'D', 'DTI'])
-          if self.round_number == 1:
-            self.group_randomly(fixed_id_in_group=True)
-            for g in self.get_groups():
-                 treat = next(treatments)
-                 for p in g.get_players():
-                     p.participant.vars['treatment'] = treat
-                     p.treatment = treat
+        quota = self.session.config['members_per_treatment']
+        try:
+            if len(self.get_players()) % quota  == 0:
+                if self.round_number == 1:
+                    current_treatments = Constants.treatments
+                    for player in self.get_players():
+                        assigned = False
+                        while not assigned:
+                            treatment = random.choice(current_treatments)
+                            counter = 0
+                            for p in self.get_players():
+                                # counting existing users with treatment before assigning new person with treatment
+                                if 'treatment' in p.participant.vars:
+                                    if p.participant.vars['treatment'] == treatment:
+                                        counter += 1
+                                        print('++++++++++++++++++++++++++++++++++++',p.participant.vars['treatment'])
+                            if counter < quota:
+                                player.participant.vars['treatment'] = treatment
+                                player.treatment = treatment
+                                assigned = True
+            else:
+                raise unbalance_group_creation
+        except unbalance_group_creation:
+            print('++++++++++++++++++++++++++++++++number of members in a treatment must be multiple of the number of participants registered')
+            raise unbalance_group_creation
+
+
 
 
 class Group(BaseGroup):

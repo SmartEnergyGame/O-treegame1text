@@ -5,7 +5,7 @@ from .models import Constants
 
 class Intro(Page):
     def vars_for_template(self):
-        return { 'players_in_group' : Constants.players_per_group,'other_players':Constants.players_per_group-1,
+        return { 'players_in_group' : self.session.config['members_per_treatment'],'other_players':self.session.config['members_per_treatment']-1,
                  'endowment':c(self.session.config['endowment']).to_real_world_currency(self.session),'goal':self.session.config['community_goal_decimal']*100}
 
 class survey(Page):

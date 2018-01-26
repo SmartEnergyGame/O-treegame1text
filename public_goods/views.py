@@ -61,11 +61,13 @@ class Results_c(Page):
 
 class Results_D(Page):
     def vars_for_template(self):
-            cum_earnings = (sum([self.group.in_round(round_id).total_savings for round_id in
+            treatment_group = [p for p in self.group.get_players() if p.treatment == self.player.treatment]
+            cum_earnings = (sum([sum([p.savings for p in self.group.in_round(round_id).get_players() if p.treatment == self.player.treatment]) for round_id in
                                  range(1, self.player.round_number + 1)])).to_real_world_currency(self.session)
             parts = [{'id_in_group': p.id_in_group, 'savings': p.savings.to_real_world_currency(self.session)} for p in
-                     self.group.get_players()]
-            if self.player.savings > self.group.average_savings:
+                     treatment_group]
+            average_savings = sum([p.savings for p in treatment_group ])/len(treatment_group)
+            if self.player.savings > average_savings:
                 position = ''' You are above average'''
             else:
                 position = ''' You are below average'''
@@ -74,7 +76,8 @@ class Results_D(Page):
                 'savings': self.player.savings.to_real_world_currency(self.session),
                 'last_savings': self.player.last_savings.to_real_world_currency(self.session),
                 'total_savings': cum_earnings,
-                'position': position,'parts': parts
+                'position': position,
+                'parts': parts
 
             }
     def is_displayed(self):
@@ -86,21 +89,27 @@ class Results_DTI(Page):
             return True
 
     def vars_for_template(self):
-            cum_earnings = (sum([self.group.in_round(round_id).total_savings for round_id in
-                                 range(1, self.player.round_number + 1)])).to_real_world_currency(self.session)
+        treatment_group = [p for p in self.group.get_players() if p.treatment == self.player.treatment]
+        cum_earnings = (sum([sum(
+            [p.savings for p in self.group.in_round(round_id).get_players() if p.treatment == self.player.treatment])
+                             for round_id in
+                             range(1, self.player.round_number + 1)])).to_real_world_currency(self.session)
+        parts = [{'id_in_group': p.id_in_group, 'savings': p.savings.to_real_world_currency(self.session)} for p in
+                 treatment_group]
+        average_savings = sum([p.savings for p in treatment_group]) / len(treatment_group)
+        if self.player.savings > average_savings:
+            position = ''' You are above average'''
+        else:
+            position = ''' You are below average'''
+        return {
+            'endowment': self.player.participant.vars['endowment'].to_real_world_currency(self.session),
+            'savings': self.player.savings.to_real_world_currency(self.session),
+            'last_savings': self.player.last_savings.to_real_world_currency(self.session),
+            'total_savings': cum_earnings,
+            'position': position,
+            'parts': parts
 
-            parts = [{'id_in_group': p.id_in_group,'savings':p.savings.to_real_world_currency(self.session)} for p in self.group.get_players()]
-            if self.player.savings > self.group.average_savings:
-                position = ''' You are above average'''
-            else:
-                position = ''' You are below average'''
-            return {
-                'endowment': self.player.participant.vars['endowment'].to_real_world_currency(self.session),
-                'savings': self.player.savings.to_real_world_currency(self.session),
-                'last_savings': self.player.last_savings.to_real_world_currency(self.session),
-                'total_savings': cum_earnings,
-                'position': position, 'parts': parts
-            }
+        }
 
 page_sequence = [
     Contribute,
