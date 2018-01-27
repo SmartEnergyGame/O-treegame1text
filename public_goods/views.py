@@ -27,6 +27,10 @@ class Contribute(Page):
 
     form_model = models.Player
     form_fields = [ 'savings']
+
+    def savings_choices(self):
+        return [c .to_real_world_currency(self.session) for c in currency_range(0, self.player.endowment/2, 1)]
+
     def vars_for_template(self):
         month = self.months[self.player.round_number]
         if self.participant.vars['treatment'] == 'DTI':
