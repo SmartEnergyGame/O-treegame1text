@@ -77,7 +77,7 @@ class Group(BaseGroup):
             avg_savings = total_savings/total_people_treatment
             if self.com_goal > 0:
                 if shares >= self.com_goal:
-                    for p in total_people_treatment:
+                    for p in treatment_group:
                         p.participant.vars['endowment'] = p.participant.vars['endowment'] - p.savings
                         p.financial_reward = (p.participant.vars['endowment']).to_real_world_currency(self.session) + (
                             avg_savings).to_real_world_currency(self.session)
@@ -110,4 +110,4 @@ class Player(BasePlayer):
                                    )
     financial_reward = models.FloatField(min=0)
     last_savings = models.CurrencyField(initial=0)
-    
+
