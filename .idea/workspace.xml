@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8eab24a8-9ccd-42ef-ba8c-440b6b2c2293" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
-      <change beforePath="$PROJECT_DIR$/public_goods/models.py" afterPath="$PROJECT_DIR$/public_goods/models.py" />
-      <change beforePath="$PROJECT_DIR$/public_goods/templates/public_goods/Results_DTI.html" afterPath="$PROJECT_DIR$/public_goods/templates/public_goods/Results_DTI.html" />
+      <change beforePath="$PROJECT_DIR$/public_goods/views.py" afterPath="$PROJECT_DIR$/public_goods/views.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -28,11 +26,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public_goods/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="217">
-              <caret line="30" column="114" lean-forward="false" selection-start-line="30" selection-start-column="114" selection-end-line="30" selection-end-column="114" />
+            <state relative-caret-position="-116">
+              <caret line="51" column="111" lean-forward="false" selection-start-line="51" selection-start-column="111" selection-end-line="51" selection-end-column="111" />
               <folding />
             </state>
           </provider>
@@ -48,6 +46,16 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="Results_c.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public_goods/templates/public_goods/Results_c.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="12" column="51" lean-forward="false" selection-start-line="12" selection-start-column="51" selection-end-line="12" selection-end-column="51" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/settings.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -58,7 +66,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Results_DTI.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Results_DTI.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public_goods/templates/public_goods/Results_DTI.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="300">
@@ -126,9 +134,9 @@
         <option value="$PROJECT_DIR$/public_goods/templates/public_goods/waiting_session.html" />
         <option value="$PROJECT_DIR$/survey/models.py" />
         <option value="$PROJECT_DIR$/public_goods/templates/public_goods/Contribute.html" />
-        <option value="$PROJECT_DIR$/public_goods/views.py" />
         <option value="$PROJECT_DIR$/public_goods/models.py" />
         <option value="$PROJECT_DIR$/public_goods/templates/public_goods/Results_DTI.html" />
+        <option value="$PROJECT_DIR$/public_goods/views.py" />
       </list>
     </option>
   </component>
@@ -572,13 +580,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public_goods/templates/public_goods/Results_c.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="51" lean-forward="false" selection-start-line="12" selection-start-column="51" selection-end-line="12" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public_goods/templates/public_goods/waiting_session.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -608,22 +609,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public_goods/templates/public_goods/Contribute.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="34" lean-forward="false" selection-start-line="12" selection-start-column="34" selection-end-line="12" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public_goods/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="30" column="114" lean-forward="false" selection-start-line="30" selection-start-column="114" selection-end-line="30" selection-end-column="114" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public_goods/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="295">
@@ -636,6 +621,30 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="20" column="34" lean-forward="false" selection-start-line="20" selection-start-column="34" selection-end-line="20" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_goods/templates/public_goods/Contribute.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="34" lean-forward="false" selection-start-line="12" selection-start-column="34" selection-end-line="12" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_goods/templates/public_goods/Results_c.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="51" lean-forward="false" selection-start-line="12" selection-start-column="51" selection-end-line="12" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_goods/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-116">
+          <caret line="51" column="111" lean-forward="false" selection-start-line="51" selection-start-column="111" selection-end-line="51" selection-end-column="111" />
           <folding />
         </state>
       </provider>

@@ -48,7 +48,8 @@ class ResultsWaitPage(WaitPage):
 
 class Results_c(Page):
     def vars_for_template(self):
-            cum_earnings = (sum([self.group.in_round(round_id).total_savings for round_id in range(1,self.player.round_number+1)])).to_real_world_currency(self.session)
+            cum_earnings = (sum([sum([p.savings for p in self.group.in_round(round_id).get_players() if p.treatment == self.player.treatment]) for round_id in
+                                 range(1, self.player.round_number + 1)])).to_real_world_currency(self.session)
             return {
                 'endowment': self.player.participant.vars['endowment'].to_real_world_currency(self.session),
                 'savings': self.player.savings.to_real_world_currency(self.session),
