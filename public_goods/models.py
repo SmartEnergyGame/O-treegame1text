@@ -85,7 +85,7 @@ class Group(BaseGroup):
                         if self.round_number > self.min_round:
                             p.last_savings = p.in_round(self.round_number - self.min_round).savings
                 else:
-                    for p in self.get_players():
+                    for p in treatment_group:
                         p.participant.vars['endowment'] = p.participant.vars['endowment'] - p.savings
                         p.financial_reward = p.participant.vars['endowment'].to_real_world_currency(self.session)
                         p.endowment = p.participant.vars['endowment']
