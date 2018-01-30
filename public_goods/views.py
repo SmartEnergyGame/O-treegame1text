@@ -71,7 +71,7 @@ class Results_D(Page):
             parts = [{'id_in_group': p.id_in_group, 'savings': p.savings.to_real_world_currency(self.session)} for p in
                      treatment_group]
             average_savings = sum([p.savings for p in treatment_group ])/len(treatment_group)
-            if self.player.savings > average_savings:
+            if self.player.savings >= average_savings:
                 position = ''' You are above average'''
             else:
                 position = ''' You are below average'''
