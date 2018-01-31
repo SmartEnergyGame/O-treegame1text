@@ -14,13 +14,77 @@
 
     <p>Total contributions to the conservation fund to date: </td><td>{{ total_savings }}</p>
     {{ position }}
-    <table class="table-condensed" style="width:500px; margin-top:20px;">
-         <tr><td>Other participants saved:</td><td></td></tr>
-         {% for p in parts %}
-             <tr><td>Participant :</td><td>{{ p.savings }}</td></tr>
-         {% endfor %}
-    </table>
-    <div align="right">
+
+
+
+    {% block styles %}
+
+    <!-- define a style -->
+    <style type="text/css">
+        /* CSS goes here */
+    </style>
+
+    <!-- or reference a static file -->
+    <link href="{% static "my_app/style.css" %}" rel="stylesheet">
+
+{% endblock %}
+
+{% block scripts %}
+
+    <!-- define a script -->
+    <script>
+
+Highcharts.chart('container', {
+    chart: {
+        type: 'column'
+    },
+    title: {
+        text: 'Savings of the round'
+    },
+    subtitle: {
+        text: ''
+    },
+    xAxis: {
+        categories: {{ parts_label|json }},
+        crosshair: true
+    },
+    yAxis: {
+        min: 0,
+        title: {
+            text: 'Energy Saved ($)'
+        }
+    },
+    tooltip: {
+        headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+        pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+            '<td style="padding:0"><b>${point.y:.1f}</b></td></tr>',
+        footerFormat: '</table>',
+        shared: true,
+        useHTML: true
+    },
+    plotOptions: {
+        column: {
+            pointPadding: 0.2,
+            borderWidth: 0
+        }
+    },
+    series: [{
+        name: 'Savings',
+        data: {{ parts_savings|json }}
+    }]
+});
+    </script>
+
+    <!-- or reference a static file -->
+    <script src="{% static "my_app/script.js" %}"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+
+<div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+
+{% endblock %}
+<div align="right">
+
       {% next_button %}
     </div>
 

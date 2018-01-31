@@ -28,7 +28,7 @@ class Contribute(Page):
     form_model = models.Player
     form_fields = [ 'savings']
     def savings_choices(self):
-        return [[c,c.to_real_world_currency(self.session)] for c in currency_range(0, self.session.config['endowment']*.5, 2)]
+        return [[c,c.to_real_world_currency(self.session)] for c in currency_range(0, self.session.config['endowment']*(1/Constants.num_rounds)*.5, 1)]
     #    return currency_range(0, self.player.participant.vars['endowment']*.5, 2)
     def vars_for_template(self):
         month = self.months[self.player.round_number]
@@ -71,6 +71,9 @@ class Results_D(Page):
             parts = [{'id_in_group': p.id_in_group, 'savings': p.savings.to_real_world_currency(self.session)} for p in
                      treatment_group]
             average_savings = sum([p.savings for p in treatment_group ])/len(treatment_group)
+            parts_savings = [p.savings.to_real_world_currency(self.session) for p in
+                     treatment_group]
+            parts_labels = ["participant "+str(label) for label in range(len(treatment_group))]
             if self.player.savings >= average_savings:
                 position = ''' You are above average'''
             else:
@@ -81,7 +84,9 @@ class Results_D(Page):
                 'last_savings': self.player.last_savings.to_real_world_currency(self.session),
                 'total_savings': cum_earnings,
                 'position': position,
-                'parts': parts
+                'parts': parts,
+                'parts_savings': parts_savings,
+                'parts_label': parts_labels
 
             }
     def is_displayed(self):
@@ -101,7 +106,10 @@ class Results_DTI(Page):
         parts = [{'id_in_group': p.id_in_group, 'savings': p.savings.to_real_world_currency(self.session)} for p in
                  treatment_group]
         average_savings = sum([p.savings for p in treatment_group]) / len(treatment_group)
-        if self.player.savings > average_savings:
+        parts_savings = [p.savings.to_real_world_currency(self.session) for p in
+                         treatment_group]
+        parts_labels = ["participant " + str(label) for label in range(len(treatment_group))]
+        if self.player.savings >= average_savings:
             position = ''' You are above average'''
         else:
             position = ''' You are below average'''
@@ -111,7 +119,9 @@ class Results_DTI(Page):
             'last_savings': self.player.last_savings.to_real_world_currency(self.session),
             'total_savings': cum_earnings,
             'position': position,
-            'parts': parts
+            'parts': parts,
+                'parts_savings': parts_savings,
+                'parts_label': parts_labels
 
         }
 
