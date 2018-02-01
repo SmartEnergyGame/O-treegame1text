@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="8eab24a8-9ccd-42ef-ba8c-440b6b2c2293" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
-      <change beforePath="$PROJECT_DIR$/public_goods/templates/public_goods/Results_D.html" afterPath="$PROJECT_DIR$/public_goods/templates/public_goods/Results_D.html" />
       <change beforePath="$PROJECT_DIR$/public_goods/templates/public_goods/Results_DTI.html" afterPath="$PROJECT_DIR$/public_goods/templates/public_goods/Results_DTI.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -38,10 +37,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Results_D.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Results_D.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public_goods/templates/public_goods/Results_D.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="431">
+            <state relative-caret-position="1140">
               <caret line="76" column="39" lean-forward="false" selection-start-line="76" selection-start-column="39" selection-end-line="76" selection-end-column="39" />
               <folding />
             </state>
@@ -78,11 +77,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Results_DTI.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Results_DTI.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public_goods/templates/public_goods/Results_DTI.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="298">
-              <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+            <state relative-caret-position="461">
+              <caret line="76" column="39" lean-forward="false" selection-start-line="76" selection-start-column="39" selection-end-line="76" selection-end-column="39" />
               <folding />
             </state>
           </provider>
@@ -117,8 +116,8 @@
       <find>USE_POINTS</find>
       <find>session</find>
       <find>below</find>
-      <find>my</find>
       <find>my_ap</find>
+      <find>my</find>
     </findStrings>
     <replaceStrings>
       <replace>endowment</replace>
@@ -153,8 +152,8 @@
         <option value="$PROJECT_DIR$/public_goods/models.py" />
         <option value="$PROJECT_DIR$/settings.py" />
         <option value="$PROJECT_DIR$/public_goods/views.py" />
-        <option value="$PROJECT_DIR$/public_goods/templates/public_goods/Results_DTI.html" />
         <option value="$PROJECT_DIR$/public_goods/templates/public_goods/Results_D.html" />
+        <option value="$PROJECT_DIR$/public_goods/templates/public_goods/Results_DTI.html" />
       </list>
     </option>
   </component>
@@ -667,17 +666,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public_goods/templates/public_goods/Results_DTI.html">
+    <entry file="file://$PROJECT_DIR$/public_goods/templates/public_goods/Results_D.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+        <state relative-caret-position="1140">
+          <caret line="76" column="39" lean-forward="false" selection-start-line="76" selection-start-column="39" selection-end-line="76" selection-end-column="39" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public_goods/templates/public_goods/Results_D.html">
+    <entry file="file://$PROJECT_DIR$/public_goods/templates/public_goods/Results_DTI.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="431">
+        <state relative-caret-position="461">
           <caret line="76" column="39" lean-forward="false" selection-start-line="76" selection-start-column="39" selection-end-line="76" selection-end-column="39" />
           <folding />
         </state>
