@@ -12,7 +12,7 @@ doc = """
 class Constants(BaseConstants):
     name_in_url = 'public_goods'
     players_per_group = None
-    num_rounds = 2
+    num_rounds = 8
 
     results_template = 'public_goods/Results_c.html'
 
@@ -61,9 +61,6 @@ class Subsession(BaseSubsession):
 
 class Group(BaseGroup):
     com_goal = models.FloatField(min=0, max=1)
-    total_savings = models.CurrencyField(initial=0)
-    average_savings = models.CurrencyField()
-    individual_savings_share = models.FloatField()
     min_round = models.IntegerField(initial=1, doc="go back to x last round. E.g. 1 for last round")
 
     def set_payoffs(self):
@@ -72,25 +69,27 @@ class Group(BaseGroup):
         for temp_treatment in treatments:
             treatment_group = [p for p in people_in_treatment if p.treatment == temp_treatment]
             total_people_treatment = len(treatment_group)
-            total_savings = sum([p.savings for p in people_in_treatment if p.treatment == temp_treatment])
+            total_savings = (total_people_treatment * self.session.config['endowment']) - sum(
+                [p.participant.vars['endowment'] for p in people_in_treatment if p.treatment == temp_treatment])
             shares = total_savings / (total_people_treatment * self.session.config['endowment'])
             avg_savings = total_savings/total_people_treatment
-            if self.com_goal > 0:
-                if shares >= self.com_goal:
-                    for p in treatment_group:
-                        p.participant.vars['endowment'] = p.participant.vars['endowment'] - p.savings
-                        p.financial_reward = (p.participant.vars['endowment']).to_real_world_currency(self.session) + (
-                            avg_savings).to_real_world_currency(self.session)
-                        p.endowment = p.participant.vars['endowment']
-                        if self.round_number > self.min_round:
-                            p.last_savings = p.in_round(self.round_number - self.min_round).savings
+            for p in treatment_group:
+                p.participant.vars['endowment'] = p.participant.vars['endowment'] - p.savings
+                if self.round_number > self.min_round:
+                    p.last_savings = p.in_round(self.round_number - self.min_round).savings
+            #if self.com_goal > 0:
+                if self.round_number == Constants.num_rounds:
+                    if shares >= self.com_goal and self.round_number == Constants.num_rounds:
+                            p.participant.vars['endowment'] = (p.participant.vars['endowment']) + (
+                                avg_savings * 3)
+                            p.endowment = p.participant.vars['endowment']
+
                 else:
-                    for p in treatment_group:
-                        p.participant.vars['endowment'] = p.participant.vars['endowment'] - p.savings
-                        p.financial_reward = p.participant.vars['endowment'].to_real_world_currency(self.session)
+                    #for p in treatment_group:
+                    #    p.participant.vars['endowment'] = p.participant.vars['endowment'] - p.savings
                         p.endowment = p.participant.vars['endowment']
-                        if self.round_number > self.min_round:
-                            p.last_savings = p.in_round(self.round_number - self.min_round).savings
+                        #if self.round_number > self.min_round:
+                        #    p.last_savings = p.in_round(self.round_number - self.min_round).savings
 
 
 

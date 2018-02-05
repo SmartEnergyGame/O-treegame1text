@@ -24,18 +24,17 @@
         Rules of play. In this game, there are {{ players_in_group }} players who represent people living in the same apartment building.
         Thus, in addition to you, there are {{ other_players}} other players. The building is trying to meet a collective energy
         conservation goal of reducing its annual energy use by {{ goal }}% through the actions of residents. Every player
-        faces the same decision-making problem. At the beginning of the experiment, you will receive a {{ endowment }} in your
+        faces the same decision-making problem. At the beginning of the experiment, you will receive a endowment of {{ endowment }} in your
         private account. During the experiment, you can use money from your account or not. In the end, your account
         balance will be paid out to you in cash. You will be making your decisions anonymously. During the course of
         the experiment, you will be playing exactly {{ Constants.num_rounds }} rounds equivalent to {{ Constants.num_rounds }} months in a year. In each round, you
         can invest some of your money into the community’s attempt to reduce energy consumption. Thus, in each round
         of the game, all {{ players_in_group }} players will be asked simultaneously, “How much do you want to invest into energy conservation?”
     </p><p>
-        Possible answers are $0, $.50, or $1.
         Only when each player has made his choice will all decisions be displayed simultaneously.
         After that, the computer will credit all invested amounts to an account for energy conservation (“conservation account”).
         At the end of the game (after exactly {{ Constants.num_rounds }} rounds), the computer will compare the conservation account balance
-        with the predetermined goal ($120). This amount is required to make the investments needed to reduce the buildings
+        with the predetermined goal ({{ goal_financial }}). This amount is required to make the investments needed to reduce the buildings
         energy consumption by {{ goal }}%. It will be earned if every player pays, on average, $.50 per round into the conservation
         account. All payouts will be made anonymously. Your fellow players will not learn your identity.
 

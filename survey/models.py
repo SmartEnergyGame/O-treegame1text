@@ -55,18 +55,14 @@ class Group(BaseGroup):
 
 
 class Player(BasePlayer):
-    q1 = models.CharField(doc="Question 1")
-    q2 = models.IntegerField(doc="Question 2")
+    q1 = models.CharField(doc="Question 1", label="Where do you supposedly live?")
+    q2 = models.CharField(doc="Question 2", label="Which is more concerning to you with regards to the effects of climate change on people?", choices = [['type1',"health problems affecting you and your family"],['type2',"health problems affecting your community"]])
     treatment = models.CharField(doc="Treatment")
     injunctive_norm_type = models.CharField(initial='undefined_IT')
     def role(self):
-        if ((self.participant.vars['treatment'] == 'DTI')) and (self.q2 == 1):
-            self.participant.vars['injunctive_norm_type'] = 'eco'
-        elif ((self.participant.vars['treatment'] == 'DTI')) and (self.q2 == 2):
-            self.participant.vars['injunctive_norm_type'] = 'type1'
-        elif ((self.participant.vars['treatment'] == 'DTI')) and (self.q2 == 3):
-            self.participant.vars['injunctive_norm_type'] = 'type2'
+        if ((self.participant.vars['treatment'] == 'DTI')):
+            self.participant.vars['role'] = self.q2
         else:
-            self.participant.vars['injunctive_norm_type'] = 'undefined_IT'
-        return self.participant.vars['injunctive_norm_type']
+            self.participant.vars['role'] = 'undefined_IT'
+        return self.participant.vars['role']
 

@@ -89,7 +89,7 @@ mturk_hit_settings = {
 # e.g. self.session.config['participation_fee']
 
 SESSION_CONFIG_DEFAULTS = {
-    'real_world_currency_per_point': 1.0,
+    'real_world_currency_per_point': .250,
     'participation_fee': 0.000,
     'doc': "",
     'mturk_hit_settings': mturk_hit_settings,
@@ -107,7 +107,7 @@ SESSION_CONFIGS = [
             'name': 'base_game',
             'display_name': "Base Game test case",
             'num_demo_participants': 3,
-            'endowment': 20,
+            'endowment': 80,
             'members_per_treatment': 1,
             'community_goal_decimal': .20,
             'app_sequence': ['survey','public_goods'],

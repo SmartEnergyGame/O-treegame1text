@@ -10,12 +10,8 @@
     <p>Your remaining endowment: {{ endowment}}</p>
     <p>Your contributions from this round to conservation fund were: {{savings}}</p>
     <p>Your contributions from last round to conservation fund were: {{last_savings}}</p>
-
-    <p>Remember, contributing to the collective energy conservation goal is important to protect the
-        environment by saving energy from fossil fuels.</p>
-    <p>Total contributions to the conservation fund to date: {{ total_savings }}</p>
-    {{ position }}
-
+    <p>Total contributions to the conservation fund to date: {{ total_savings }}: {{ position }}</p>
+    <p>{{ injunctive_label }}</p>
         {% block styles %}
 
     <!-- define a style -->

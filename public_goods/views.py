@@ -28,12 +28,17 @@ class Contribute(Page):
     form_model = models.Player
     form_fields = [ 'savings']
     def savings_choices(self):
-        return [[c,c.to_real_world_currency(self.session)] for c in currency_range(0, self.session.config['endowment']*(1/Constants.num_rounds)*.5, 1)]
+        return [[c,c.to_real_world_currency(self.session)] for c in currency_range(0, 4, 2)]
     #    return currency_range(0, self.player.participant.vars['endowment']*.5, 2)
     def vars_for_template(self):
         month = self.months[self.player.round_number]
         if self.participant.vars['treatment'] == 'DTI':
-            injunctive_text = "Remember, contributing to the collective energy conservation goal is important to protect the environment by saving energy from fossil fuels."
+            if self.player.participant.vars['role'] == 'type1':
+                injunctive_text = "Remember, contributing to the collective energy conservation goal is important to to help reduce air and water pollution creating health problems affecting you and your family and improve your chances of gaining a larger share of the conservation account funds."
+            elif self.player.participant.vars['role'] == 'type2':
+                injunctive_text = "Remember, contributing to the collective energy conservation goal is important to to help reduce air and water pollution creating health problems affecting your community and improve everyone’s chances of gaining a larger share of the conservation account funds."
+            else:
+                injunctive_text = ''
         else:
             injunctive_text = ' '
         return {'month': month, 'endowment':self.player.participant.vars['endowment'].to_real_world_currency(self.session),
@@ -113,6 +118,13 @@ class Results_DTI(Page):
             position = ''' You are above average'''
         else:
             position = ''' You are below average'''
+        if self.player.participant.vars['role'] == 'type1':
+            injunctive_label = "Remember, contributing to the collective energy conservation goal is important to to help reduce air and water pollution creating health problems affecting you and your family and improve your chances of gaining a larger share of the conservation account funds."
+        elif self.player.participant.vars['role'] == 'type2':
+            injunctive_label = "Remember, contributing to the collective energy conservation goal is important to to help reduce air and water pollution creating health problems affecting your community and improve everyone’s chances of gaining a larger share of the conservation account funds."
+        else:
+            injunctive_label = ''
+
         return {
             'endowment': self.player.participant.vars['endowment'].to_real_world_currency(self.session),
             'savings': self.player.savings.to_real_world_currency(self.session),
@@ -121,7 +133,8 @@ class Results_DTI(Page):
             'position': position,
             'parts': parts,
                 'parts_savings': parts_savings,
-                'parts_label': parts_labels
+                'parts_label': parts_labels,
+            'injunctive_label': injunctive_label
 
         }
 
