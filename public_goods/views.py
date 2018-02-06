@@ -73,7 +73,7 @@ class Results_D(Page):
             treatment_group = [p for p in self.group.get_players() if p.treatment == self.player.treatment]
             cum_earnings = (sum([sum([p.savings for p in self.group.in_round(round_id).get_players() if p.treatment == self.player.treatment]) for round_id in
                                  range(1, self.player.round_number + 1)])).to_real_world_currency(self.session)
-            parts = [{'id_in_group': p.id_in_group, 'savings': p.savings.to_real_world_currency(self.session)} for p in
+            parts = [{'id_in_group': treatment_group.index(p), 'savings': p.savings.to_real_world_currency(self.session)} for p in
                      treatment_group]
             average_savings = sum([p.savings for p in treatment_group ])/len(treatment_group)
             parts_savings = [p.savings.to_real_world_currency(self.session) for p in
@@ -108,7 +108,7 @@ class Results_DTI(Page):
             [p.savings for p in self.group.in_round(round_id).get_players() if p.treatment == self.player.treatment])
                              for round_id in
                              range(1, self.player.round_number + 1)])).to_real_world_currency(self.session)
-        parts = [{'id_in_group': p.id_in_group, 'savings': p.savings.to_real_world_currency(self.session)} for p in
+        parts = [{'id_in_group':  treatment_group.index(p), 'savings': p.savings.to_real_world_currency(self.session)} for p in
                  treatment_group]
         average_savings = sum([p.savings for p in treatment_group]) / len(treatment_group)
         parts_savings = [p.savings.to_real_world_currency(self.session) for p in

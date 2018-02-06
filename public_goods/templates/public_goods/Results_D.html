@@ -7,84 +7,19 @@
 
 {% block content %}
 
-
-    <h1>Your remaining endowment: {{ endowment}}</h1>
-    <h2>Your contributions from this round to conservation fund were: {{savings}}</h2>
-    <h2>Your contributions from last round to conservation fund were: {{last_savings}}</h2>
-
-    <h2>Total contributions to the conservation fund to date: </td><td>{{ total_savings }}</h2>
-    {{ position }}
-
-
-
-    {% block styles %}
-
-    <!-- define a style -->
-    <style type="text/css">
-        /* CSS goes here */
-    </style>
-
-    <!-- or reference a static file -->
-
-{% endblock %}
-
-{% block scripts %}
-
-    <!-- define a script -->
-    <script>
-
-Highcharts.chart('container', {
-    chart: {
-        type: 'column'
-    },
-    title: {
-        text: 'Savings of the round'
-    },
-    subtitle: {
-        text: ''
-    },
-    xAxis: {
-        categories: {{ parts_label|json }},
-        crosshair: true
-    },
-    yAxis: {
-        min: 0,
-        title: {
-            text: 'Energy Saved ($)'
-        }
-    },
-    tooltip: {
-        headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
-        pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
-            '<td style="padding:0"><b>${point.y:.1f}</b></td></tr>',
-        footerFormat: '</table>',
-        shared: true,
-        useHTML: true
-    },
-    plotOptions: {
-        column: {
-            pointPadding: 0.2,
-            borderWidth: 0
-        }
-    },
-    series: [{
-        name: 'Savings',
-        data: {{ parts_savings|json }}
-    }]
-});
-    </script>
-
-    <!-- or reference a static file -->
-    <script src="https://code.highcharts.com/highcharts.js"></script>
-<script src="https://code.highcharts.com/modules/exporting.js"></script>
-
-<div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
-
-{% endblock %}
-<div align="right">
-
+    <h1>Endowment</h1>
+    <h3>Your remaining endowment: {{ endowment}}</h3>
+    <h1>Contributions</h1>
+    <h3>Your contributions from this round to conservation fund were: {{savings}}</h3>
+    <h3>Your contributions from last round to conservation fund were: {{last_savings}}</h3>
+    <h3>Total contributions to the conservation fund to date: {{ total_savings }}</h3>
+    <h1>{{ position }}</h1>
+     {% for p in parts  %}
+         <h3>Participant {{ p.id_in_group }}: {{p.savings}}</h3>
+    {% endfor %}
+    <div align="right">
       {% next_button %}
     </div>
 
-
 {% endblock %}
+
