@@ -56,7 +56,7 @@ class Group(BaseGroup):
 
 class Player(BasePlayer):
     q1 = models.CharField(doc="Question 1", label="Where do you supposedly live?")
-    q2 = models.CharField(doc="Question 2", label="Which is more concerning to you with regards to the effects of climate change on people?", choices = [['type1',"health problems affecting you and your family"],['type2',"health problems affecting your community"]])
+    q2 = models.CharField(doc="Question 2", label="Which is more concerning to you with regards to the effects of climate change on people?", choices = [['type1',"health problems affecting you and your family"],['type1',"health problems affecting your community"]])
     treatment = models.CharField(doc="Treatment")
     injunctive_norm_type = models.CharField(initial='undefined_IT')
     def role(self):
