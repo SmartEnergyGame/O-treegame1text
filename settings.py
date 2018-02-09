@@ -105,12 +105,21 @@ SESSION_CONFIGS = [
     # }
         {
             'name': 'base_game',
-            'display_name': "Base Game test case",
+            'display_name': "Multiple treatments game",
             'num_demo_participants': 3,
             'endowment': 80,
             'members_per_treatment': 1,
             'community_goal_decimal': .20,
             'app_sequence': ['survey','public_goods'],
+            'doc': """community_goal_decimal limits: [0,1]"""
+        }, {
+            'name': 'single_treatment',
+            'display_name': "Single Treatment",
+            'num_demo_participants': 3,
+            'single_treatment': "DTI",
+            'endowment': 80,
+            'community_goal_decimal': .20,
+            'app_sequence': ['single_treatment','public_goods'],
             'doc': """community_goal_decimal limits: [0,1]"""
         },
 ]
