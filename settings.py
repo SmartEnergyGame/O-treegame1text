@@ -120,7 +120,7 @@ SESSION_CONFIGS = [
             'endowment': 80,
             'community_goal_decimal': .20,
             'app_sequence': ['single_treatment','public_goods'],
-            'doc': """community_goal_decimal limits: [0,1]"""
+            'doc': """community_goal_decimal limits: [0,1]. Treatment codes: 'control', 'D', 'DTI'"""
         },
 ]
 #
