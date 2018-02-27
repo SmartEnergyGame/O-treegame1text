@@ -7,9 +7,16 @@
 
 {% block content %}
 
-    {% formfield player.q1 %}
+    <h2>Brief Survey </h2>
 
-    {% formfield player.q2  %}
+    Now that you have read the instructions, we will give you a basic quiz to confirm that you understand the rules of the game.  You will be paid and additional $.50 for each correct answer in the quiz.
+
+    {% formfield player.q1 %}
+    {% formfield player.q2 %}
+    {% formfield player.q3 %}
+    {% formfield player.q4 %}
+    {% formfield player.q5 %}
+    {% formfield player.q6 %}
 
     {% next_button %}
 

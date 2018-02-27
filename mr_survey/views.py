@@ -17,7 +17,7 @@ class mr_Intro(Page):
 
 class mr_survey(Page):
     form_model = models.Player
-    form_fields = ['q1', 'q2']
+    form_fields = ['q1', 'q2', 'q3', 'q4', 'q5', 'q6']
     def before_next_page(self):
         self.player.role()
 
