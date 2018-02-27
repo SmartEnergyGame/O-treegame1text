@@ -75,10 +75,10 @@ class Player(BasePlayer):
     q4 = models.CharField(doc="Question 4", label="Assume $30 has been contributed to the conservation account by the end of the experiment, and you have personally invested a total of $5 over the 8 rounds, leaving $11 in your private account. How much money will you receive at the end of the experiment, after the conservation account bonus incentive has been paid? My payout is $")
 
 
-    q5 = models.CharField(doc="Question 4", label="lease assume that the goal of $24 has NOT been contributed to the conservation account and you have invested a total of $5 in the 8 rounds, leaving $11 in your private account. How much money will you receive at the end of the experiment.  My payout is $")
+    q5 = models.CharField(doc="Question 4", label="Lease assume that the goal of $24 has NOT been contributed to the conservation account and you have invested a total of $5 in the 8 rounds, leaving $11 in your private account. How much money will you receive at the end of the experiment.  My payout is $")
 
 
-    q6 = models.CharField(doc = "Question 6", label="Is it possible to meet the conservation account goal even if one player does not contribute to the goal at all? ", choices = ["$0", "$0.5"])
+    q6 = models.CharField(doc = "Question 6", label="Is it possible to meet the conservation account goal even if one player does not contribute to the goal at all? ", choices = ["Yes", "No"])
 
     treatment = models.CharField(doc="Treatment")
     injunctive_norm_type = models.CharField(initial='undefined_IT')
