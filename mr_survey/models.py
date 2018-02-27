@@ -61,14 +61,6 @@ class Subsession(BaseSubsession):
                     p.participant.vars['treatment'] =  treatment
 
 
-
-
-
-
-
-
-
-
 class Group(BaseGroup):
     pass
 
