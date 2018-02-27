@@ -106,11 +106,11 @@ SESSION_CONFIGS = [
         {
             'name': 'base_game',
             'display_name': "Multiple treatments game",
-            'num_demo_participants': 3,
+            'num_demo_participants': 6,
             'endowment': 80,
             'members_per_treatment': 1,
             'community_goal_decimal': .20,
-            'app_sequence': ['survey','public_goods'],
+            'app_sequence': ['mr_survey','multi_public_goods'],
             'doc': """community_goal_decimal limits: [0,1]"""
         }, {
             'name': 'single_treatment',
