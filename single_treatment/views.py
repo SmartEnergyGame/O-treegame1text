@@ -5,23 +5,32 @@ from .models import Constants
 
 #define global variables
 
-all_players = len(self.group.get_players())
-vars = { 'players_in_group' : all_players ,
-         'other_players':all_players-1,
-         'endowment':c(self.session.config['endowment']).to_real_world_currency(self.session),
-         'goal':self.session.config['community_goal_decimal']*100,
-         'goal_financial':c(self.session.config['community_goal_decimal']*all_players*self.session.config['endowment']).to_real_world_currency(self.session),
-         'share': c(self.session.config['community_goal_decimal']*self.session.config['endowment']).to_real_world_currency(self.session)
-        }
 
 class Intro(Page):
-    def vars_for_template(self):     
+    def vars_for_template(self):
+        all_players = len(self.group.get_players())
+        vars = { 'players_in_group' : all_players ,
+                 'other_players':all_players-1,
+                 'endowment':c(self.session.config['endowment']).to_real_world_currency(self.session),
+                 'goal':self.session.config['community_goal_decimal']*100,
+                 'goal_financial':c(self.session.config['community_goal_decimal']*all_players*self.session.config['endowment']).to_real_world_currency(self.session),
+                 'share': c(self.session.config['community_goal_decimal']*self.session.config['endowment']).to_real_world_currency(self.session)
+
+                 }
         return vars
 
 class Intro_part2(Page):
     def vars_for_template(self):
-        return vars
+        all_players = len(self.group.get_players())
+        vars = { 'players_in_group' : all_players ,
+                 'other_players':all_players-1,
+                 'endowment':c(self.session.config['endowment']).to_real_world_currency(self.session),
+                 'goal':self.session.config['community_goal_decimal']*100,
+                 'goal_financial':c(self.session.config['community_goal_decimal']*all_players*self.session.config['endowment']).to_real_world_currency(self.session),
+                 'share': c(self.session.config['community_goal_decimal']*self.session.config['endowment']).to_real_world_currency(self.session)
 
+                 }
+        return vars
                  
 class survey(Page):
     form_model = models.Player
