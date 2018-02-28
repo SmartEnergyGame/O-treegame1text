@@ -12,7 +12,7 @@ doc = """
 class Constants(BaseConstants):
     name_in_url = 'public_goods'
     players_per_group = None
-    num_rounds = 2
+    num_rounds = 8
 
     results_template = 'public_goods/Results_c.html'
 
