@@ -42,4 +42,4 @@ class AssignationWaitPage(WaitPage):
 
     body_text = "Waiting for other participants to complete survey."
 
-page_sequence = [Intro,survey, AssignationWaitPage]
+page_sequence = [Intro,Intro_part2, survey, AssignationWaitPage]
