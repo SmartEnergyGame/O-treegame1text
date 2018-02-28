@@ -26,7 +26,19 @@ class Group(BaseGroup):
 
 
 class Player(BasePlayer):
-    q011 = models.IntegerField(choices=[1, 2, 3, 4, 5, 6, 7])
+    treatment = models.CharField(doc="Treatment of each player")
+    endowment = models.CurrencyField(
+        min=0,
+        doc="endowment by each player"
+    )
+    savings = models.CurrencyField(doc="Savings by each player",widget=widgets.RadioSelectHorizontal,
+                                   label="How much do you choose to contribute to the group energy conservation goal?"
+                                   #,choices=currency_range(c(0), c(0.10), c(0.02))
+                                   )
+    financial_reward = models.FloatField(min=0)
+    last_savings = models.CurrencyField(initial=0)
+
+    q011 = models.IntegerField(choices=[1, 2, 3, 4, 5, 6, 7],label="Plants")
     q021 = models.CharField(doc="Question 1", label="What is your year of birth?")
     q031 = models.CharField(doc="Question 1", label="What is your sex? ", choices=[['M', "Male"], ['F', "Female"]])
     q041 = models.CharField(doc="Question 1", label="What term best describes your ethnic identity?",

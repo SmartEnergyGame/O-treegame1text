@@ -12,7 +12,7 @@ doc = """
 class Constants(BaseConstants):
     name_in_url = 'public_goods'
     players_per_group = None
-    num_rounds = 8
+    num_rounds = 2
 
     results_template = 'public_goods/Results_c.html'
 
@@ -78,7 +78,7 @@ class Group(BaseGroup):
                 if self.round_number > self.min_round:
                     p.last_savings = p.in_round(self.round_number - self.min_round).savings
             #if self.com_goal > 0:
-                if self.round_number == Constants.num_rounds:
+                if self.round_number == Constants.num_rounds: # In last round calculate bonus
                     if shares >= self.com_goal and self.round_number == Constants.num_rounds:
                             p.participant.vars['endowment'] = (p.participant.vars['endowment']) + (
                                 avg_savings * 3)
