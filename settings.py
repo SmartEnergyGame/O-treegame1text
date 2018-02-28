@@ -103,23 +103,14 @@ SESSION_CONFIGS = [
     #     'num_demo_participants': ...,
     #     'app_sequence': ['...'],
     # }
-        {
-            'name': 'base_game',
-            'display_name': "Multiple treatments game",
-            'num_demo_participants': 6,
-            'endowment': 80,
-            'members_per_treatment': 1,
-            'community_goal_decimal': .20,
-            'app_sequence': ['mr_survey','multi_public_goods'],
-            'doc': """community_goal_decimal limits: [0,1]"""
-        }, {
+         {
             'name': 'single_treatment',
             'display_name': "Single Treatment",
             'num_demo_participants': 3,
             'single_treatment': "DTI",
-            'endowment': 80,
+            'endowment': 64,
             'community_goal_decimal': .20,
-            'app_sequence': ['post_survey','single_treatment','public_goods'],
+            'app_sequence': ['single_treatment','public_goods','post_survey'],
             'doc': """community_goal_decimal limits: [0,1]. Treatment codes: 'control', 'D', 'DTI'"""
         },
 ]

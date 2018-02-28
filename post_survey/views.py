@@ -17,7 +17,11 @@ class ResultsWaitPage(WaitPage):
 
 
 class Final_page(Page):
-    pass
+
+    def vars_for_template(self):
+            return {
+                'endowment': self.player.participant.vars['endowment'].to_real_world_currency(self.session)
+            }
 
 
 page_sequence = [
