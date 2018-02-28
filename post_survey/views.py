@@ -4,8 +4,10 @@ from ._builtin import Page, WaitPage
 from .models import Constants
 
 
-class MyPage(Page):
-    pass
+class Post_survey(Page):
+    form_model = models.Player
+    form_fields = ['q011', 'q021', 'q031', 'q041', 'q051', 'q061', 'q071', 'q081', 'q091', 'q101', 'q111', 'q121',
+                   'q131', 'q141']
 
 
 class ResultsWaitPage(WaitPage):
@@ -14,12 +16,11 @@ class ResultsWaitPage(WaitPage):
         pass
 
 
-class Results(Page):
+class Final_page(Page):
     pass
 
 
 page_sequence = [
-    MyPage,
-    ResultsWaitPage,
-    Results
+    Final_page,
+    Post_survey
 ]
