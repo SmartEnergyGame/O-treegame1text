@@ -14,7 +14,6 @@ class mr_Intro(Page):
 
                  }
 
-
 class mr_survey(Page):
     form_model = models.Player
     form_fields = ['q1', 'q2', 'q3', 'q4', 'q5', 'q6']
@@ -22,7 +21,6 @@ class mr_survey(Page):
         self.player.role()
 
 class AssignationWaitPage(WaitPage):
-
     body_text = "Waiting for other participants to complete survey."
 
 page_sequence = [mr_Intro,mr_survey, AssignationWaitPage]
