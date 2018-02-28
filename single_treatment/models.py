@@ -19,6 +19,7 @@ class unbalance_group_creation(Exception):
     print("Error when creating same size of treatment group")
 
 class Subsession(BaseSubsession):
+
     def creating_session(self):
         treatments = self.session.config['single_treatment']
         if self.round_number == 1:
