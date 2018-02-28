@@ -14,6 +14,7 @@ class Intro(Page):
                  'share': c(self.session.config['community_goal_decimal']*self.session.config['endowment']).to_real_world_currency(self.session)
 
                  }
+                 
 
 
 class survey(Page):
