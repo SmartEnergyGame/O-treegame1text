@@ -110,7 +110,12 @@ SESSION_CONFIGS = [
             'single_treatment': "DTI",
             'endowment': 64,
             'community_goal_decimal': .20,
+<<<<<<< HEAD
             'app_sequence': ['single_treatment','public_goods','post_survey'],
+=======
+            #'app_sequence': ['post_survey','single_treatment','public_goods'],
+            'app_sequence': ['single_treatment', 'public_goods'],
+>>>>>>> e916335de19b763f8cd31d0e3d3c6a0c6f71a612
             'doc': """community_goal_decimal limits: [0,1]. Treatment codes: 'control', 'D', 'DTI'"""
         },
 ]

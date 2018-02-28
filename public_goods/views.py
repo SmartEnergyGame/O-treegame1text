@@ -61,6 +61,7 @@ class Results_c(Page):
                 'savings': self.player.savings.to_real_world_currency(self.session),
                 'last_savings': self.player.last_savings.to_real_world_currency(self.session),
                 'total_savings': cum_earnings,
+                'goal':self.session.config['community_goal_decimal']*100,
             }
 
     def is_displayed(self):
@@ -91,8 +92,8 @@ class Results_D(Page):
                 'position': position,
                 'parts': parts,
                 'parts_savings': parts_savings,
-                'parts_label': parts_labels
-
+                'parts_label': parts_labels,
+                'goal':self.session.config['community_goal_decimal']*100,
             }
     def is_displayed(self):
         if self.participant.vars['treatment'] == 'D':
@@ -134,8 +135,8 @@ class Results_DTI(Page):
             'parts': parts,
                 'parts_savings': parts_savings,
                 'parts_label': parts_labels,
-            'injunctive_label': injunctive_label
-
+            'injunctive_label': injunctive_label,
+            'goal':self.session.config['community_goal_decimal']*100,
         }
 
 page_sequence = [
