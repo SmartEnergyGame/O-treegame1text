@@ -35,7 +35,7 @@ class Group(BaseGroup):
 class Player(BasePlayer):
     #choices1q = [c(0).to_real_world_currency(BasePlayer.session), c(1*2), c(1*4)]
     
-    q1 = models.IntegerField(
+    q1 = models.CurrencyField(
         doc="Question 1", 
         label="How much does each player have to invest into the conservation account, on average, for each round to meet the goal?",
         widget=widgets.RadioSelectHorizontal,
