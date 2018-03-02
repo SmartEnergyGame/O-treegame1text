@@ -1,13 +1,8 @@
 {% extends "global/Page.html" %}
 {% load staticfiles otree %}
 
-{% block title %}
-    Round {{ player.round_number }}
-    <div align="right">{{ player.round_number }}/8</div>
-{% endblock %}
-
 {% block content %}
-
+    Round {{ player.round_number }} <div align="right">{{ player.round_number }}/8</div>
 
     <p>Your endowment is: {{ endowment }}</p
     <p>{{ injunctive_text }}</p>
