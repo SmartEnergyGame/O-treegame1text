@@ -44,7 +44,6 @@ class Player(BasePlayer):
          doc="Question 2",
          label="Assuming the goal has been met, total payments from the conservation account are equal to what amount?", 
          choices = [
-
              ['a',"The total in the conservation account "],
              ['b',"Two times the total in the conservation account "],
              ['c',"Three times the total in the conservation account "]
@@ -69,7 +68,7 @@ class Player(BasePlayer):
         doc = "Question 6", 
         label="Is it possible to meet the conservation account goal even if one player does not contribute to the goal at all? ", 
         choices = ["Yes", "No"],
-        widget=widgets.RadioSelect,
+        widget=widgets.RadioSelectHorizontal,
     )
 
     treatment = models.CharField(doc="Treatment")
