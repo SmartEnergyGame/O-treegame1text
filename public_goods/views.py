@@ -133,7 +133,7 @@ class Results_DTI(Page):
                 'parts_savings': parts_savings,
                 'parts_label': parts_labels,
             'injunctive_label': injunctive_label,
-            'goal':self.session.config['community_goal_decimal']*100,
+            'goal':Constants.num_rounds*len([p.savings for p in self.group.in_round(1).get_players()])*.5,
         }
 
 page_sequence = [

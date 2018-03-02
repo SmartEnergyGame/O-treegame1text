@@ -14,8 +14,12 @@ class ResultsWaitPage(WaitPage):
 
 class Final_page(Page):
     def vars_for_template(self):
+            group_size = len(self.group.get_players())
+            group_savings = self.session.config['endowment']*group_size - sum([ p.participant.vars['endowment'] for p in self.group.get_players()])
             return {
-                'endowment': self.player.participant.vars['endowment'].to_real_world_currency(self.session)
+                'endowment': self.player.participant.vars['endowment'].to_real_world_currency(self.session),
+                'group_savings': group_savings
+
             }
 
 page_sequence = [
