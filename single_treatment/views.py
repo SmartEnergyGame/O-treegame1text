@@ -42,6 +42,6 @@ class survey(Page):
 
 class AssignationWaitPage(WaitPage):
 
-    body_text = "Waiting for other participants to complete survey."
+    body_text = "Please wait for the other participants to make their decision!"
 
 page_sequence = [Intro,Intro_part2, survey, AssignationWaitPage]
