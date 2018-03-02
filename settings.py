@@ -106,9 +106,9 @@ SESSION_CONFIGS = [
          {
             'name': 'single_treatment',
             'display_name': "Single Treatment",
-            'num_demo_participants': 3,
+            'num_demo_participants': 6,
             'single_treatment': "DTI",
-            'endowment': 64,
+            'endowment': 16,
             'community_goal_decimal': .20,
             'app_sequence': ['single_treatment','public_goods','post_survey'],
             'doc': """community_goal_decimal limits: [0,1]. Treatment codes: 'control', 'D', 'DTI'"""

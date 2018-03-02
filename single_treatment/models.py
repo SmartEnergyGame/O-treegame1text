@@ -40,10 +40,10 @@ class Player(BasePlayer):
         label="How much does each player have to invest into the conservation account, on average, for each round to meet the goal?", 
         choices= [
             c(0),
-            c(1*2), 
-            c(1*4)
+            c(0.5),
+            c(1)
             ],
-        widget=widgets.RadioSelect,
+        widget=widgets.RadioSelectHorizontal,
     )
     
     q2 = models.CharField(
