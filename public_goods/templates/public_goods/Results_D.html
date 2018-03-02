@@ -12,9 +12,6 @@
     <h1>Your contributions: </h1>
     <h3>    You  just contribute: {{savings}}</h3>
     Your total contributions to the conservation fund to date: {{ my_total_savings }}
-
-
-
      {% for p in parts  %}
          {% if p.id_in_group == player.id_in_group %}
             <h3>You : {{p.savings}}</h3>

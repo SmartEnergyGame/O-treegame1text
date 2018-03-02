@@ -56,7 +56,7 @@ class Results_c(Page):
                 'last_savings': self.player.last_savings.to_real_world_currency(self.session),
                 'my_total_savings': sum([ p.savings for p in self.player.in_all_rounds()]),
                 'total_savings': cum_earnings,
-                'goal':Constants.num_rounds*len([p.savings for p in self.group.in_round(1).get_players()])*.5,
+                'goal':c(Constants.num_rounds*len([p.savings for p in self.group.in_round(1).get_players()])*.5).to_real_world_currency(self.session),
 
             }
             return res
@@ -91,7 +91,7 @@ class Results_D(Page):
                 'parts_savings': parts_savings,
                 'my_total_savings': sum([p.savings for p in self.player.in_all_rounds()]),
                 'parts_label': parts_labels,
-                'goal':Constants.num_rounds*len([p.savings for p in self.group.in_round(1).get_players()])*.5,
+                'goal':c(Constants.num_rounds*len([p.savings for p in self.group.in_round(1).get_players()])*.5).to_real_world_currency(self.session),
             }
     def is_displayed(self):
         if self.participant.vars['treatment'] == 'D':
@@ -133,7 +133,8 @@ class Results_DTI(Page):
                 'parts_savings': parts_savings,
                 'parts_label': parts_labels,
             'injunctive_label': injunctive_label,
-            'goal':Constants.num_rounds*len([p.savings for p in self.group.in_round(1).get_players()])*.5,
+            'my_total_savings': (sum([p.savings for p in self.player.in_all_rounds()])).to_real_world_currency(self.session),
+            'goal':c(Constants.num_rounds*len([p.savings for p in self.group.in_round(1).get_players()])*.5).to_real_world_currency(self.session),
         }
 
 page_sequence = [
