@@ -97,7 +97,7 @@ class Player(BasePlayer):
         doc="endowment by each player"
     )
     savings = models.CurrencyField(doc="Savings by each player",widget=widgets.RadioSelectHorizontal,
-                                   label="How much do you choose to contribute to the group energy conservation goal?"
+                                   label="How much do you want to invest in group energy conservation?"
                                    #,choices=currency_range(c(0), c(0.10), c(0.02))
                                    )
     financial_reward = models.FloatField(min=0)
