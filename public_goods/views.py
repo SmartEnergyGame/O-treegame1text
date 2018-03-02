@@ -30,7 +30,7 @@ class Contribute(Page):
     form_model = models.Player
     form_fields = [ 'savings']
     def savings_choices(self):
-        return [[c,c.to_real_world_currency(self.session)] for c in currency_range(0, 4, 2)]
+        return [[c,c.to_real_world_currency(self.session)] for c in [c(0),c(.5),c(1)]]
     #    return currency_range(0, self.player.participant.vars['endowment']*.5, 2)
     def vars_for_template(self):
         month = self.months[self.player.round_number]
