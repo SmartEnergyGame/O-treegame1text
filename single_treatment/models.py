@@ -61,7 +61,7 @@ class Player(BasePlayer):
     
     q5 = models.FloatField(
         doc="Question 4", 
-        label="Lease assume that the goal of $24 has NOT been contributed to the conservation account and you have invested a total of $5 in the 8 rounds, leaving $11 in your private account. How much money will you receive at the end of the experiment.  My payout is $"
+        label="Let's assume that the goal of $24 has NOT been contributed to the conservation account and you have invested a total of $5 in the 8 rounds, leaving $11 in your private account. How much money will you receive at the end of the experiment.  My payout is $"
     )
     
     q6 = models.CharField(
