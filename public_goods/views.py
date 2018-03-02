@@ -59,8 +59,10 @@ class Results_c(Page):
                 'endowment': self.player.participant.vars['endowment'].to_real_world_currency(self.session),
                 'savings': self.player.savings.to_real_world_currency(self.session),
                 'last_savings': self.player.last_savings.to_real_world_currency(self.session),
+                'my_total_savings': sum([ p.savings for p in self.player.in_all_rounds()]),
                 'total_savings': cum_earnings,
-                'goal':self.session.config['community_goal_decimal']*100,
+                'goal':Constants.num_rounds*len([p.savings for p in self.group.in_round(1).get_players()])*.5,
+
             }
             return res
 
@@ -92,8 +94,9 @@ class Results_D(Page):
                 'position': position,
                 'parts': parts,
                 'parts_savings': parts_savings,
+                'my_total_savings': sum([p.savings for p in self.player.in_all_rounds()]),
                 'parts_label': parts_labels,
-                'goal':self.session.config['community_goal_decimal']*100,
+                'goal':Constants.num_rounds*len([p.savings for p in self.group.in_round(1).get_players()])*.5,
             }
     def is_displayed(self):
         if self.participant.vars['treatment'] == 'D':
@@ -121,10 +124,9 @@ class Results_DTI(Page):
             position = ''' You are below average'''
         if self.player.participant.vars['role'] == 'type1':
             injunctive_label = "Remember, contributing to the collective energy conservation goal is important to to help reduce air and water pollution creating health problems affecting you and your family and improve your chances of gaining a larger share of the conservation account funds."
-        elif self.player.participant.vars['role'] == 'type2':
-            injunctive_label = "Remember, contributing to the collective energy conservation goal is important to to help reduce air and water pollution creating health problems affecting your community and improve everyone’s chances of gaining a larger share of the conservation account funds."
         else:
-            injunctive_label = ''
+            injunctive_label = "Remember, reducing energy consumption by contributing to the group conservation fund will reduce pollution creating cleaner air and water for everyone and reducing the threat of global warming. It will also improve your group’s chance of gaining an additional cash incentive for meeting your collective conservation fund goal."
+
 
         return {
             'endowment': self.player.participant.vars['endowment'].to_real_world_currency(self.session),
