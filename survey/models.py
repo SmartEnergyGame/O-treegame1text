@@ -5,9 +5,7 @@ from otree.api import (
 import random
 import itertools
 
-doc = """
-    This application provides a survey and introductions based on the answers of the survey.
-"""
+doc = """This application provides a survey and introductions based on the answers of the survey."""
 
 class Constants(BaseConstants):
     name_in_url = 'instructions_n_survey'
@@ -19,7 +17,6 @@ class unbalance_group_creation(Exception):
     print("Error when creating same size of treatment group")
 
 class Subsession(BaseSubsession):
-
     def creating_session(self):
         quota = self.session.config['members_per_treatment']
         try:
@@ -48,11 +45,8 @@ class Subsession(BaseSubsession):
             raise unbalance_group_creation
 
 
-
-
 class Group(BaseGroup):
     pass
-
 
 class Player(BasePlayer):
     q1 = models.CharField(doc="Question 1", label="Where do you supposedly live?")

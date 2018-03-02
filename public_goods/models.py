@@ -5,9 +5,7 @@ from otree.api import (
 import random
 import itertools
 
-doc = """
-        Public good game section (Rounds and feedback).
-      """
+doc = """Public good game section (Rounds and feedback)."""
 
 class Constants(BaseConstants):
     name_in_url = 'public_goods'
@@ -26,17 +24,18 @@ class Subsession(BaseSubsession):
     def vars_for_admin_report(self):
         savings_session = [p.savings for p in self.get_players() if p.savings != None]
         if savings_session:
-            return {
+            res = {
                 'avg_saving': sum(savings_session)/len(savings_session),
                 'min_saving': min(savings_session),
                 'max_saving': max(savings_session),
             }
         else:
-            return {
+            res = {
                 'avg_saving': '(no data)',
                 'min_saving': '(no data)',
                 'max_saving': '(no data)',
             }
+        return res
 
     def creating_session(self):
         # self.Constants.endowment = self.session.config['endowment']
@@ -90,12 +89,6 @@ class Group(BaseGroup):
                         p.endowment = p.participant.vars['endowment']
                         #if self.round_number > self.min_round:
                         #    p.last_savings = p.in_round(self.round_number - self.min_round).savings
-
-
-
-
-
-
 
 class Player(BasePlayer):
     treatment = models.CharField(doc="Treatment of each player")

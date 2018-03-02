@@ -45,7 +45,6 @@ class Player(BasePlayer):
         ],
         widget=widgets.RadioSelectHorizontal,
     )
-    
     q2 = models.CharField(
          doc="Question 2",
          label="Assuming the goal has been met, total payments from the conservation account are equal to what amount?", 
@@ -53,10 +52,9 @@ class Player(BasePlayer):
              ['t1',"The total in the conservation account "],
              ['t1',"Two times the total in the conservation account "], 
              ['',"Three times the total in the conservation account "]
-             ], 
-         widget=widgets.RadioSelect,
-         )
-    
+        ], 
+        widget=widgets.RadioSelect,
+    )
     q3 = models.CharField(
         doc="Question 3", 
         label="Please assume that the goal of $24 has been contributed to the conservation account. If there are 6 players in the game, how much will each player receive as a bonus for meeting the conservation account goal?  Each Player will receive $"
