@@ -43,7 +43,7 @@ class Player(BasePlayer):
             [1, '$ 0.5 '],
             [2, '$ 1'],
         ],
-        widget=widgets.RadioSelect,
+        widget=widgets.RadioSelectHorizontal,
     )
     
     q2 = models.CharField(
