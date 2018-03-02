@@ -18,7 +18,10 @@ class Final_page(Page):
             group_savings = self.session.config['endowment']*group_size - sum([ p.participant.vars['endowment'] for p in self.group.get_players()])
             return {
                 'endowment': self.player.participant.vars['endowment'].to_real_world_currency(self.session),
-                'group_savings': group_savings
+                'group_savings': group_savings,
+                'goal': c(8 * len(
+                    [p for p in self.group.in_round(1).get_players()]) * .5).to_real_world_currency(
+                    self.session)
 
             }
 
