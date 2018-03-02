@@ -26,7 +26,7 @@ class Intro_part2(Page):
                  'other_players':all_players-1,
                  'endowment':c(self.session.config['endowment']).to_real_world_currency(self.session),
                  'goal':self.session.config['community_goal_decimal']*100,
-                 'goal_financial':c(self.session.config['community_goal_decimal']*all_players*self.session.config['endowment']).to_real_world_currency(self.session),
+                 'goal_financial':c(.5*8*all_players).to_real_world_currency(self.session),
                  'share': c(self.session.config['community_goal_decimal']*self.session.config['endowment']).to_real_world_currency(self.session)
 
                  }
@@ -35,6 +35,8 @@ class Intro_part2(Page):
 class survey(Page):
     form_model = models.Player
     form_fields = ['q1', 'q2', 'q3', 'q4', 'q5', 'q6']
+    def q1_choices(self):
+        return [[c,c.to_real_world_currency(self.session)] for c in [c(0),c(0.5),c(1.0)]]
     def before_next_page(self):
         self.player.role()
 
