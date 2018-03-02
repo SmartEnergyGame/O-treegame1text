@@ -40,7 +40,6 @@ class Player(BasePlayer):
         label="How much does each player have to invest into the conservation account, on average, for each round to meet the goal?",
         widget=widgets.RadioSelectHorizontal,
     )
-    
     q2 = models.CharField(
          doc="Question 2",
          label="Assuming the goal has been met, total payments from the conservation account are equal to what amount?", 
@@ -51,7 +50,6 @@ class Player(BasePlayer):
              ], 
          widget=widgets.RadioSelect,
          )
-    
     q3 = models.FloatField(
         doc="Question 3", 
         label="Please assume that the goal of $24 has been contributed to the conservation account. If there are 6 players in the game, how much will each player receive as a bonus for meeting the conservation account goal?  Each Player will receive $"
@@ -70,14 +68,14 @@ class Player(BasePlayer):
         doc = "Question 6", 
         label="Is it possible to meet the conservation account goal even if one player does not contribute to the goal at all? ", 
         choices = ["Yes", "No"],
-        widget=widgets.RadioSelect,
+        widget=widgets.RadioSelectHorizontal,
     )
 
     treatment = models.CharField(doc="Treatment")
     injunctive_norm_type = models.CharField(initial='undefined_IT')
     def role(self):
         if ((self.participant.vars['treatment'] == 'DTI')):
-            self.participant.vars['role'] = self.q2
+            self.participant.vars['role'] = 'DTI'
         else:
             self.participant.vars['role'] = 'undefined_IT'
         return self.participant.vars['role']

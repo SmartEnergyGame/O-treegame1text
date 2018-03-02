@@ -5,9 +5,7 @@ from otree.api import (
 import random
 import itertools
 
-doc = """
-        Public good game section (Rounds and feedback).
-      """
+doc = """Public good game section (Rounds and feedback)."""
 
 class Constants(BaseConstants):
     name_in_url = 'single_treatment_public_goods'
@@ -26,17 +24,18 @@ class Subsession(BaseSubsession):
     def vars_for_admin_report(self):
         savings_session = [p.savings for p in self.get_players() if p.savings != None]
         if savings_session:
-            return {
+            res = {
                 'avg_saving': sum(savings_session)/len(savings_session),
                 'min_saving': min(savings_session),
                 'max_saving': max(savings_session),
             }
         else:
-            return {
+            res = {
                 'avg_saving': '(no data)',
                 'min_saving': '(no data)',
                 'max_saving': '(no data)',
             }
+        return res
 
     def creating_session(self):
         # self.Constants.endowment = self.session.config['endowment']
@@ -83,7 +82,6 @@ class Group(BaseGroup):
                             p.participant.vars['endowment'] = (p.participant.vars['endowment']) + (
                                 avg_savings * 3)
                             p.endowment = p.participant.vars['endowment']
-
                 else:
                     #for p in treatment_group:
                     #    p.participant.vars['endowment'] = p.participant.vars['endowment'] - p.savings
@@ -92,21 +90,17 @@ class Group(BaseGroup):
                         #    p.last_savings = p.in_round(self.round_number - self.min_round).savings
 
 
-
-
-
-
-
 class Player(BasePlayer):
     treatment = models.CharField(doc="Treatment of each player")
     endowment = models.CurrencyField(
         min=0,
         doc="endowment by each player"
     )
-    savings = models.CurrencyField(doc="Savings by each player",widget=widgets.RadioSelectHorizontal,
-                                   label="How much do you choose to contribute to the group energy conservation goal?"
-                                   #,choices=currency_range(c(0), c(0.10), c(0.02))
-                                   )
+    savings = models.CurrencyField(
+        doc="Savings by each player",widget=widgets.RadioSelectHorizontal,
+        label="How much do you choose to contribute to the group energy conservation goal?"
+        #,choices=currency_range(c(0), c(0.10), c(0.02))
+    )
     financial_reward = models.FloatField(min=0)
     last_savings = models.CurrencyField(initial=0)
 
