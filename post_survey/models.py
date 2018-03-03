@@ -9,41 +9,46 @@ class Constants(BaseConstants):
     num_rounds = 1
 
 class Subsession(BaseSubsession):
-    def creating_session(self):
-        for g in self.get_groups():
-            endowments = [p.participant.vars['endowment'] for p in g.get_players()]
-            total_savings = len(endowments)* self.session.config['endowment'] - sum(endowments)
-            group_goal = (.5*8*len(endowments))
-            for p in g.get_players():
-                p.treatment = p.participant.vars['treatment']
-                p.endowment = p.participant.vars['endowment']
-                if total_savings >= group_goal:
-                    f = total_savings * 3
-                    print(f)
-                    print('+++++++++++++++++++++++++++++++++++++++++++')
-                    p.bonus = f/len(endowments)
-                    print(p.bonus)
-
-                else:
-                    p.bonus = c(0)
-                    print('+++++++++++++++++else')
-                p.total_payment = p.endowment + p.bonus
+    #def creating_session(self):
+    #    for g in self.get_groups():
+    #        for p in g.get_players():
+    #            p.treatment = p.participant.vars['treatment']
+    #            p.endowment = p.participant.vars['endowment']
+    #            p.correct_answers = p.participant.vars['correct_answers']
+    #            if 'correct_answers' in p.participant.vars:
+    #                print("+++++++++++++++++++++++in participant vars")
+    #            else:
+    #                print("not correct_ans")
+    pass
 
 
 
 class Group(BaseGroup):
-    pass
+    def get_bonus(self):
+        endowments = [p.participant.vars['endowment'] for p in self.get_players()]
+        total_savings = len(endowments) * self.session.config['endowment'] - sum(endowments)
+        group_goal = (.5 * 8 * len(endowments))
+        f = total_savings * 3
+        indv_shares = f / len(endowments)
+        for p in self.get_players():
+            p.correct_answers = p.participant.vars['correct_answers']
+            if total_savings >= group_goal:
+                    p.bonus = indv_shares
+                    print(p.correct_answers)
+                    p.total_payment = p.participant.vars['endowment'] + p.bonus + c(p.participant.vars['correct_answers'] * .5)
+            else:
+                p.bonus = c(0)
+                p.total_payment = p.participant.vars['endowment'] + c(p.participant.vars['correct_answers'] * .5)
+
 
 class Player(BasePlayer):
     bonus = models.CurrencyField(min=0)
+    
     total_payment = models.CurrencyField(min=0)
     treatment = models.CharField(
             doc="Treatment of each player"
         )
-    endowment = models.CurrencyField(
-        min=0,
-        doc="endowment by each player"
-    )
+
     savings = models.CurrencyField(
         doc="Savings by each player",
         widget=widgets.RadioSelectHorizontal,

@@ -38,11 +38,17 @@ class survey(Page):
 
     def before_next_page(self):
         self.player.role()
+        self.player.total_correct_ans()
 
 class SurveyResults(Page):
     form_model = models.Player
     def vars_for_template(self):
-        return {'answers' : self.player.check_answers()}
+        ans = self.player.check_answers()
+        return {'answers' : ans}
+
+    def before_next_page(self):
+        self.participant.vars['correct_answers'] = self.player.correct_answers
+        print(self.participant.vars['correct_answers'])
 
 class AssignationWaitPage(WaitPage):
 

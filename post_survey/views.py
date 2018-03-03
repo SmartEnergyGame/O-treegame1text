@@ -10,14 +10,17 @@ class Final_page(Page):
     def vars_for_template(self):
             group_size = len(self.group.get_players())
             group_savings = self.session.config['endowment']*group_size - sum([ p.participant.vars['endowment'] for p in self.group.get_players()])
+            self.group.get_bonus()
+            ca =  self.player.participant.vars['endowment']
             return {
                 'goal': c(8 * len(
                     [p for p in self.group.in_round(1).get_players()]) * .5).to_real_world_currency(
                     self.session),
                 'endowment': self.player.participant.vars['endowment'].to_real_world_currency(self.session),
                 'group_savings': (group_savings).to_real_world_currency(self.session),
-                's': self.player.total_payment.to_real_world_currency(self.session) - self.player.participant.vars['endowment'].to_real_world_currency(self.session),
-                'total': self.player.total_payment.to_real_world_currency(self.session)
+                's': self.player.bonus.to_real_world_currency(self.session) ,
+                'total': self.player.total_payment,
+                'ans': c(self.player.participant.vars['correct_answers']*.5).to_real_world_currency(self.session)
             }
 
 class Post_survey(Page):
