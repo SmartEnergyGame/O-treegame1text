@@ -31,7 +31,15 @@ class Player(BasePlayer):
     financial_reward = models.FloatField(min=0)
     last_savings = models.CurrencyField(initial=0)
     q011 = models.IntegerField(
-        choices=[1, 2, 3, 4, 5, 6, 7],
+        choices=[1, 2, 3, 4, 5, 6, 7],widget=widgets.RadioSelectHorizontal,
+        label="Plants"
+    )
+    q012 = models.IntegerField(
+        choices=[1, 2, 3, 4, 5, 6, 7], widget=widgets.RadioSelectHorizontal,
+        label="Plants"
+    )
+    q013 = models.IntegerField(
+        choices=[1, 2, 3, 4, 5, 6, 7], widget=widgets.RadioSelectHorizontal,
         label="Plants"
     )
     q021 = models.CharField(

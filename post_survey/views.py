@@ -2,20 +2,28 @@ from otree.api import Currency as c, currency_range
 from . import models
 from ._builtin import Page, WaitPage
 from .models import Constants
+from random import shuffle
 
 class Post_survey(Page):
     form_model = models.Player
-    form_fields = ['q011', 'q021', 'q031', 'q041', 'q051', 'q061', 'q071', 'q081', 'q091', 'q101', 'q111', 'q121',
+    form_fields = ['q011','q012','q013', 'q021', 'q031', 'q041', 'q051', 'q061', 'q071', 'q081', 'q091', 'q101', 'q111', 'q121',
                    'q131', 'q141']
+    def vars_for_template(self):
+        return {
+
+        }
 
 class ResultsWaitPage(WaitPage):
     def after_all_players_arrive(self):
         pass
 
 class Final_page(Page):
+
     def vars_for_template(self):
             group_size = len(self.group.get_players())
             group_savings = self.session.config['endowment']*group_size - sum([ p.participant.vars['endowment'] for p in self.group.get_players()])
+            questions_1 = [self.player.q011,self.player.q012,self.player.q013]
+            shuffle(questions_1)
             return {
                 'endowment': self.player.participant.vars['endowment'].to_real_world_currency(self.session),
                 'group_savings': group_savings,
