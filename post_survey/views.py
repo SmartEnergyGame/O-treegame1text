@@ -30,21 +30,21 @@ class Post_survey(Page):
                        self.player.q7, self.player.q8, self.player.q9, self.player.q10, self.player.q11,
                        self.player.q12]
         shuffle(questions_1)
-        q1, q2, q3, q4, q5, q6, q7, q8, q9, q10, q11, q12 = questions_1
+        a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12 = questions_1
         return {
-
-            'q1': q1,
-            'q2': q2,
-            'q3': q3,
-            'q4': q4,
-            'q5': q5,
-            'q6': q6,
-            'q7': q7,
-            'q8': q8,
-            'q9': q9,
-            'q10': q10,
-            'q10': q11,
-            'q10': q12,
+            'b':a1,
+            'a1': a1,
+            'a2': a2,
+            'a3': a3,
+            'a4': a4,
+            'a5': a5,
+            'a6': a6,
+            'a7': a7,
+            'a8': a8,
+            'a9': a9,
+            'a10': a10,
+            'a11': a11,
+            'a12': a12,
 
         }
 

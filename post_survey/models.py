@@ -58,47 +58,47 @@ class Player(BasePlayer):
     )
     q2 = models.IntegerField(
         choices=[1, 2, 3, 4, 5, 6, 7], widget=widgets.RadioSelectHorizontal,
-        label="Plants"
+        label="Marine life"
     )
     q3 = models.IntegerField(
         choices=[1, 2, 3, 4, 5, 6, 7], widget=widgets.RadioSelectHorizontal,
-        label="Plants"
+        label="Birds"
     )
     q4 = models.IntegerField(
         choices=[1, 2, 3, 4, 5, 6, 7], widget=widgets.RadioSelectHorizontal,
-        label="Plants"
+        label="Animals"
     )
     q5 = models.IntegerField(
         choices=[1, 2, 3, 4, 5, 6, 7], widget=widgets.RadioSelectHorizontal,
-        label="Plants"
+        label="My prosperity"
     )
     q6 = models.IntegerField(
         choices=[1, 2, 3, 4, 5, 6, 7], widget=widgets.RadioSelectHorizontal,
-        label="Plants"
+        label="My lifestyle"
     )
     q7 = models.IntegerField(
         choices=[1, 2, 3, 4, 5, 6, 7], widget=widgets.RadioSelectHorizontal,
-        label="Plants"
+        label="My health"
     )
     q8 = models.IntegerField(
         choices=[1, 2, 3, 4, 5, 6, 7], widget=widgets.RadioSelectHorizontal,
-        label="Plants"
+        label="My future"
     )
     q9 = models.IntegerField(
         choices=[1, 2, 3, 4, 5, 6, 7], widget=widgets.RadioSelectHorizontal,
-        label="Plants"
+        label="People in my community"
     )
     q10 = models.IntegerField(
         choices=[1, 2, 3, 4, 5, 6, 7], widget=widgets.RadioSelectHorizontal,
-        label="Plants"
+        label="The human race"
     )
     q11 = models.IntegerField(
         choices=[1, 2, 3, 4, 5, 6, 7], widget=widgets.RadioSelectHorizontal,
-        label="Plants"
+        label="Children"
     )
     q12 = models.IntegerField(
         choices=[1, 2, 3, 4, 5, 6, 7], widget=widgets.RadioSelectHorizontal,
-        label="Plants"
+        label="People in the United States"
     )
     q021 = models.CharField(
         doc="Question 1", 
@@ -162,57 +162,68 @@ class Player(BasePlayer):
         doc="Question 1", 
         label="What is your political party affiliation, if any?",
         choices=[
-            ['M', "Male"],
-            ['F', "Female"]
+            ['1', "Democrat,"],
+            ['2', "Independent,"],
+            ['3', "Republican,,"],
+            ['4', "None,,"],
         ]
     )
     q091 = models.CharField(
         doc="Question 1", 
         label="Do you consider yourself an environmentalist?",
         choices=[
-            ['M', "Male"], 
-            ['F', "Female"]
+            ['Y', "Yes"],
+            ['N', "No"]
         ]
     )
     q101 = models.CharField(
         doc="Question 1", 
         label="What year are you in your undergraduate studies?",
         choices=[
-            ['M', "Male"],
-            ['F', "Female"]
+            ['1', "First"],
+            ['2', "Second"],
+            ['3', "Third"],
+            ['4', "Fourth"],
+            ['5', "Fifth or higher"],
         ]
     )
     q111 = models.CharField(
         doc="Question 1", 
         label="What is your main field of study at Purdue?",
         choices=[
-            ['M', "Male"], 
-            ['F', "Female"]
+            ['M', "Agriculture/Natural Resources"],
+            ['F', "Business/Economics"],
+            ['M', "Education"],
+            ['F', "Engineering"],
+            ['M', "Health Sciences"],
+            ['F', "Liberal Arts"],
+            ['M', "Science"],
+            ['F', "Technology"],
+
         ]
     )
     q121 = models.CharField(
         doc="Question 1",
         label="How many experiments have you participated in before this one?",
         choices=[
-            ['M', "Male"], 
-            ['F', "Female"]
+            ['1','None'],
+            ['1','1 - 2 previous'],
+            ['1','3 - 5 previous'],
+            ['1','More than 5 pervious'],
         ]
     )
     q131 = models.CharField(
         doc="Question 1",
         label="Are you currently receiving some form of financial assistance for your educational expenses?",
         choices=[
-            ['M', "Male"],
-            ['F', "Female"]
+            ['Y', "Yes"],
+            ['N', "No"]
         ]
     )
-    q141 = models.CharField(
+    q141 = models.IntegerField(
         doc="Question 1",
         label="Are you currently employed in a job while in school?  If so, please indicate how many hours per week on average you work.  If you study full time and do not work, enter 0.",
-        choices=[
-            ['M', "Male"], 
-            ['F', "Female"]
-        ]
+        
     )
     treatment = models.CharField(doc="Treatment")
 
