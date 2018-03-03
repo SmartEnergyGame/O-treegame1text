@@ -35,8 +35,6 @@ class Intro_part2(Page):
 class survey(Page):
     form_model = models.Player
     form_fields = ['q1', 'q2', 'q3', 'q4', 'q5', 'q6']
-    def q1_choices(self):
-        return [[c,c.to_real_world_currency(self.session)] for c in [c(0),c(0.5),c(1.0)]]
     def before_next_page(self):
         self.player.role()
 
