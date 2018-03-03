@@ -223,7 +223,7 @@ class Player(BasePlayer):
     q141 = models.IntegerField(
         doc="Question 1",
         label="Are you currently employed in a job while in school?  If so, please indicate how many hours per week on average you work.  If you study full time and do not work, enter 0.",
-        
+
     )
     treatment = models.CharField(doc="Treatment")
 

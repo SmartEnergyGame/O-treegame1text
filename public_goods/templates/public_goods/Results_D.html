@@ -13,12 +13,16 @@
     <h3>    You  just contribute: {{savings}}</h3>
     Your total contributions to the conservation fund to date: {{ my_total_savings }}
      {% for p in parts  %}
-         {% if  p.id_in_group  == player.participant.id_in_session %}
+         {% if  p.id_in_group == player.participant.id_in_session %}
             <h3>You : {{p.savings}}</h3>
          {% else %}
             <h3>Participant {{ p.id_in_group }}: {{p.savings}}</h3>
          {% endif %}
     {% endfor %}
+
+    {% for p in parts  %}
+    {{ p.id_in_session }}
+    {% endfor  %}
     <h3 >The group’s contribution to the conservation fund to date: {{ total_savings }}</h3>
     <h3>The group conservation fund goal: {{ goal }} </h3>
 
