@@ -76,17 +76,7 @@ class Group(BaseGroup):
                 p.participant.vars['endowment'] = p.participant.vars['endowment'] - p.savings
                 if self.round_number > self.min_round:
                     p.last_savings = p.in_round(self.round_number - self.min_round).savings
-            #if self.com_goal > 0:
-                if self.round_number == Constants.num_rounds: # In last round calculate bonus
-                    if shares >= self.com_goal and self.round_number == Constants.num_rounds:
-                            p.participant.vars['endowment'] = (p.participant.vars['endowment']) + (
-                                avg_savings * 3)
-                            p.endowment = p.participant.vars['endowment']
-
-                else:
-                    #for p in treatment_group:
-                    #    p.participant.vars['endowment'] = p.participant.vars['endowment'] - p.savings
-                        p.endowment = p.participant.vars['endowment']
+                p.endowment = p.participant.vars['endowment']
                         #if self.round_number > self.min_round:
                         #    p.last_savings = p.in_round(self.round_number - self.min_round).savings
 

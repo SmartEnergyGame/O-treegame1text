@@ -106,7 +106,7 @@ SESSION_CONFIGS = [
          {
             'name': 'single_treatment',
             'display_name': "Single Treatment",
-            'num_demo_participants': 6,
+            'num_demo_participants': 2,
             'single_treatment': "DTI",
             'endowment': 16,
             'community_goal_decimal': .20,

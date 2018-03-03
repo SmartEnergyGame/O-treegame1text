@@ -4,7 +4,7 @@
 {% block content %}
     Round {{ player.round_number }} <div align="right">{{ player.round_number }}/8</div>
 
-    <p>Your endowment is: {{ endowment }}</p
+    <p>Money in your private account: {{ endowment }}</p
     <p>{{ injunctive_text }}</p>
     <p>{% formfield player.savings%}</p>
     {% next_button %}

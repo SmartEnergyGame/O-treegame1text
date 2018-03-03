@@ -11,15 +11,32 @@ class Constants(BaseConstants):
 class Subsession(BaseSubsession):
     def creating_session(self):
         for g in self.get_groups():
+            endowments = [p.participant.vars['endowment'] for p in g.get_players()]
+            total_savings = len(endowments)* self.session.config['endowment'] - sum(endowments)
+            group_goal = (.5*8*len(endowments))
             for p in g.get_players():
                 p.treatment = p.participant.vars['treatment']
                 p.endowment = p.participant.vars['endowment']
+                if total_savings >= group_goal:
+                    f = total_savings * 3
+                    print(f)
+                    print('+++++++++++++++++++++++++++++++++++++++++++')
+                    p.bonus = f/len(endowments)
+                    print(p.bonus)
+
+                else:
+                    p.bonus = c(0)
+                    print('+++++++++++++++++else')
+                p.total_payment = p.endowment + p.bonus
+
 
 
 class Group(BaseGroup):
     pass
 
 class Player(BasePlayer):
+    bonus = models.CurrencyField(min=0)
+    total_payment = models.CurrencyField(min=0)
     treatment = models.CharField(
             doc="Treatment of each player"
         )
@@ -56,14 +73,6 @@ class Player(BasePlayer):
         label="Plants"
     )
     q6 = models.IntegerField(
-        choices=[1, 2, 3, 4, 5, 6, 7], widget=widgets.RadioSelectHorizontal,
-        label="Plants"
-    )
-    q7 = models.IntegerField(
-        choices=[1, 2, 3, 4, 5, 6, 7], widget=widgets.RadioSelectHorizontal,
-        label="Plants"
-    )
-    q7 = models.IntegerField(
         choices=[1, 2, 3, 4, 5, 6, 7], widget=widgets.RadioSelectHorizontal,
         label="Plants"
     )
