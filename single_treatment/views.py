@@ -35,11 +35,17 @@ class Intro_part2(Page):
 class survey(Page):
     form_model = models.Player
     form_fields = ['q1', 'q2', 'q3', 'q4', 'q5', 'q6']
+
     def before_next_page(self):
         self.player.role()
+
+class SurveyResults(Page):
+    form_model = models.Player
+    def vars_for_template(self):
+        return {'answers' : self.player.check_answers()}
 
 class AssignationWaitPage(WaitPage):
 
     body_text = "Please wait for the other participants to make their decision!"
 
-page_sequence = [Intro,Intro_part2, survey, AssignationWaitPage]
+page_sequence = [Intro,Intro_part2, survey, SurveyResults, AssignationWaitPage]
