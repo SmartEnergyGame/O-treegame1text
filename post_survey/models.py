@@ -9,7 +9,12 @@ class Constants(BaseConstants):
     num_rounds = 1
 
 class Subsession(BaseSubsession):
-    pass
+    def creating_session(self):
+        for g in self.get_groups():
+            for p in g.get_players():
+                p.treatment = p.participant.vars['treatment']
+                p.endowment = p.participant.vars['endowment']
+
 
 class Group(BaseGroup):
     pass
@@ -30,15 +35,59 @@ class Player(BasePlayer):
     )
     financial_reward = models.FloatField(min=0)
     last_savings = models.CurrencyField(initial=0)
-    q011 = models.IntegerField(
+    q1 = models.IntegerField(
         choices=[1, 2, 3, 4, 5, 6, 7],widget=widgets.RadioSelectHorizontal,
         label="Plants"
     )
-    q012 = models.IntegerField(
+    q2 = models.IntegerField(
         choices=[1, 2, 3, 4, 5, 6, 7], widget=widgets.RadioSelectHorizontal,
         label="Plants"
     )
-    q013 = models.IntegerField(
+    q3 = models.IntegerField(
+        choices=[1, 2, 3, 4, 5, 6, 7], widget=widgets.RadioSelectHorizontal,
+        label="Plants"
+    )
+    q4 = models.IntegerField(
+        choices=[1, 2, 3, 4, 5, 6, 7], widget=widgets.RadioSelectHorizontal,
+        label="Plants"
+    )
+    q5 = models.IntegerField(
+        choices=[1, 2, 3, 4, 5, 6, 7], widget=widgets.RadioSelectHorizontal,
+        label="Plants"
+    )
+    q6 = models.IntegerField(
+        choices=[1, 2, 3, 4, 5, 6, 7], widget=widgets.RadioSelectHorizontal,
+        label="Plants"
+    )
+    q7 = models.IntegerField(
+        choices=[1, 2, 3, 4, 5, 6, 7], widget=widgets.RadioSelectHorizontal,
+        label="Plants"
+    )
+    q7 = models.IntegerField(
+        choices=[1, 2, 3, 4, 5, 6, 7], widget=widgets.RadioSelectHorizontal,
+        label="Plants"
+    )
+    q7 = models.IntegerField(
+        choices=[1, 2, 3, 4, 5, 6, 7], widget=widgets.RadioSelectHorizontal,
+        label="Plants"
+    )
+    q8 = models.IntegerField(
+        choices=[1, 2, 3, 4, 5, 6, 7], widget=widgets.RadioSelectHorizontal,
+        label="Plants"
+    )
+    q9 = models.IntegerField(
+        choices=[1, 2, 3, 4, 5, 6, 7], widget=widgets.RadioSelectHorizontal,
+        label="Plants"
+    )
+    q10 = models.IntegerField(
+        choices=[1, 2, 3, 4, 5, 6, 7], widget=widgets.RadioSelectHorizontal,
+        label="Plants"
+    )
+    q11 = models.IntegerField(
+        choices=[1, 2, 3, 4, 5, 6, 7], widget=widgets.RadioSelectHorizontal,
+        label="Plants"
+    )
+    q12 = models.IntegerField(
         choices=[1, 2, 3, 4, 5, 6, 7], widget=widgets.RadioSelectHorizontal,
         label="Plants"
     )
@@ -48,7 +97,7 @@ class Player(BasePlayer):
     )
     q031 = models.CharField(
         doc="Question 1",
-        label="What is your sex? ", 
+        label="What is your sex? ",
         choices=[
             ['M', "Male"],
             ['F', "Female"]
