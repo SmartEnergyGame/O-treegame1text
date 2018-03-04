@@ -105,9 +105,29 @@ SESSION_CONFIGS = [
     # }
          {
             'name': 'single_treatment',
-            'display_name': "Single Treatment",
+            'display_name': "Single Treatment DTI",
             'num_demo_participants': 2,
             'single_treatment': "DTI",
+            'endowment': 16,
+            'community_goal_decimal': .20,
+            'app_sequence': ['single_treatment','public_goods','post_survey'],
+            'doc': """community_goal_decimal limits: [0,1]. Treatment codes: 'control', 'D', 'DTI'"""
+        },
+{
+            'name': 'single_treatment',
+            'display_name': "Single Treatment D",
+            'num_demo_participants': 2,
+            'single_treatment': "D",
+            'endowment': 16,
+            'community_goal_decimal': .20,
+            'app_sequence': ['single_treatment','public_goods','post_survey'],
+            'doc': """community_goal_decimal limits: [0,1]. Treatment codes: 'control', 'D', 'DTI'"""
+        },
+{
+            'name': 'single_treatment',
+            'display_name': "Single Treatment control",
+            'num_demo_participants': 2,
+            'single_treatment': "control",
             'endowment': 16,
             'community_goal_decimal': .20,
             'app_sequence': ['single_treatment','public_goods','post_survey'],
