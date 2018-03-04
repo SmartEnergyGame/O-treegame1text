@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="8eab24a8-9ccd-42ef-ba8c-440b6b2c2293" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/settings.py" afterPath="$PROJECT_DIR$/settings.py" />
-      <change beforePath="$PROJECT_DIR$/single_treatment/templates/single_treatment/Intro.html" afterPath="$PROJECT_DIR$/single_treatment/templates/single_treatment/Intro.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -43,17 +42,17 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="119" column="36" lean-forward="true" selection-start-line="119" selection-start-column="36" selection-end-line="119" selection-end-column="36" />
+            <state relative-caret-position="445">
+              <caret line="126" column="45" lean-forward="false" selection-start-line="126" selection-start-column="45" selection-end-line="126" selection-end-column="45" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Intro.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Intro.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/single_treatment/templates/single_treatment/Intro.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="225">
@@ -169,8 +168,8 @@
         <option value="$PROJECT_DIR$/post_survey/models.py" />
         <option value="$PROJECT_DIR$/public_goods/templates/public_goods/Results_DTI.html" />
         <option value="$PROJECT_DIR$/public_goods/templates/public_goods/Results_D.html" />
-        <option value="$PROJECT_DIR$/settings.py" />
         <option value="$PROJECT_DIR$/single_treatment/templates/single_treatment/Intro.html" />
+        <option value="$PROJECT_DIR$/settings.py" />
       </list>
     </option>
   </component>
@@ -651,14 +650,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="119" column="36" lean-forward="true" selection-start-line="119" selection-start-column="36" selection-end-line="119" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/single_treatment/templates/single_treatment/Intro.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
@@ -669,6 +660,14 @@
             <element signature="e#321#343#0#HTML" expanded="true" />
             <element signature="e#674#696#0#HTML" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="445">
+          <caret line="126" column="45" lean-forward="false" selection-start-line="126" selection-start-column="45" selection-end-line="126" selection-end-column="45" />
+          <folding />
         </state>
       </provider>
     </entry>

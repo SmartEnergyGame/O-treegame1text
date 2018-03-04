@@ -104,7 +104,7 @@ SESSION_CONFIGS = [
     #     'app_sequence': ['...'],
     # }
          {
-            'name': 'single_treatment',
+            'name': 'single_treatment_DTI',
             'display_name': "Single Treatment DTI",
             'num_demo_participants': 2,
             'single_treatment': "DTI",
@@ -114,7 +114,7 @@ SESSION_CONFIGS = [
             'doc': """community_goal_decimal limits: [0,1]. Treatment codes: 'control', 'D', 'DTI'"""
         },
 {
-            'name': 'single_treatment',
+            'name': 'single_treatment_D',
             'display_name': "Single Treatment D",
             'num_demo_participants': 2,
             'single_treatment': "D",
@@ -124,7 +124,7 @@ SESSION_CONFIGS = [
             'doc': """community_goal_decimal limits: [0,1]. Treatment codes: 'control', 'D', 'DTI'"""
         },
 {
-            'name': 'single_treatment',
+            'name': 'single_treatment_control',
             'display_name': "Single Treatment control",
             'num_demo_participants': 2,
             'single_treatment': "control",
