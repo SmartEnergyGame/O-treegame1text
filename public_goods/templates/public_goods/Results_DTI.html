@@ -7,17 +7,19 @@
 
 {% block content %}
 
-    <h3>Money in your private account: {{ endowment}} </h3>
-
-    <h1>Your contributions: </h1>
+    Money in your private account: {{ endowment}}
+    <br>
+    Your contributions:
     <h3>    You  just contribute: {{savings}}</h3>
     Your total contributions to the conservation fund to date: {{ my_total_savings }}
      {% for p in parts  %}
-         {% if p.id_in_group == player.id_in_session%}
-            <h3>You : {{p.savings}}</h3>
+         <tr>
+         {% if  p.id_in_group == player.participant.id_in_session %}
+            <td><h3>You : {{p.savings}}</h3></td>
          {% else %}
-            <h3>Participant {{ p.id_in_group }}: {{p.savings}}</h3>
+            <td><h3>Participant {{ p.id_in_group }}: {{p.savings}}</h3></td>
          {% endif %}
+         </tr>
     {% endfor %}
     <h3 >The group’s contribution to the conservation fund to date: {{ total_savings }}</h3>
     <h3>The group conservation fund goal: {{ goal }} </h3>

@@ -167,10 +167,10 @@ class Player(BasePlayer):
         doc="Question 1", 
         label="What is your political party affiliation, if any?",
         choices=[
-            ['1', "Democrat,"],
-            ['2', "Independent,"],
-            ['3', "Republican,,"],
-            ['4', "None,,"],
+            ['1', "Democrat"],
+            ['2', "Independent"],
+            ['3', "Republican"],
+            ['4', "None"],
         ]
     )
     q091 = models.CharField(
