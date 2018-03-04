@@ -2,19 +2,21 @@
 {% load staticfiles otree %}
 
 {% block title %}
-    Results for Round {{ player.round_number }}
+
 {% endblock %}
 
 {% block content %}
+    <p style="font-size:25px"><b>Results for Round {{ player.round_number }}</b></p><br>
+    <p style="font-size:20px">Money in your private account: {{ endowment}} </p>
+    <p style="font-size:25px"><b>Your contributions:</b></p>
+    <p style="font-size:20px;margin-left: 40px;">You  just contribute: {{savings}}</p>
+    <p style="font-size:20px;margin-left: 40px;">Your total contributions to the conservation fund to date: {{ my_total_savings }}</p>
 
-    <h3>Money in your private account: {{ endowment}} </h3>
+    <p style="font-size:20px"><b>The group’s contribution to the conservation fund to date:</b> {{ total_savings }}</p>
+    <p style="font-size:20px">The group conservation fund goal: {{ goal }}
+    </table>
 
-    <h1>Your contributions: </h1>
-    <h3>    You  just contribute: {{savings}}</h3>
-    Your total contributions to the conservation fund to date: {{ my_total_savings }}
-    The group conservation fund goal: {{ goal }}
-    <h3 >The group’s contribution to the conservation fund to date:: {{ total_savings }}</h3>
-    
+
     <div align="right">
       {% next_button %}
     </div>
