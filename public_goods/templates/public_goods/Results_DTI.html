@@ -2,27 +2,32 @@
 {% load staticfiles otree %}
 
 {% block title %}
-    Results for Round {{ player.round_number }}
+
 {% endblock %}
 
 {% block content %}
-
-    Money in your private account: {{ endowment}}
+    <p style="font-size:25px"><b>Results for Round {{ player.round_number }}</b></p><br>
+    <p style="font-size:20px">Money in your private account: {{ endowment}} </p>
+    <p style="font-size:25px"><b>Your contributions:</b></p>
+    <p style="font-size:20px;margin-left: 40px;">You  just contribute: {{savings}}</p>
+    <p style="font-size:20px;margin-left: 40px;">Your total contributions to the conservation fund to date: {{ my_total_savings }}</p>
     <br>
-    Your contributions:
-    <h3>    You  just contribute: {{savings}}</h3>
-    Your total contributions to the conservation fund to date: {{ my_total_savings }}
+    <p style="font-size:25px"><b>Others' contribution:</b></p>
+    <table>
+        <tr><td><p style="font-size:20px">All player contributions:</p></td><td></td></td></tr>
      {% for p in parts  %}
          <tr>
          {% if  p.id_in_group == player.participant.id_in_session %}
-            <td><h3>You : {{p.savings}}</h3></td>
+             <td><p style="font-size:20px;margin-left: 40px;">You</p> </td> <td><p style="font-size:20px;margin-left: 40px;">{{p.savings}}</p></td>
          {% else %}
-            <td><h3>Participant {{ p.id_in_group }}: {{p.savings}}</h3></td>
+             <td><p style="font-size:20px;margin-left: 40px;">Participant {{ p.id_in_group }}</p></td><td><p style="font-size:20px;margin-left: 40px;"> {{p.savings}}</p></td>
          {% endif %}
          </tr>
     {% endfor %}
-    <h3 >The group’s contribution to the conservation fund to date: {{ total_savings }}</h3>
-    <h3>The group conservation fund goal: {{ goal }} </h3>
+        <tr style="border-style:solid;border-width: 1px 0px 0px 0px;"><td><p style="font-size:20px"><b>The group’s contribution to the conservation fund to date:</b></p></td><td><p style="font-size:20px;margin-left: 40px;">{{ total_savings }}</p></td></tr>
+    <tr><td><p style="font-size:20px">The group conservation fund goal</p></td><td>{{ goal }} </td></tr>
+    </table>
+
 
     <div align="right">
       {% next_button %}
