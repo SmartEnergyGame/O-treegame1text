@@ -1,18 +1,20 @@
 {% extends "global/Page.html" %}
 {% load staticfiles otree %}
 
+
 {% block title %}
     Quiz 2
 {% endblock %}
 
+
 {% block content %}
-    {{ a }}
+
     <b>1. People often express concern about environmental problems, but some people differ as to which consequences concern them the most. We are going to list different areas where environmental problems could have harmful consequences.  For each, please rate how concerned you are about their impact using a scale from 1 to 7. If you are not at all concerned, give the area a rating of 1. If you are extremely concerned, give it a rating of 7. Of course, you can choose any number between 1 and 7 for your answer.</b>
     <br>
-    <table class="table"></table>
-
+<table class="table"><tr><td><p style="visibility: hidden"> categories</p></td><td><p style="visibility: hidden"> ranking</p></td><td style="margin-left: 20px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Not Concern &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Extremely Concern</td></tr></table>
+<div>
     <table class="table">
-    <tr><td></td><td style="align-content: end">Not Concern &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Extremely Concern</td></tr>
+
     <tr>
     <td>{{ form.q1.label }}</td>
     {% for choice in form.q1 %}
@@ -86,19 +88,47 @@
     {% endfor %}
     </tr>
     </table>
-    {% formfield player.q021 %}
-    {% formfield player.q031 %}
-    {% formfield player.q041 %}
-    {% formfield player.q051 %}
-    {% formfield player.q061 %}
-    {% formfield player.q071 %}
-    {% formfield player.q081 %}
-    {% formfield player.q091 %}
-    {% formfield player.q101 %}
-    {% formfield player.q111 %}
-    {% formfield player.q121 %}
-    {% formfield player.q131 %}
-    {% formfield player.q141 %}
-    {% next_button %}
+</div>
+        {% formfield player.q021 %}
+        {% formfield player.q031 %}
+        {% formfield player.q041 %}
+        {% formfield player.q051 %}
+        {% formfield player.q061 %}
+        {% formfield player.q071 %}
+        {% formfield player.q081 %}
+        {% formfield player.q091 %}
+        {% formfield player.q101 %}
+        {% formfield player.q111 %}
+        {% formfield player.q121 %}
+        {% formfield player.q131 %}
+        {% formfield player.q141 %}
 
+
+
+
+    {% block scripts %}
+
+    <!-- define a script -->
+    <script>
+$.fn.randomize = function(selector){
+    var $elems = selector ? $(this).find(selector) : $(this).children(),
+        $parents = $elems.parent();
+
+    $parents.each(function(){
+        $(this).children(selector).sort(function(){
+            return Math.round(Math.random()) - 0.5;
+        // }). remove().appendTo(this); // 2014-05-24: Removed `random` but leaving for reference. See notes under 'ANOTHER EDIT'
+        }).detach().appendTo(this);
+    });
+
+    return this;
+};
+$('table').randomize('tr');
+    </script>
+
+{% endblock %}
+
+    <div align="right">
+      {% next_button %}
+    </div>
 {% endblock %}
