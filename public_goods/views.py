@@ -54,7 +54,7 @@ class Results_c(Page):
                 'endowment': self.player.participant.vars['endowment'].to_real_world_currency(self.session),
                 'savings': self.player.savings.to_real_world_currency(self.session),
                 'last_savings': self.player.last_savings.to_real_world_currency(self.session),
-                'my_total_savings': sum([ p.savings for p in self.player.in_all_rounds()]),
+                'my_total_savings': (sum([ p.savings for p in self.player.in_all_rounds()])).to_real_world_currency(self.session),
                 'total_savings': cum_earnings,
                 'goal':c(Constants.num_rounds*len([p.savings for p in self.group.in_round(1).get_players()])*.5).to_real_world_currency(self.session),
 
