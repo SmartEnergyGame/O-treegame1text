@@ -105,7 +105,7 @@ class Player(BasePlayer):
         choices=[1, 2, 3, 4, 5, 6, 7], widget=widgets.RadioSelectHorizontal,
         label="People in the United States"
     )
-    q021 = models.CharField(
+    q021 = models.IntegerField(
         doc="Question 1", 
         label="What is your year of birth?",min=1918,max=2010
     )
