@@ -6,14 +6,15 @@
 {% endblock %}
 
 {% block content %}
-    Now that you have read the instructions, we will give you a basic quiz to confirm that you understand the rules of the game.  You will be paid an additional $.50 for each correct answer in the quiz.
+    <p style="font-size:18px">Now that you have read the instructions, we will give you a basic quiz to confirm that you understand the rules of the game.  You will be paid an additional $.50 for each correct answer in the quiz.</p>
     <br>
-    {% formfield player.q1 %}
-    {% formfield player.q2 %}
-    {% formfield player.q3 %}
-    {% formfield player.q4 %}
-    {% formfield player.q5 %}
-    {% formfield player.q6 %}
+    <br>
+    <p style="font-size:18px;">{% formfield player.q1 %}</p>
+    <p style="font-size:18px;">{% formfield player.q2 %}</p>
+    <p style="font-size:18px;">{% formfield player.q3 %}</p>
+    <p style="font-size:18px;">{% formfield player.q4 %}</p>
+    <p style="font-size:18px;">{% formfield player.q5 %}</p>
+    <p style="font-size:18px;">{% formfield player.q6 %}</p>
 
 
     <div align="right">

@@ -111,7 +111,7 @@ class Player(BasePlayer):
     )
     q031 = models.CharField(
         doc="Question 1",
-        label="What is your sex? ",
+        label="What is your sex? ",widget=widgets.RadioSelectHorizontal,
         choices=[
             ['M', "Male"],
             ['F', "Female"]
@@ -146,21 +146,22 @@ class Player(BasePlayer):
     )
     q061 = models.CharField(
         doc="Question 1", 
-        label="How long have you live in the United States?",
+        label="How long have you live in the United States?",widget=widgets.RadioSelectHorizontal,
         choices=[
-            ['3', "More than 5 years"], 
-            ['2', "2-5 years"],
-            ['1', "1-2 years"],
             ['0', "Less than 1 year"]
+            ,['1', "1-2 years"],
+            ['2', "2-5 years"],
+
+            ['3', "More than 5 years"]
         ]
     )
     q071 = models.CharField(
         doc="Question 1", 
         label="Where did you live when you were 15 years old?",
         choices=[
-            ['M', "In the countryside but not on a farm"],
-            ['F', "On a farm"],
-            ['F', "Small city or town (under 50,000)"]
+            ['1', "In the countryside but not on a farm"],
+            ['2', "On a farm"],
+            ['3', "Small city or town (under 50,000)"]
         ]
     )
     q081 = models.CharField(
@@ -196,14 +197,14 @@ class Player(BasePlayer):
         doc="Question 1", 
         label="What is your main field of study at Purdue?",
         choices=[
-            ['M', "Agriculture/Natural Resources"],
-            ['F', "Business/Economics"],
-            ['M', "Education"],
-            ['F', "Engineering"],
-            ['M', "Health Sciences"],
-            ['F', "Liberal Arts"],
-            ['M', "Science"],
-            ['F', "Technology"],
+            ['1', "Agriculture/Natural Resources"],
+            ['2', "Business/Economics"],
+            ['3', "Education"],
+            ['4', "Engineering"],
+            ['5', "Health Sciences"],
+            ['6', "Liberal Arts"],
+            ['7', "Science"],
+            ['8', "Technology"],
 
         ]
     )
@@ -212,10 +213,10 @@ class Player(BasePlayer):
         label="How many experiments have you participated in before this one?",
         choices=[
             ['1','None'],
-            ['1','1 - 2 previous'],
-            ['1','3 - 5 previous'],
-            ['1','More than 5 pervious'],
-        ]
+            ['2','1 - 2 previous'],
+            ['3','3 - 5 previous'],
+            ['4','More than 5 previous'],
+        ],widget=widgets.RadioSelectHorizontal,
     )
     q131 = models.CharField(
         doc="Question 1",
@@ -223,11 +224,11 @@ class Player(BasePlayer):
         choices=[
             ['Y', "Yes"],
             ['N', "No"]
-        ]
+        ],widget=widgets.RadioSelectHorizontal,
     )
     q141 = models.IntegerField(
         doc="Question 1",
-        label="Are you currently employed in a job while in school?  If so, please indicate how many hours per week on average you work.  If you study full time and do not work, enter 0.",
+        label="Are you currently employed in a job while in school?  If so, please indicate how many hours per week on average you work.  If you study full time and do not work, enter 0.",min=0
 
     )
     treatment = models.CharField(doc="Treatment")

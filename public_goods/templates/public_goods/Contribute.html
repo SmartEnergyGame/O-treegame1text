@@ -1,12 +1,18 @@
 {% extends "global/Page.html" %}
 {% load staticfiles otree %}
 
-{% block content %}
-    Round {{ player.round_number }} <div align="right">{{ player.round_number }}/8</div>
+{% block title %}
+    Round {{ player.round_number }}
+    <div align="right"><p style="font-size:18px;">{{ player.round_number }}/{{ Constants.num_rounds }}</p></div>
+{% endblock %}
 
-    <p>Money in your private account: {{ endowment }}</p
-    <p>{{ injunctive_text }}</p>
-    <p>{% formfield player.savings%}</p>
-    {% next_button %}
+{% block content %}
+
+    <p style="font-size:18px;">Money in your private account: {{ endowment }}</p>
+    <p style="font-size:18px;color:blue;">{{ injunctive_text }}</p>
+    {% formfield player.savings%}
+    <br>
+    <br>
+    <div align="right">{% next_button %}</div>
 
 {% endblock %}

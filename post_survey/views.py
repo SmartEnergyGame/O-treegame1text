@@ -19,7 +19,7 @@ class Final_page(Page):
                 'endowment': self.player.participant.vars['endowment'].to_real_world_currency(self.session),
                 'group_savings': (group_savings).to_real_world_currency(self.session),
                 's': self.player.bonus.to_real_world_currency(self.session) ,
-                'total': self.player.total_payment,
+                'total': self.player.total_payment.to_real_world_currency(self.session),
                 'ans': c(self.player.participant.vars['correct_answers']*.5).to_real_world_currency(self.session)
             }
 
