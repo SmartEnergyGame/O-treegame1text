@@ -107,7 +107,7 @@ class Player(BasePlayer):
     )
     q021 = models.CharField(
         doc="Question 1", 
-        label="What is your year of birth?"
+        label="What is your year of birth?",min=1918,max=2010
     )
     q031 = models.CharField(
         doc="Question 1",
@@ -126,7 +126,7 @@ class Player(BasePlayer):
             ['H', "HISPANIC "],
             ['W', "WHITE"],
             ['NA', "NATIVE AMERICAN"]
-        ]
+        ],widget=widgets.RadioSelectHorizontal,
     )
     q051 = models.CharField(
         doc="Question 1", 
@@ -162,7 +162,7 @@ class Player(BasePlayer):
             ['1', "In the countryside but not on a farm"],
             ['2', "On a farm"],
             ['3', "Small city or town (under 50,000)"]
-        ]
+        ],widget=widgets.RadioSelectHorizontal,
     )
     q081 = models.CharField(
         doc="Question 1", 
@@ -172,7 +172,7 @@ class Player(BasePlayer):
             ['2', "Independent"],
             ['3', "Republican"],
             ['4', "None"],
-        ]
+        ],widget=widgets.RadioSelectHorizontal,
     )
     q091 = models.CharField(
         doc="Question 1", 
@@ -180,7 +180,7 @@ class Player(BasePlayer):
         choices=[
             ['Y', "Yes"],
             ['N', "No"]
-        ]
+        ],widget=widgets.RadioSelectHorizontal,
     )
     q101 = models.CharField(
         doc="Question 1", 
@@ -191,7 +191,7 @@ class Player(BasePlayer):
             ['3', "Third"],
             ['4', "Fourth"],
             ['5', "Fifth or higher"],
-        ]
+        ],widget=widgets.RadioSelectHorizontal,
     )
     q111 = models.CharField(
         doc="Question 1", 
@@ -228,7 +228,7 @@ class Player(BasePlayer):
     )
     q141 = models.IntegerField(
         doc="Question 1",
-        label="Are you currently employed in a job while in school?  If so, please indicate how many hours per week on average you work.  If you study full time and do not work, enter 0.",min=0
+        label="Are you currently employed in a job while in school?  If so, please indicate how many hours per week on average you work.  If you study full time and do not work, enter 0.",min=0,max=168
 
     )
     treatment = models.CharField(doc="Treatment")
