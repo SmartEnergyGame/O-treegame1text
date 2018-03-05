@@ -59,9 +59,11 @@ class ResultsWaitPage(WaitPage):
     def after_all_players_arrive(self):
         pass
 
-
+class LastPage(Page):
+    pass
 
 page_sequence = [
     Final_page,
-    Post_survey
+    Post_survey,
+    LastPage
 ]
