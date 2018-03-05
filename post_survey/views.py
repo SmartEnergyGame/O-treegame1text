@@ -60,7 +60,11 @@ class ResultsWaitPage(WaitPage):
         pass
 
 class LastPage(Page):
-    pass
+    form_model = models.Player
+
+    def vars_for_template(self):
+     return {'total': self.player.total_payment.to_real_world_currency(self.session),}
+
 
 page_sequence = [
     Final_page,
