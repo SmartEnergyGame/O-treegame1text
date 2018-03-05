@@ -130,7 +130,7 @@ class Player(BasePlayer):
     )
     q051 = models.CharField(
         doc="Question 1", 
-        label="n what country or region were you born?",
+        label="What country or region were you born?",
         choices=[
             ['AFA', "North America"],
             ['ASA', "Central/South America"],
