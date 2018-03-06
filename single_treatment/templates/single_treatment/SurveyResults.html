@@ -11,13 +11,12 @@
         <br>
         <span style="font-size:18px;">{{ answers.0.1 }}</span><br>
     {% if answers.0.0 == 1 %}
-    <span style="color:green;font-size:18px;">{{ answers.0.2 }}</span>
+        <span style="font-size:18px;"><p style="color:green">{{ answers.0.2 }}</p></span>
     {% else %}
-        <span style="font-size:18px;color:red">Incorrect!<br>{{ answers.0.2 }}</span>
+        <span style="font-size:18px;"><p style="color:red">Incorrect!<br>{{ answers.0.2 }}</p></span>
     {% endif %}
     <br>
         <span style="font-size:18px;"><b>Assuming the goal has been met, total payments from the conservation account are equal to what amount?</b></span>
-
         <br>
         <span style="font-size:18px;">{{ answers.1.1 }}</span>
     {% if answers.1.0 == 1 %}
