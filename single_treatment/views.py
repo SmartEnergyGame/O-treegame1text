@@ -61,7 +61,7 @@ class surveyP2(Page):
 class SurveyResultsP2(Page):
     form_model = models.Player
     def vars_for_template(self):
-        ans = self.player.check_answers()
+        ans = self.player.check_answers2()
         return {'answers' : ans}
 
     def before_next_page(self):

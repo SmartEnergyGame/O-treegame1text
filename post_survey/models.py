@@ -123,36 +123,40 @@ class Player(BasePlayer):
         choices=[
             ['AFA', "African-American "], 
             ['ASA', "Asian-American "],
-            ['H', "HISPANIC "],
-            ['W', "WHITE"],
-            ['NA', "NATIVE AMERICAN"]
+            ['H', "Hispanic"],
+            ['W', "White"],
+            ['NA', "Native American"]
         ],widget=widgets.RadioSelectHorizontal,
+    )
+    q042 = models.CharField(
+        doc="Question 1",
+        label="Other term that best describes your ethnic identity: ",
     )
     q051 = models.CharField(
         doc="Question 1", 
         label="What country or region were you born?",
         choices=[
-            ['AFA', "North America"],
-            ['ASA', "Central/South America"],
-            ['H', "Australia/New Zealand "],
-            ['W', "Africa"], 
-            ['NA', "South-East Asia"],
-            ['NA', "South Asia"], 
-            ['NA', "Other Asia"], 
-            ['NA', "Western Europe"],
-            ['NA', "Northern Europe"], 
-            ['NA', "Eastern Europe"]
+            ['NA', "North America"],
+            ['CSA', "Central/South America"],
+            ['ANZ', "Australia/New Zealand "],
+            ['AFA', "Africa"],
+            ['SEA', "South-East Asia"],
+            ['SA', "South Asia"],
+            ['OA', "Other Asia"],
+            ['WE', "Western Europe"],
+            ['NE', "Northern Europe"],
+            ['EE', "Eastern Europe"],
+            ['O', "Other"]
         ]
     )
     q061 = models.CharField(
         doc="Question 1", 
         label="How long have you live in the United States?",widget=widgets.RadioSelectHorizontal,
         choices=[
-            ['0', "Less than 1 year"]
-            ,['1', "1-2 years"],
+            ['3', "More than 5 years"],
             ['2', "2-5 years"],
-
-            ['3', "More than 5 years"]
+            ['1', "1-2 years"],
+            ['0', "Less than 1 year"]
         ]
     )
     q071 = models.CharField(
@@ -161,7 +165,12 @@ class Player(BasePlayer):
         choices=[
             ['1', "In the countryside but not on a farm"],
             ['2', "On a farm"],
-            ['3', "Small city or town (under 50,000)"]
+            ['3', "Small city or town (under 50,000)"],
+            ['4', "Medium size city (50,000-250,000)"],
+            ['5', "Suburb near a large city"],
+            ['6', "Large city (250,000-3,000,000)"],
+            ['7', "Very large city (over 3,000,000)"]
+
         ],widget=widgets.RadioSelectHorizontal,
     )
     q081 = models.CharField(
@@ -172,6 +181,7 @@ class Player(BasePlayer):
             ['2', "Independent"],
             ['3', "Republican"],
             ['4', "None"],
+            ['5', "Other"],
         ],widget=widgets.RadioSelectHorizontal,
     )
     q091 = models.CharField(
@@ -205,8 +215,14 @@ class Player(BasePlayer):
             ['6', "Liberal Arts"],
             ['7', "Science"],
             ['8', "Technology"],
+            ['9', "Other"]
 
         ]
+    )
+    q112 = models.CharField(
+        doc="Question 1",
+        label="Other main field of study at Purdue"
+
     )
     q121 = models.CharField(
         doc="Question 1",
