@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="8eab24a8-9ccd-42ef-ba8c-440b6b2c2293" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
-      <change beforePath="$PROJECT_DIR$/post_survey/templates/post_survey/Final_page.html" afterPath="$PROJECT_DIR$/post_survey/templates/post_survey/Final_page.html" />
-      <change beforePath="$PROJECT_DIR$/single_treatment/templates/single_treatment/SurveyResults.html" afterPath="$PROJECT_DIR$/single_treatment/templates/single_treatment/SurveyResults.html" />
-      <change beforePath="$PROJECT_DIR$/single_treatment/templates/single_treatment/surveyP2.html" afterPath="$PROJECT_DIR$/single_treatment/templates/single_treatment/surveyP2.html" />
+      <change beforePath="$PROJECT_DIR$/single_treatment/templates/single_treatment/SurveyResultsP2.html" afterPath="$PROJECT_DIR$/single_treatment/templates/single_treatment/SurveyResultsP2.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -106,7 +104,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Final_page.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Final_page.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/post_survey/templates/post_survey/Final_page.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="285">
@@ -117,6 +115,16 @@
                 <element signature="n#style#0;n#span#0;n#td#1;n#tr#2;n#table#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#span#0;n#td#1;n#tr#3;n#table#0;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SurveyResultsP2.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/single_treatment/templates/single_treatment/SurveyResultsP2.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="101">
+              <caret line="8" column="9" lean-forward="false" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -218,7 +226,6 @@
         <option value="$PROJECT_DIR$/post_survey/models.py" />
         <option value="$PROJECT_DIR$/single_treatment/models.py" />
         <option value="$PROJECT_DIR$/single_treatment/templates/single_treatment/survey.html" />
-        <option value="$PROJECT_DIR$/single_treatment/templates/single_treatment/SurveyResultsP2.html" />
         <option value="$PROJECT_DIR$/public_goods/templates/public_goods/Contribute.html" />
         <option value="$PROJECT_DIR$/public_goods/templates/public_goods/Results_D.html" />
         <option value="$PROJECT_DIR$/public_goods/templates/public_goods/Results_DTI.html" />
@@ -227,6 +234,7 @@
         <option value="$PROJECT_DIR$/single_treatment/templates/single_treatment/SurveyResults.html" />
         <option value="$PROJECT_DIR$/single_treatment/templates/single_treatment/surveyP2.html" />
         <option value="$PROJECT_DIR$/post_survey/templates/post_survey/Final_page.html" />
+        <option value="$PROJECT_DIR$/single_treatment/templates/single_treatment/SurveyResultsP2.html" />
       </list>
     </option>
   </component>
@@ -269,20 +277,20 @@
             <path>
               <item name="O-treegame1text" type="b2602c69:ProjectViewProjectNode" />
               <item name="O-treegame1text" type="462c0819:PsiDirectoryNode" />
-              <item name="post_survey" type="462c0819:PsiDirectoryNode" />
+              <item name="single_treatment" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="O-treegame1text" type="b2602c69:ProjectViewProjectNode" />
               <item name="O-treegame1text" type="462c0819:PsiDirectoryNode" />
-              <item name="post_survey" type="462c0819:PsiDirectoryNode" />
+              <item name="single_treatment" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="O-treegame1text" type="b2602c69:ProjectViewProjectNode" />
               <item name="O-treegame1text" type="462c0819:PsiDirectoryNode" />
-              <item name="post_survey" type="462c0819:PsiDirectoryNode" />
+              <item name="single_treatment" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="post_survey" type="462c0819:PsiDirectoryNode" />
+              <item name="single_treatment" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -556,25 +564,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/single_treatment/templates/single_treatment/SurveyResultsP2.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="39" column="101" lean-forward="false" selection-start-line="39" selection-start-column="101" selection-end-line="39" selection-end-column="101" />
-          <folding>
-            <element signature="e#659#682#0#HTML" expanded="true" />
-            <element signature="e#752#775#0#HTML" expanded="true" />
-            <element signature="e#857#880#0#HTML" expanded="true" />
-            <element signature="e#984#1007#0#HTML" expanded="true" />
-            <element signature="e#1363#1386#0#HTML" expanded="true" />
-            <element signature="e#1468#1491#0#HTML" expanded="true" />
-            <element signature="e#1595#1618#0#HTML" expanded="true" />
-            <element signature="e#1774#1797#0#HTML" expanded="true" />
-            <element signature="e#1867#1890#0#HTML" expanded="true" />
-            <element signature="e#1972#1995#0#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public_goods/templates/public_goods/Contribute.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -819,14 +808,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/single_treatment/templates/single_treatment/SurveyResults.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="178">
-          <caret line="13" column="82" lean-forward="false" selection-start-line="13" selection-start-column="82" selection-end-line="13" selection-end-column="82" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/single_treatment/templates/single_treatment/surveyP2.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -845,6 +826,22 @@
             <element signature="n#style#0;n#span#0;n#td#1;n#tr#2;n#table#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#td#1;n#tr#3;n#table#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/single_treatment/templates/single_treatment/SurveyResults.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="13" column="82" lean-forward="false" selection-start-line="13" selection-start-column="82" selection-end-line="13" selection-end-column="82" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/single_treatment/templates/single_treatment/SurveyResultsP2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="101">
+          <caret line="8" column="9" lean-forward="false" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
+          <folding />
         </state>
       </provider>
     </entry>
