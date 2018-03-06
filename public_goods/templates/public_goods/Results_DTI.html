@@ -16,17 +16,17 @@
     <p style="font-size:20px"><b>Others' contributions:</b></p>
 
     <table>
-    <tr><td><p style="font-size:20px;margin-left: 20px;">All player contributions:</p></td></tr>
+    <tr><td><p style="font-size:20px;margin-left: 20px;">All player contributions:</p></td><td></td><td>Round {{ player.round_number }}</td><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td><td style="margin-left: 20px;">Cumulative contributions</td></tr>
      {% for p in parts  %}
          <tr>
          {% if  p.id_in_group == player.participant.id_in_session %}
-             <td> </td><td><p style="color:blue;font-size:18px;">You</p> </td> <td><b><p style="color:blue;font-size:18px;margin-left: 15px;">{{p.savings}}</p></b></td>
+             <td> </td><td><p style="color:blue;font-size:18px;">You</p> </td> <td><b><p style="color:blue;font-size:18px;margin-left: 15px;">{{p.savings}}</p></b></td><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td><td style="margin-left: 20px;">{{ p.ind_cum_savings }}</td>
          {% else %}
-             <td> </td><td><p style="color:blue;font-size:18px;">Participant {{ p.id_in_group }}</p></td><td><p style="color:blue;font-size:18px;margin-left: 15px;"> <b>{{p.savings}}</b></p></td>
+             <td> </td><td><p style="color:blue;font-size:18px;">Participant {{ p.id_in_group }}</p></td><td><p style="color:blue;font-size:18px;margin-left: 15px;"> <b>{{p.savings}}</b></p></td><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td><td style="margin-left: 20px;">{{ p.ind_cum_savings }}</td>
          {% endif %}
          </tr>
     {% endfor %}
-        <tr style="border-style:solid;border-width: 1px 0px 0px 0px;"><td></td><td><p style="font-size:18px"><b>The group’s contribution to the conservation fund to date:</b></p></td><td><p style="font-size:20px;margin-left: 15px;">{{ total_savings }}</p></td></tr>
+        <tr style="border-style:solid;border-width: 1px 0px 0px 0px;"><td></td><td><p style="font-size:18px"><b>The group’s contribution to the conservation fund to date:</b></p></td><td>{{ current_total_savings }}</td><td><p style="font-size:20px;margin-left: 15px;">{{ total_savings }}</p></td></tr>
         <tr><td></td><td><p style="font-size:20px">The group conservation fund goal</p></td><td><p style="font-size:18px;margin-left: 20px;">{{ goal }}</p> </td></tr>
     </table>
 
