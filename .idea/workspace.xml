@@ -122,9 +122,12 @@
       <file leaf-file-name="SurveyResultsP2.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/single_treatment/templates/single_treatment/SurveyResultsP2.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="101">
-              <caret line="8" column="9" lean-forward="false" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
-              <folding />
+            <state relative-caret-position="150">
+              <caret line="10" column="389" lean-forward="false" selection-start-line="10" selection-start-column="389" selection-end-line="10" selection-end-column="389" />
+              <folding>
+                <element signature="e#167#190#0#HTML" expanded="true" />
+                <element signature="e#567#590#0#HTML" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -839,9 +842,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/single_treatment/templates/single_treatment/SurveyResultsP2.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="101">
-          <caret line="8" column="9" lean-forward="false" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
-          <folding />
+        <state relative-caret-position="150">
+          <caret line="10" column="389" lean-forward="false" selection-start-line="10" selection-start-column="389" selection-end-line="10" selection-end-column="389" />
+          <folding>
+            <element signature="e#167#190#0#HTML" expanded="true" />
+            <element signature="e#567#590#0#HTML" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
