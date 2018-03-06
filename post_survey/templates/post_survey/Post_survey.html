@@ -9,102 +9,102 @@
 
 {% block content %}
 
-    <b>People often express concern about environmental problems, but some people differ as to which consequences concern them the most. We are going to list different areas where environmental problems could have harmful consequences.  For each, please rate how concerned you are about their impact using a scale from 1 to 7. If you are not at all concerned, give the area a rating of 1. If you are extremely concerned, give it a rating of 7. Of course, you can choose any number between 1 and 7 for your answer.</b>
+    <span style="font-size:18px;"><b>People often express concern about environmental problems, but some people differ as to which consequences concern them the most. We are going to list different areas where environmental problems could have harmful consequences.  For each, please rate how concerned you are about their impact using a scale from 1 to 7. If you are not at all concerned, give the area a rating of 1. If you are extremely concerned, give it a rating of 7. Of course, you can choose any number between 1 and 7 for your answer.</b></span>
     <br>
-<table class="table"><tr><td><p style="visibility: hidden"> categories</p></td><td><p style="visibility: hidden"> ranking</p></td><td style="margin-left: 20px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Not Concern &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Extremely Concern</td></tr></table>
+    <table class="table"><tr><td><span style="font-size:18px;"><p style="visibility: hidden"> categories</p></span></td><td><span style="font-size:18px;"><p style="visibility: hidden"> ranking</p></span></td><td style="margin-left: 20px;"><span style="font-size:18px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Not Concern &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Extremely Concern<span style="font-size:18px;"></td></tr></table>
 <div>
     <table class="table">
 
     <tr>
-    <td>{{ form.q1.label }}</td>
+        <td><span style="font-size:18px;">{{ form.q1.label }}</span></td>
     {% for choice in form.q1 %}
-        <td>{{ choice }}</td>
+        <td><span style="font-size:18px;">{{ choice }}</span></td>
     {% endfor %}
     </tr>
     <tr>
-    <td>{{ form.q2.label }}</td>
+        <td><span style="font-size:18px;">{{ form.q2.label }}</span></td>
     {% for choice in form.q2 %}
-        <td>{{ choice }}</td>
+        <td><span style="font-size:18px;">{{ choice }}</span></td>
     {% endfor %}
     </tr>
     <tr>
-    <td>{{ form.q3.label }}</td>
+        <td><span style="font-size:18px;">{{ form.q3.label }}</span></td>
     {% for choice in form.q3 %}
-        <td>{{ choice }}</td>
+        <td><span style="font-size:18px;">{{ choice }}</span></td>
     {% endfor %}
     </tr>
     <tr>
-    <td>{{ form.q4.label }}</td>
+        <td><span style="font-size:18px;">{{ form.q4.label }}</span></td>
     {% for choice in form.q4 %}
-        <td>{{ choice }}</td>
+        <td><span style="font-size:18px;">{{ choice }}</span></td>
     {% endfor %}
     </tr>
     <tr>
-    <td>{{ form.q5.label }}</td>
+        <td><span style="font-size:18px;">{{ form.q5.label }}</span></td>
     {% for choice in form.q5 %}
-        <td>{{ choice }}</td>
+        <td><span style="font-size:18px;">{{ choice }}</span></td>
     {% endfor %}
     </tr>
     <tr>
-    <td>{{ form.q6.label }}</td>
+        <td><span style="font-size:18px;">{{ form.q6.label }}</span></td>
     {% for choice in form.q6 %}
-        <td>{{ choice }}</td>
+        <td><span style="font-size:18px;">{{ choice }}</span></td>
     {% endfor %}
     </tr>
     <tr>
-    <td>{{ form.q7.label }}</td>
+        <td><span style="font-size:18px;">{{ form.q7.label }}</span></td>
     {% for choice in form.q7 %}
-        <td>{{ choice }}</td>
+        <td><span style="font-size:18px;">{{ choice }}</span></td>
     {% endfor %}
     </tr>
     <tr>
-    <td>{{ form.q8.label }}</td>
+        <td><span style="font-size:18px;">{{ form.q8.label }}</span></td>
     {% for choice in form.q8 %}
-        <td>{{ choice }}</td>
+        <td><span style="font-size:18px;">{{ choice }}</span></td>
     {% endfor %}
     </tr>
     <tr>
-    <td>{{ form.q9.label }}</td>
+        <td><span style="font-size:18px;">{{ form.q9.label }}</span></td>
     {% for choice in form.q9 %}
-        <td>{{ choice }}</td>
+        <td><span style="font-size:18px;">{{ choice }}</span></td>
     {% endfor %}
     </tr>
     <tr>
-    <td>{{ form.q10.label }}</td>
+        <td><span style="font-size:18px;">{{ form.q10.label }}</span></td>
     {% for choice in form.q10 %}
-        <td>{{ choice }}</td>
+        <td><span style="font-size:18px;">{{ choice }}</span></td>
     {% endfor %}
     </tr>
     <tr>
-    <td>{{ form.q11.label }}</td>
+        <td><span style="font-size:18px;">{{ form.q11.label }}</span></td>
     {% for choice in form.q11 %}
-        <td>{{ choice }}</td>
+        <td><span style="font-size:18px;">{{ choice }}</span></td>
     {% endfor %}
     </tr>
     <tr>
-    <td>{{ form.q12.label }}</td>
+        <td><span style="font-size:18px;">{{ form.q12.label }}</span></td>
     {% for choice in form.q12 %}
-        <td>{{ choice }}</td>
+        <td><span style="font-size:18px;">{{ choice }}</span></td>
     {% endfor %}
     </tr>
     </table>
 </div>
-        {% formfield player.q021 %}
-        {% formfield player.q031 %}
-        {% formfield player.q041 %}
-        {% formfield player.q042 %}
-        {% formfield player.q051 %}
-        {% formfield player.q061 %}
-        {% formfield player.q071 %}
-        {% formfield player.q081 %}
-        {% formfield player.q082 %}
-        {% formfield player.q091 %}
-        {% formfield player.q101 %}
-        {% formfield player.q111 %}
-        {% formfield player.q112 %}
-        {% formfield player.q121 %}
-        {% formfield player.q131 %}
-        {% formfield player.q141 %}
+    <span style="font-size:18px;">{% formfield player.q021 %}</span>
+    <span style="font-size:18px;">{% formfield player.q031 %}</span>
+    <span style="font-size:18px;">{% formfield player.q041 %}</span>
+    <span style="font-size:18px;">{% formfield player.q042 %}</span>
+    <span style="font-size:18px;">{% formfield player.q051 %}</span>
+    <span style="font-size:18px;">{% formfield player.q061 %}</span>
+    <span style="font-size:18px;">{% formfield player.q071 %}</span>
+    <span style="font-size:18px;">{% formfield player.q081 %}</span>
+    <span style="font-size:18px;">{% formfield player.q082 %}</span>
+    <span style="font-size:18px;">{% formfield player.q091 %}</span>
+    <span style="font-size:18px;">{% formfield player.q101 %}</span>
+    <span style="font-size:18px;">{% formfield player.q111 %}</span>
+    <span style="font-size:18px;">{% formfield player.q112 %}</span>
+    <span style="font-size:18px;">{% formfield player.q121 %}</span>
+    <span style="font-size:18px;">{% formfield player.q131 %}</span>
+    <span style="font-size:18px;">{% formfield player.q141 %}</span>
 
     Code: {{ session.code }}::::{{ player.participant.code }}
 

@@ -6,21 +6,21 @@
 {% endblock %}
 
 {% block content %}
-    Total conservation fund contributions for the group:  {{ group_savings }}<br>
+    <span style="font-size:18px;">Total conservation fund contributions for the group:  {{ group_savings }}</span><br>
     {% if group_savings < goal %}
-    This did not meet the group goal of {{ goal }}. <br>
+        <span style="font-size:18px;">This did not meet the group goal of {{ goal }}. </span><br>
     {% else %}
-    This did meet the group goal of {{ goal }}. <br>
+        <span style="font-size:18px;">This did meet the group goal of {{ goal }}. </span><br>
     {% endif %}
     <br>
     <table>
-        <tr><td >The bonus each member receives for meeting the goal:</td><td style="text-align: right"> <p style="margin-left: 15px;">{{ s }}</p>       </td></tr>
-        <tr><td>Remaining money in your private account:              </td><td style="text-align: right"> <p style="margin-left: 15px;">{{ endowment}}</p> </td></tr>
-        <tr><td>Additional payment for the pre- and post-game quizzes:</td><td style="text-align: right"> <p style="margin-left: 15px;">{{ ans }} </p>     </td></tr>
-        <tr style="border-style:solid;border-width: 1px 0px 0px 0px;"><td>Total pay to you:       </td><td style="text-align: right"> <p style="margin-left: 15px;">{{ total }}</p>   </td></tr>
+        <tr><td ><span style="font-size:18px;">The bonus each member receives for meeting the goal:</span></td><td style="text-align: right"> <p style="margin-left: 15px;"><span style="font-size:18px;">{{ s }}</span></p>       </td></tr>
+        <tr><td><span style="font-size:18px;">Remaining money in your private account:</span>              </td><td style="text-align: right"> <p style="margin-left: 15px;">{{ endowment}}</p> </td></tr>
+        <tr><td><span style="font-size:18px;">Additional payment for the pre- and post-game quizzes:</span></td><td style="text-align: right"> <p style="margin-left: 15px;">{{ ans }} </p>     </td></tr>
+        <tr style="border-style:solid;border-width: 1px 0px 0px 0px;"><td><span style="font-size:18px;">Total pay to you:       </span></td><td style="text-align: right"><span style="font-size:18px;"> <p style="margin-left: 15px;">{{ total }}</p>   </span></td></tr>
 </table>
     <br>
-    Before you receive your pay, you will need to answer a few more questions!
+    <span style="font-size:18px;">Before you receive your pay, you will need to answer a few more questions!</span>
 <br>
     <br>
     <br>
