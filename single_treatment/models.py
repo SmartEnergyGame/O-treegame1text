@@ -35,6 +35,27 @@ class Group(BaseGroup):
 
 class Player(BasePlayer):
     #choices1q = [c(0).to_real_world_currency(BasePlayer.session), c(1*2), c(1*4)]
+    def check_answersP2(self):
+        correct_answer = "Correct!"
+        if self.q4 == "$ 26":
+            q4_feedback = [1,"Your answer was: "+ self.q4 , correct_answer]
+
+        else:
+            q4_feedback = [0,"Your answer was: "+ self.q4 , "In this scenario, the group has met the threshold for the group incentive from the conservation account. This means you get an equal share of the $90 group incentive ($30 x 3), or $15. In addition, you keep the $11 remaining in your private account. Your total payout is $15 + $11 = $26"]
+        if self.q5 == "$ 11":
+            q5_feedback = [1,"Your answer was: "+ self.q5 , correct_answer]
+
+        else:
+            q5_feedback = [0,"Your answer was: "+ self.q5 , "Because the group did not reach the threshold in the conservation account for the group incentive, there is no group bonus. You will receive only the money remaining in your private account = $11."]
+        if self.q6 == "Yes":
+            q6_feedback = [1,"Your answer was: "+ self.q6 , correct_answer]
+
+        else:
+            q6_feedback = [0,"Your answer was: "+ self.q6 , "All players do not have to contribute to the conservation account to meet the $24 goal. For example, if 1 player does not donate, the other 5 players only have to average contributions of $0.60 per round to still make the goal."]
+
+        res = [q4_feedback,q5_feedback,q6_feedback]
+        return res
+
     def check_answers(self):
         correct_answer = "Correct!"
 
@@ -53,24 +74,11 @@ class Player(BasePlayer):
 
         else:
             q3_feedback = [0,"Your answer was: "+ self.q3 , "Because the 6 players have met the threshold for the conservation account, they will receive a share of the group incentive. Because the group incentive is equal to three times the account total, the total incentive payment is $72. Each player receives an equal share of that incentive, or $12 each."]
-        if self.q4 == "$ 26":
-            q4_feedback = [1,"Your answer was: "+ self.q4 , correct_answer]
 
-        else:
-            q4_feedback = [0,"Your answer was: "+ self.q4 , "In this scenario, the group has met the threshold for the group incentive from the conservation account. This means you get an equal share of the $90 group incentive ($30 x 3), or $15. In addition, you keep the $11 remaining in your private account. Your total payout is $15 + $11 = $26"]
-        if self.q5 == "$ 11":
-            q5_feedback = [1,"Your answer was: "+ self.q5 , correct_answer]
-
-        else:
-            q5_feedback = [0,"Your answer was: "+ self.q5 , "Because the group did not reach the threshold in the conservation account for the group incentive, there is no group bonus. You will receive only the money remaining in your private account = $11."]
-        if self.q6 == "Yes":
-            q6_feedback = [1,"Your answer was: "+ self.q6 , correct_answer]
-
-        else:
-            q6_feedback = [0,"Your answer was: "+ self.q6 , "All players do not have to contribute to the conservation account to meet the $24 goal. For example, if 1 player does not donate, the other 5 players only have to average contributions of $0.60 per round to still make the goal."]
-        res = [q1_feedback,q2_feedback,q3_feedback,q4_feedback,q5_feedback,q6_feedback]
-
+        res = [q1_feedback,q2_feedback,q3_feedback]
         return res
+
+
     def total_correct_ans(self):
         res = self.check_answers()
         correct = sum([a[0] for a in res])
