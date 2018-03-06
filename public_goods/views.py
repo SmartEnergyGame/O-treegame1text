@@ -44,7 +44,7 @@ class Contribute(Page):
 class ResultsWaitPage(WaitPage):
     def after_all_players_arrive(self):
         self.group.set_payoffs()
-    body_text = "Please wait for the other participants to respond."
+    body_text = "Please wait for the other participants to make their decision!"
 
 class Results_c(Page):
     def vars_for_template(self):

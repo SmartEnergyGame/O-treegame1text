@@ -58,6 +58,7 @@ class Post_survey(Page):
 class ResultsWaitPage(WaitPage):
     def after_all_players_arrive(self):
         pass
+    body_text = "Please wait for the other participants to make their decision!"
 
 class LastPage(Page):
     form_model = models.Player
