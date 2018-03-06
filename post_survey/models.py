@@ -58,51 +58,51 @@ class Player(BasePlayer):
     financial_reward = models.FloatField(min=0)
     last_savings = models.CurrencyField(initial=0)
     q1 = models.IntegerField(
-        choices=[1, 2, 3, 4, 5, 6, 7],widget=widgets.RadioSelectHorizontal,
+        min=1,max=7,
         label="Plants"
     )
     q2 = models.IntegerField(
-        choices=[1, 2, 3, 4, 5, 6, 7], widget=widgets.RadioSelectHorizontal,
+        min=1,max=7,
         label="Marine life"
     )
     q3 = models.IntegerField(
-        choices=[1, 2, 3, 4, 5, 6, 7], widget=widgets.RadioSelectHorizontal,
+        min=1,max=7,
         label="Birds"
     )
     q4 = models.IntegerField(
-        choices=[1, 2, 3, 4, 5, 6, 7], widget=widgets.RadioSelectHorizontal,
+        min=1,max=7,
         label="Animals"
     )
     q5 = models.IntegerField(
-        choices=[1, 2, 3, 4, 5, 6, 7], widget=widgets.RadioSelectHorizontal,
+        min=1,max=7,
         label="My prosperity"
     )
     q6 = models.IntegerField(
-        choices=[1, 2, 3, 4, 5, 6, 7], widget=widgets.RadioSelectHorizontal,
+        min=1,max=7,
         label="My lifestyle"
     )
     q7 = models.IntegerField(
-        choices=[1, 2, 3, 4, 5, 6, 7], widget=widgets.RadioSelectHorizontal,
+        min=1,max=7,
         label="My health"
     )
     q8 = models.IntegerField(
-        choices=[1, 2, 3, 4, 5, 6, 7], widget=widgets.RadioSelectHorizontal,
+        min=1,max=7,
         label="My future"
     )
     q9 = models.IntegerField(
-        choices=[1, 2, 3, 4, 5, 6, 7], widget=widgets.RadioSelectHorizontal,
+        min=1,max=7,
         label="People in my community"
     )
     q10 = models.IntegerField(
-        choices=[1, 2, 3, 4, 5, 6, 7], widget=widgets.RadioSelectHorizontal,
+        min=1,max=7,
         label="The human race"
     )
     q11 = models.IntegerField(
-        choices=[1, 2, 3, 4, 5, 6, 7], widget=widgets.RadioSelectHorizontal,
+        min=1,max=7,
         label="Children"
     )
     q12 = models.IntegerField(
-        choices=[1, 2, 3, 4, 5, 6, 7], widget=widgets.RadioSelectHorizontal,
+        min=1,max=7,
         label="People in the United States"
     )
     q021 = models.IntegerField(
