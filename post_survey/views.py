@@ -27,33 +27,8 @@ class Final_page(Page):
 class Post_survey(Page):
     form_model = models.Player
     form_fields = ["q1", "q2", "q3", "q4", "q5", "q6", "q7", "q8", "q9","q10", "q11","q12", 'q021', 'q031', 'q041','q042',
-                   'q051', 'q061', 'q071', 'q081', 'q091', 'q101', 'q111','q112', 'q121', 'q131', 'q141']
+                   'q051','q052', 'q061', 'q071', 'q081', 'q082', 'q091', 'q101', 'q111','q112', 'q121', 'q131', 'q141']
 
-    def vars_for_template(self):
-
-        questions_1 = [self.player.q1, self.player.q2, self.player.q3, self.player.q4, self.player.q5, self.player.q6,
-                       self.player.q7, self.player.q8, self.player.q9, self.player.q10, self.player.q11,
-                       self.player.q12]
-        shuffle(questions_1)
-        a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12 = questions_1
-        a1 = Post_survey.form_fields[0]
-        return {
-
-            'a1': a1,
-            'a2': a2,
-            'a3': a3,
-            'a4': a4,
-            'a5': a5,
-            'a6': a6,
-            'a7': a7,
-            'a8': a8,
-            'a9': a9,
-            'a10': a10,
-            'a11': a11,
-            'a12': a12,
-            'list':questions_1
-
-        }
 
 class ResultsWaitPage(WaitPage):
     def after_all_players_arrive(self):

@@ -41,10 +41,7 @@ class Contribute(Page):
         return {'month': month, 'endowment':self.player.participant.vars['endowment'].to_real_world_currency(self.session),
                 'currency': c(1),'real_value':c(1).to_real_world_currency(self.session),'injunctive_text':injunctive_text}
 
-class ResultsWaitPage(WaitPage):
-    def after_all_players_arrive(self):
-        self.group.set_payoffs()
-    body_text = "Please wait for the other participants to make their decision!"
+
 
 class Results_c(Page):
     def vars_for_template(self):
@@ -131,6 +128,11 @@ class Results_DTI(Page):
                 self.session),
             'goal':c(Constants.num_rounds*len([p.savings for p in self.group.in_round(1).get_players()])*.5).to_real_world_currency(self.session),
         }
+
+class ResultsWaitPage(WaitPage):
+    def after_all_players_arrive(self):
+        self.group.set_payoffs()
+    body_text = "Please wait for the other participants to make their decision!"
 
 page_sequence = [
     Contribute,

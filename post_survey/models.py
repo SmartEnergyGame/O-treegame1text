@@ -125,12 +125,13 @@ class Player(BasePlayer):
             ['ASA', "Asian-American "],
             ['H', "Hispanic"],
             ['W', "White"],
-            ['NA', "Native American"]
+            ['NA', "Native American"],
+            ['O', "Other"]
         ],widget=widgets.RadioSelectHorizontal,
     )
     q042 = models.CharField(
         doc="Question 1",
-        label="Other term that best describes your ethnic identity: ",
+        label="If your last answer to the previous question was 'Other' please fill the box with the term that best describes your ethnic identity: ",blank=True
     )
     q051 = models.CharField(
         doc="Question 1", 
@@ -148,6 +149,10 @@ class Player(BasePlayer):
             ['EE', "Eastern Europe"],
             ['O', "Other"]
         ]
+    )
+    q052 = models.CharField(
+        doc="Question 1",
+        label="If your last answer to the previous question was 'Other' please fill the box with your country.",blank = True
     )
     q061 = models.CharField(
         doc="Question 1", 
@@ -171,7 +176,7 @@ class Player(BasePlayer):
             ['6', "Large city (250,000-3,000,000)"],
             ['7', "Very large city (over 3,000,000)"]
 
-        ],widget=widgets.RadioSelectHorizontal,
+        ]
     )
     q081 = models.CharField(
         doc="Question 1", 
@@ -183,6 +188,11 @@ class Player(BasePlayer):
             ['4', "None"],
             ['5', "Other"],
         ],widget=widgets.RadioSelectHorizontal,
+    )
+    q082 = models.CharField(
+        doc="Question 1",
+        label="If your last answer to the previous question was 'Other' please fill the box with the other political party affiliation of your preference.",blank=True
+
     )
     q091 = models.CharField(
         doc="Question 1", 
@@ -221,7 +231,7 @@ class Player(BasePlayer):
     )
     q112 = models.CharField(
         doc="Question 1",
-        label="Other main field of study at Purdue"
+        label="If your last answer to the previous question was 'Other' please fill the box with the other main field of study at Purdue", blank=True
 
     )
     q121 = models.CharField(

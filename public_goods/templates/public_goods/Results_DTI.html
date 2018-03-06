@@ -14,23 +14,40 @@
     <br>
 
     <p style="font-size:20px"><b>Others' contributions:</b></p>
+<br>
 
-    <table>
-    <tr><td><p style="font-size:20px;margin-left: 20px;">All player contributions:</p></td><td></td><td>Round {{ player.round_number }}</td><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td><td style="margin-left: 20px;">Cumulative contributions</td></tr>
-     {% for p in parts  %}
-         <tr>
-         {% if  p.id_in_group == player.participant.id_in_session %}
-             <td> </td><td><p style="color:blue;font-size:18px;">You</p> </td> <td><b><p style="color:blue;font-size:18px;margin-left: 15px;">{{p.savings}}</p></b></td><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td><td style="margin-left: 20px;">{{ p.ind_cum_savings }}</td>
-         {% else %}
-             <td> </td><td><p style="color:blue;font-size:18px;">Participant {{ p.id_in_group }}</p></td><td><p style="color:blue;font-size:18px;margin-left: 15px;"> <b>{{p.savings}}</b></p></td><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td><td style="margin-left: 20px;">{{ p.ind_cum_savings }}</td>
-         {% endif %}
-         </tr>
-    {% endfor %}
-        <tr style="border-style:solid;border-width: 1px 0px 0px 0px;"><td></td><td><p style="font-size:18px"><b>The group’s contribution to the conservation fund to date:</b></p></td><td>{{ current_total_savings }}</td><td><p style="font-size:20px;margin-left: 15px;">{{ total_savings }}</p></td></tr>
-        <tr><td></td><td><p style="font-size:20px">The group conservation fund goal</p></td><td><p style="font-size:18px;margin-left: 20px;">{{ goal }}</p> </td></tr>
+{% if player.round_number < 2 %}
+    <table style="font-size:18px;text-align: center;border-collapse: separate;border-spacing: 1px;" cellpadding="15">
+        <tr ><th colspan="2" style="border-left: black solid 3px;text-align: center; padding-left: 15px;border-top:black solid 3px;border-right: black solid 3px;">Round {{ player.round_number }}</th></tr>
+        {% for p in parts  %}
+            <tr>
+                {% if  p.id_in_group == player.participant.id_in_session %}
+                    <td style="border-left: black solid 3px;"><p style="color:blue;font-size:18px;">You</p> </td><td style="border-right: black solid 3px;"><p style="color:blue;font-size:18px;">{{p.savings}}</p></td>
+                {% else %}
+                    <td style="border-left: black solid 3px;"><p style="color:blue;font-size:18px;">Participant {{ p.id_in_group }}</p></td><td style="border-right: black solid 3px;"><p style="color:blue;font-size:18px;"> {{p.savings}}</p></td>
+                {% endif %}
+            </tr>
+        {% endfor %}
+        <tr ><td style="border-left: black solid 3px;"><b>The group’s contribution to the conservation fund in round {{ player.round_number }}</b></td><td style="border-right: black solid 3px;"><p style="font-size:18px;">{{ total_savings }}</p></td></tr>
+        <tr><td style="border-bottom: black solid 3px;border-left: black solid 3px;"></td><td style="border-bottom: black solid 3px;border-right: black solid 3px;"></td> </tr>
     </table>
-
-
+{% else %}
+        <table style="font-size:18px;text-align: center;border-collapse: separate;border-spacing: 1px;" cellpadding="15">
+        <tr ><th colspan="2" style="text-align: center; padding-left: 5px;padding-right: 5px;border-left: black solid 3px; border-top:black solid 3px;border-right: black solid 3px;">Cumulative savings</th><th colspan="2" style="text-align: center; padding-left: 15px;border-top:black solid 3px;border-right: black solid 3px;">Round {{ player.round_number }}</th></tr>
+        {% for p in parts  %}
+            <tr>
+                {% if  p.id_in_group == player.participant.id_in_session %}
+                    <td style="border-left: black solid 3px;"><p style="color:blue;font-size:18px;">You</p> </td><td style="border-right: black solid 3px;margin-left: 20px;"><p style="color: blue">{{ p.ind_cum_savings }}</p></td><td><p style="color:blue;font-size:18px;">You</p> </td><td style="border-right: black solid 3px;"><p style="color:blue;font-size:18px;">{{p.savings}}</p></td>
+                {% else %}
+                    <td style="border-left: black solid 3px;"><p style="color:blue;font-size:18px;">Participant {{ p.id_in_group }}</p></td><td style="border-right: black solid 3px;margin-left: 20px;"><p style="color: blue">{{ p.ind_cum_savings }}</p></td><td><p style="color:blue;font-size:18px;">Participant {{ p.id_in_group }}</p></td><td style="border-right: black solid 3px;"><p style="color:blue;font-size:18px;"> {{p.savings}}</p></td>
+                {% endif %}
+            </tr>
+        {% endfor %}
+        <tr ><td style="border-left: black solid 3px;"><b>The group’s contribution to the conservation fund to date:</b></td><td style="border-right: black solid 3px;"><p>{{ total_savings }} </p></td><td ><b>The group’s contribution to the conservation fund in round {{ player.round_number }}</b></td><td style="border-right: black solid 3px;"><p style="font-size:18px;">{{ current_total_savings }}</p></td></tr>
+        <tr><td style="border-left: black solid 3px;border-bottom: black solid 3px;"><p>The group conservation fund goal</p></td><td style="border-bottom: black solid 3px;border-right: black solid 3px"><p style="font-size:18px;">{{ goal }}</p></td><td style="border-bottom: black solid 3px;"></td><td style="border-bottom: black solid 3px;border-right: black solid 3px;"></td> </tr>
+    </table>
+    {% endif %}
+<br><br>
     <div align="right">
       {% next_button %}
     </div>
