@@ -3,14 +3,16 @@
 
 {% block title %}
     Quiz
+
 {% endblock %}
 
 {% block content %}
+
     <p style="font-size:18px">Now that you have read the instructions, we will give you a basic quiz to confirm that you understand the rules of the game.  You will be paid an additional $.50 for each correct answer in the quiz.</p>
     <br>
-    <p style="font-size:18px;">{% formfield player.q1 %}</p>
-    <p style="font-size:18px;">{% formfield player.q2 %}</p>
-    <p style="font-size:18px;">{% formfield player.q3 %}</p>
+    <span style="font-size:18px;">{% formfield player.q1 %}</span>
+    <span style="font-size:18px;">{% formfield player.q2 %}</span>
+    <span style="font-size:18px;">{% formfield player.q3 %}</span>
 
 
     <div align="right">

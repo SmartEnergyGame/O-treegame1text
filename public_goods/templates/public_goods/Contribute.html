@@ -8,9 +8,9 @@
 
 {% block content %}
 
-    <p style="font-size:18px;">Money in your private account: <span><b> {{ endowment }} </b></span></p>
-    <p style="font-size:18px;color:blue;">{{ injunctive_text }}</p>
-    {% formfield player.savings%}
+    <span style="font-size:18px;"><p style="font-size:18px;">Money in your private account: <span><b> {{ endowment }} </b></span></p></span>
+    <span style="font-size:18px;"><p style="font-size:18px;color:blue;">{{ injunctive_text }}</p></span>
+    <span style="font-size:18px;">{% formfield player.savings%}</span>
     <br>
     <br>
     <div align="right">{% next_button %}</div>
