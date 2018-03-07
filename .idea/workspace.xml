@@ -1,28 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8eab24a8-9ccd-42ef-ba8c-440b6b2c2293" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/post_survey/templates/post_survey/Post_surveyP2.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/post_survey/templates/post_survey/Post_surveyP3.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/post_survey/templates/post_survey/Post_surveyP4.html" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
-      <change beforePath="$PROJECT_DIR$/post_survey/models.py" afterPath="$PROJECT_DIR$/post_survey/models.py" />
-      <change beforePath="$PROJECT_DIR$/post_survey/templates/post_survey/Final_page.html" afterPath="$PROJECT_DIR$/post_survey/templates/post_survey/Final_page.html" />
-      <change beforePath="$PROJECT_DIR$/post_survey/templates/post_survey/LastPage.html" afterPath="$PROJECT_DIR$/post_survey/templates/post_survey/LastPage.html" />
-      <change beforePath="$PROJECT_DIR$/post_survey/templates/post_survey/Post_survey.html" afterPath="$PROJECT_DIR$/post_survey/templates/post_survey/Post_survey.html" />
-      <change beforePath="$PROJECT_DIR$/post_survey/views.py" afterPath="$PROJECT_DIR$/post_survey/views.py" />
-      <change beforePath="$PROJECT_DIR$/public_goods/templates/public_goods/Results_D.html" afterPath="$PROJECT_DIR$/public_goods/templates/public_goods/Results_D.html" />
-      <change beforePath="$PROJECT_DIR$/public_goods/templates/public_goods/Results_DTI.html" afterPath="$PROJECT_DIR$/public_goods/templates/public_goods/Results_DTI.html" />
-      <change beforePath="$PROJECT_DIR$/single_treatment/models.py" afterPath="$PROJECT_DIR$/single_treatment/models.py" />
-      <change beforePath="$PROJECT_DIR$/single_treatment/templates/single_treatment/Intro.html" afterPath="$PROJECT_DIR$/single_treatment/templates/single_treatment/Intro.html" />
-      <change beforePath="$PROJECT_DIR$/single_treatment/templates/single_treatment/Intro_part2.html" afterPath="$PROJECT_DIR$/single_treatment/templates/single_treatment/Intro_part2.html" />
-      <change beforePath="$PROJECT_DIR$/single_treatment/templates/single_treatment/SurveyResults.html" afterPath="$PROJECT_DIR$/single_treatment/templates/single_treatment/SurveyResults.html" />
-      <change beforePath="$PROJECT_DIR$/single_treatment/templates/single_treatment/SurveyResultsP2.html" afterPath="$PROJECT_DIR$/single_treatment/templates/single_treatment/SurveyResultsP2.html" />
-      <change beforePath="$PROJECT_DIR$/single_treatment/templates/single_treatment/survey.html" afterPath="$PROJECT_DIR$/single_treatment/templates/single_treatment/survey.html" />
-      <change beforePath="$PROJECT_DIR$/single_treatment/templates/single_treatment/surveyP2.html" afterPath="$PROJECT_DIR$/single_treatment/templates/single_treatment/surveyP2.html" />
-      <change beforePath="$PROJECT_DIR$/single_treatment/views.py" afterPath="$PROJECT_DIR$/single_treatment/views.py" />
-    </list>
+    <list default="true" id="8eab24a8-9ccd-42ef-ba8c-440b6b2c2293" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -68,11 +47,48 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/post_survey/models.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="477">
               <caret line="133" column="17" lean-forward="false" selection-start-line="133" selection-start-column="17" selection-end-line="133" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Results_D.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public_goods/templates/public_goods/Results_D.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="420">
+              <caret line="28" column="17" lean-forward="true" selection-start-line="28" selection-start-column="17" selection-end-line="28" selection-end-column="17" />
+              <folding>
+                <element signature="n#style#0;n#td#0;n#tr#1;n#table#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#td#0;n#tr#1;n#table#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#1;n#tr#1;n#table#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#td#1;n#tr#1;n#table#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#2;n#tr#1;n#table#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#td#2;n#tr#1;n#table#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#3;n#tr#1;n#table#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#td#3;n#tr#1;n#table#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#0;n#tr#2;n#table#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#1;n#tr#2;n#table#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#td#1;n#tr#2;n#table#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#0;n#tr#3;n#table#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#1;n#tr#3;n#table#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#table#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#th#0;n#tr#0;n#table#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#th#1;n#tr#0;n#table#1;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Results_DTI.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public_goods/templates/public_goods/Results_DTI.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="19" column="133" lean-forward="true" selection-start-line="19" selection-start-column="133" selection-end-line="19" selection-end-column="133" />
               <folding />
             </state>
           </provider>
@@ -176,10 +192,8 @@
         <option value="$PROJECT_DIR$/single_treatment/templates/single_treatment/SurveyResultsP2.html" />
         <option value="$PROJECT_DIR$/single_treatment/templates/single_treatment/surveyP2.html" />
         <option value="$PROJECT_DIR$/single_treatment/views.py" />
-        <option value="$PROJECT_DIR$/public_goods/templates/public_goods/Results_DTI.html" />
         <option value="$PROJECT_DIR$/post_survey/templates/post_survey/Final_page.html" />
         <option value="$PROJECT_DIR$/post_survey/templates/post_survey/Post_survey.html" />
-        <option value="$PROJECT_DIR$/public_goods/templates/public_goods/Results_D.html" />
         <option value="$PROJECT_DIR$/post_survey/templates/post_survey/LastPage.html" />
         <option value="$PROJECT_DIR$/single_treatment/models.py" />
         <option value="$PROJECT_DIR$/post_survey/templates/post_survey/Post_surveyP3.html" />
@@ -187,6 +201,8 @@
         <option value="$PROJECT_DIR$/post_survey/templates/post_survey/Post_surveyP2.html" />
         <option value="$PROJECT_DIR$/post_survey/views.py" />
         <option value="$PROJECT_DIR$/post_survey/models.py" />
+        <option value="$PROJECT_DIR$/public_goods/templates/public_goods/Results_DTI.html" />
+        <option value="$PROJECT_DIR$/public_goods/templates/public_goods/Results_D.html" />
       </list>
     </option>
   </component>
@@ -230,24 +246,19 @@
             <path>
               <item name="O-treegame1text" type="b2602c69:ProjectViewProjectNode" />
               <item name="O-treegame1text" type="462c0819:PsiDirectoryNode" />
-              <item name="post_survey" type="462c0819:PsiDirectoryNode" />
+              <item name="public_goods" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="O-treegame1text" type="b2602c69:ProjectViewProjectNode" />
               <item name="O-treegame1text" type="462c0819:PsiDirectoryNode" />
-              <item name="post_survey" type="462c0819:PsiDirectoryNode" />
+              <item name="public_goods" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="O-treegame1text" type="b2602c69:ProjectViewProjectNode" />
               <item name="O-treegame1text" type="462c0819:PsiDirectoryNode" />
-              <item name="post_survey" type="462c0819:PsiDirectoryNode" />
+              <item name="public_goods" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="post_survey" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="O-treegame1text" type="b2602c69:ProjectViewProjectNode" />
-              <item name="O-treegame1text" type="462c0819:PsiDirectoryNode" />
               <item name="public_goods" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -543,14 +554,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public_goods/templates/public_goods/Results_DTI.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="44" column="20" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/post_survey/templates/post_survey/Final_page.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
@@ -583,14 +586,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-583">
           <caret line="12" column="14" lean-forward="false" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public_goods/templates/public_goods/Results_D.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="825">
-          <caret line="55" column="0" lean-forward="true" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -632,6 +627,39 @@
         <state relative-caret-position="477">
           <caret line="133" column="17" lean-forward="false" selection-start-line="133" selection-start-column="17" selection-end-line="133" selection-end-column="17" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_goods/templates/public_goods/Results_DTI.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="133" lean-forward="true" selection-start-line="19" selection-start-column="133" selection-end-line="19" selection-end-column="133" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_goods/templates/public_goods/Results_D.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="28" column="17" lean-forward="true" selection-start-line="28" selection-start-column="17" selection-end-line="28" selection-end-column="17" />
+          <folding>
+            <element signature="n#style#0;n#td#0;n#tr#1;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#td#0;n#tr#1;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#1;n#tr#1;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#td#1;n#tr#1;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#2;n#tr#1;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#td#2;n#tr#1;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#3;n#tr#1;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#td#3;n#tr#1;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#tr#2;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#1;n#tr#2;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#td#1;n#tr#2;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#tr#3;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#1;n#tr#3;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#table#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#th#0;n#tr#0;n#table#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#th#1;n#tr#0;n#table#1;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
