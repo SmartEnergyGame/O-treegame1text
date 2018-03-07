@@ -1,0 +1,26 @@
+{% extends "global/Page.html" %}
+{% load staticfiles otree %}
+
+
+{% block title %}
+    
+{% endblock %}
+
+
+{% block content %}
+
+
+
+    <span style="font-size:18px;">{% formfield player.q101 %}</span>
+    <span style="font-size:18px;">{% formfield player.q111 %}</span>
+    <span style="font-size:18px;">{% formfield player.q112 %}</span>
+    <span style="font-size:18px;">{% formfield player.q121 %}</span>
+    <span style="font-size:18px;">{% formfield player.q131 %}</span>
+    <span style="font-size:18px;">{% formfield player.q141 %}</span>
+
+    Code: {{ session.code }}::::{{ player.participant.code }}
+
+    <div align="right">
+      {% next_button %}
+    </div>
+{% endblock %}

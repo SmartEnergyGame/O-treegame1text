@@ -38,7 +38,7 @@ class survey(Page):
 
     def before_next_page(self):
         self.player.role()
-        self.player.total_correct_ans()
+
 
 class SurveyResults(Page):
     form_model = models.Player

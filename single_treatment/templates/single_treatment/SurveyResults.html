@@ -7,7 +7,7 @@
 {% block content %}
     <br>
     <div>
-        <span style="font-size:18px;"><b>How much does each player have to invest into the conservation account, on average, for each round to meet the goal?</b></span>
+        <span style="font-size:18px;"><b>1. How much does each player have to invest into the conservation account, on average, for each round to meet the goal?</b></span>
         <br>
         <span style="font-size:18px;">{{ answers.0.1 }}</span><br>
     {% if answers.0.0 == 1 %}
@@ -16,7 +16,7 @@
         <span style="font-size:18px;"><p style="color:red">Incorrect!<br>{{ answers.0.2 }}</p></span>
     {% endif %}
     <br>
-        <span style="font-size:18px;"><b>Assuming the goal has been met, total payments from the conservation account are equal to what amount?</b></span>
+        <span style="font-size:18px;"><b>2. Assuming the goal has been met, total payments from the conservation account are equal to what amount?</b></span>
         <br>
         <span style="font-size:18px;">{{ answers.1.1 }}</span>
     {% if answers.1.0 == 1 %}
@@ -25,7 +25,7 @@
         <span style="font-size:18px;"><p style="color:red">Incorrect!<br>{{ answers.1.2 }}</p></span>
     {% endif %}
     <br>
-        <span style="font-size:18px;"><b>Please assume that the goal of $24 has been contributed to the conservation account. If there are 6 players in the game, how much will each player receive as a bonus for meeting the conservation account goal?</b></span>
+        <span style="font-size:18px;"><b>3. Please assume that the goal of $24 has been contributed to the conservation account. If there are 6 players in the game, how much will each player receive as a bonus for meeting the conservation account goal? Each player will receive $</b></span>
 
         <br>
         <span style="font-size:18px;">{{ answers.2.1 }}</span>

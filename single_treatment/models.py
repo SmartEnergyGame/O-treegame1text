@@ -41,7 +41,7 @@ class Player(BasePlayer):
             q4_feedback = [1,"Your answer was: "+ self.q4 , correct_answer]
 
         else:
-            q4_feedback = [0,"Your answer was: "+ self.q4 , "In this scenario, the group has met the threshold for the group incentive from the conservation account. This means you get an equal share of the $90 group incentive ($30 x 3), or $15. In addition, you keep the $11 remaining in your private account. Your total payout is $15 + $11 = $26"]
+            q4_feedback = [0,"Your answer was: "+ self.q4 , "In this scenario, the group has met the threshold for the incentive from the conservation account. This means you get an equal share of the $90 group incentive ($30 x 3), or $15. In addition, you keep the $11 remaining in your private account. Your total payout is $15 + $11 = $26"]
         if self.q5 == "$ 11":
             q5_feedback = [1,"Your answer was: "+ self.q5 , correct_answer]
 
@@ -51,7 +51,7 @@ class Player(BasePlayer):
             q6_feedback = [1,"Your answer was: "+ self.q6 , correct_answer]
 
         else:
-            q6_feedback = [0,"Your answer was: "+ self.q6 , "All players do not have to contribute to the conservation account to meet the $24 goal. For example, if 1 player does not donate, the other 5 players only have to average contributions of $0.60 per round to still make the goal."]
+            q6_feedback = [0,"Your answer was: "+ self.q6 , "All players do not have to contribute to the conservation account to meet the goal. For example, if 1 player does not donate, the other players can still meet the goal by contributing slightly more than $.50 per round on average."]
 
         res = [q4_feedback,q5_feedback,q6_feedback]
         return res
@@ -63,7 +63,7 @@ class Player(BasePlayer):
             q1_feedback = [1,"Your answer was: "+ self.q1 , correct_answer]
 
         else:
-            q1_feedback = [0,"Your answer was: "+ self.q1 , "The energy conservation goals is $24, so each player has to contribute $0.50 each round, on average, to meet the goal."]
+            q1_feedback = [0,"Your answer was: "+ self.q1 , "The energy conservation goals is " + str(8*.5*(len(self.get_others_in_subsession())+1)) + ", so each player has to contribute $0.50 each round, on average, to meet the goal."]
         if self.q2 == 'Three times the total in the conservation account ':
             q2_feedback = [1,"Your answer was: "+ self.q2 , correct_answer]
 
@@ -82,20 +82,22 @@ class Player(BasePlayer):
     def total_correct_ans(self):
         res = self.check_answers()
         correct = sum([a[0] for a in res])
+        res2 = self.check_answers()
+        correct2 = sum([a[0] for a in res2])
         print(correct)
-        self.participant.vars['correct_answers'] = correct
-        self.correct_answers = correct
+        self.participant.vars['correct_answers'] = correct + correct2
+        self.correct_answers = correct + correct2
 
     correct_answers = models.IntegerField(initial=0)
     q1 = models.CharField(
         doc="Question 1", 
-        label="How much does each player have to invest into the conservation account, on average, for each round to meet the goal?",
+        label="1. How much does each player have to invest into the conservation account, on average, for each round to meet the goal?",
         choices = ["$ 0", "$ 0.5", "$ 1.0"],
         widget=widgets.RadioSelectHorizontal,
     )
     q2 = models.CharField(
          doc="Question 2",
-         label="Assuming the goal has been met, total payments from the conservation account are equal to what amount?", 
+         label="2. Assuming the goal has been met, total payments from the conservation account are equal to what amount?",
          choices = [
              "The total in the conservation account ",
              "Two times the total in the conservation account ",
@@ -105,10 +107,10 @@ class Player(BasePlayer):
          )
     q3 = models.CharField(
         doc="Question 3", 
-        label="Please assume that the goal of $24 has been contributed to the conservation account."
+        label="3. Please assume that the goal of $24 has been contributed to the conservation account."
               " If there are 6 players in the game,"
               " how much will each player receive as a bonus for meeting the conservation account goal?  "
-              "Each Player will receive $",
+              "Each player will receive $",
         choices=[
             "$ 11",
             "$ 12",
@@ -119,7 +121,7 @@ class Player(BasePlayer):
     
     q4 = models.CharField(
         doc="Question 4",
-        label="Assume $30 has been contributed to the conservation account by the end of the experiment, and you have personally invested a total of $5 over the 8 rounds, leaving $11 in your private account. How much money will you receive at the end of the experiment, after the conservation account bonus incentive has been paid? My payout is $"
+        label="4. Assume there are 6 players in the game and they have contributed $30 to the conservation account by the end of the experiment, and you have personally invested a total of $5 over the 8 rounds, leaving $11 in your private account. How much money will you receive at the end of the experiment, after the conservation account bonus incentive has been paid? My payout is $"
         , choices=[
             "$ 15",
             "$ 11",
@@ -130,17 +132,17 @@ class Player(BasePlayer):
     
     q5 = models.CharField(
         doc="Question 5",
-        label="Let's assume that the goal of $24 has NOT been contributed to the conservation account and you have invested a total of $5 in the 8 rounds, leaving $11 in your private account. How much money will you receive at the end of the experiment.  My payout is $"
+        label="5. Let's assume that the goal of $24 has NOT been contributed to the conservation account and you have invested a total of $5 in the 8 rounds, leaving $11 in your private account. How much money will you receive at the end of the experiment.  My payout is $"
         , choices=[
             "$ 5",
             "$ 11",
-            "$ 24"
+            "$ 26"
         ],widget=widgets.RadioSelectHorizontal,
     )
     
     q6 = models.CharField(
         doc = "Question 6", 
-        label="Is it possible to meet the conservation account goal even if one player does not contribute to the goal at all? ", 
+        label="6. Is it possible to meet the conservation account goal even if one player does not contribute to the goal at all? ",
         choices = ["Yes","No"],
         widget=widgets.RadioSelectHorizontal,
     )

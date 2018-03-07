@@ -2,8 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8eab24a8-9ccd-42ef-ba8c-440b6b2c2293" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/post_survey/templates/post_survey/Post_surveyP2.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/post_survey/templates/post_survey/Post_surveyP3.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/post_survey/templates/post_survey/Post_surveyP4.html" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
+      <change beforePath="$PROJECT_DIR$/post_survey/models.py" afterPath="$PROJECT_DIR$/post_survey/models.py" />
+      <change beforePath="$PROJECT_DIR$/post_survey/templates/post_survey/Final_page.html" afterPath="$PROJECT_DIR$/post_survey/templates/post_survey/Final_page.html" />
+      <change beforePath="$PROJECT_DIR$/post_survey/templates/post_survey/LastPage.html" afterPath="$PROJECT_DIR$/post_survey/templates/post_survey/LastPage.html" />
+      <change beforePath="$PROJECT_DIR$/post_survey/templates/post_survey/Post_survey.html" afterPath="$PROJECT_DIR$/post_survey/templates/post_survey/Post_survey.html" />
+      <change beforePath="$PROJECT_DIR$/post_survey/views.py" afterPath="$PROJECT_DIR$/post_survey/views.py" />
+      <change beforePath="$PROJECT_DIR$/public_goods/templates/public_goods/Results_D.html" afterPath="$PROJECT_DIR$/public_goods/templates/public_goods/Results_D.html" />
+      <change beforePath="$PROJECT_DIR$/public_goods/templates/public_goods/Results_DTI.html" afterPath="$PROJECT_DIR$/public_goods/templates/public_goods/Results_DTI.html" />
+      <change beforePath="$PROJECT_DIR$/single_treatment/models.py" afterPath="$PROJECT_DIR$/single_treatment/models.py" />
+      <change beforePath="$PROJECT_DIR$/single_treatment/templates/single_treatment/Intro.html" afterPath="$PROJECT_DIR$/single_treatment/templates/single_treatment/Intro.html" />
+      <change beforePath="$PROJECT_DIR$/single_treatment/templates/single_treatment/Intro_part2.html" afterPath="$PROJECT_DIR$/single_treatment/templates/single_treatment/Intro_part2.html" />
+      <change beforePath="$PROJECT_DIR$/single_treatment/templates/single_treatment/SurveyResults.html" afterPath="$PROJECT_DIR$/single_treatment/templates/single_treatment/SurveyResults.html" />
       <change beforePath="$PROJECT_DIR$/single_treatment/templates/single_treatment/SurveyResultsP2.html" afterPath="$PROJECT_DIR$/single_treatment/templates/single_treatment/SurveyResultsP2.html" />
+      <change beforePath="$PROJECT_DIR$/single_treatment/templates/single_treatment/survey.html" afterPath="$PROJECT_DIR$/single_treatment/templates/single_treatment/survey.html" />
+      <change beforePath="$PROJECT_DIR$/single_treatment/templates/single_treatment/surveyP2.html" afterPath="$PROJECT_DIR$/single_treatment/templates/single_treatment/surveyP2.html" />
+      <change beforePath="$PROJECT_DIR$/single_treatment/views.py" afterPath="$PROJECT_DIR$/single_treatment/views.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -20,36 +38,51 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="SurveyResultsP2.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/single_treatment/templates/single_treatment/SurveyResultsP2.html">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/post_survey/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="20" column="295" lean-forward="false" selection-start-line="20" selection-start-column="295" selection-end-line="20" selection-end-column="295" />
-              <folding>
-                <element signature="e#167#190#0#HTML" expanded="true" />
-                <element signature="e#567#590#0#HTML" expanded="true" />
-                <element signature="e#660#683#0#HTML" expanded="true" />
-                <element signature="e#765#788#0#HTML" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="surveyP2.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/single_treatment/templates/single_treatment/surveyP2.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="66" lean-forward="false" selection-start-line="10" selection-start-column="66" selection-end-line="10" selection-end-column="66" />
+            <state relative-caret-position="388">
+              <caret line="35" column="15" lean-forward="false" selection-start-line="35" selection-start-column="15" selection-end-line="35" selection-end-column="15" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/single_treatment/models.py">
+      <file leaf-file-name="Post_surveyP3.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/post_survey/templates/post_survey/Post_surveyP3.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="132" column="269" lean-forward="true" selection-start-line="132" selection-start-column="15" selection-end-line="132" selection-end-column="269" />
+            <state relative-caret-position="255">
+              <caret line="17" column="68" lean-forward="false" selection-start-line="17" selection-start-column="68" selection-end-line="17" selection-end-column="68" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Post_surveyP4.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/post_survey/templates/post_survey/Post_surveyP4.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="models.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/post_survey/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="477">
+              <caret line="133" column="17" lean-forward="false" selection-start-line="133" selection-start-column="17" selection-end-line="133" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Post_surveyP2.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/post_survey/templates/post_survey/Post_surveyP2.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="18" column="58" lean-forward="false" selection-start-line="18" selection-start-column="58" selection-end-line="18" selection-end-column="58" />
               <folding />
             </state>
           </provider>
@@ -66,8 +99,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>self.average_savings</find>
-      <find>financial_reward</find>
       <find>injunctive_text</find>
       <find>Constants.</find>
       <find>production</find>
@@ -96,6 +127,8 @@
       <find>wait</find>
       <find>other</find>
       <find>survey</find>
+      <find>need</find>
+      <find>need</find>
     </findStrings>
     <replaceStrings>
       <replace>endowment</replace>
@@ -132,25 +165,28 @@
         <option value="$PROJECT_DIR$/survey/models.py" />
         <option value="$PROJECT_DIR$/public_goods/models.py" />
         <option value="$PROJECT_DIR$/settings.py" />
-        <option value="$PROJECT_DIR$/single_treatment/templates/single_treatment/Intro.html" />
         <option value="$PROJECT_DIR$/public_goods/templates/public_goods/waiting_session.html" />
         <option value="$PROJECT_DIR$/public_goods/templates/public_goods/Results_c.html" />
-        <option value="$PROJECT_DIR$/single_treatment/templates/single_treatment/Intro_part2.html" />
-        <option value="$PROJECT_DIR$/single_treatment/views.py" />
         <option value="$PROJECT_DIR$/public_goods/views.py" />
-        <option value="$PROJECT_DIR$/post_survey/views.py" />
-        <option value="$PROJECT_DIR$/single_treatment/models.py" />
-        <option value="$PROJECT_DIR$/single_treatment/templates/single_treatment/survey.html" />
         <option value="$PROJECT_DIR$/public_goods/templates/public_goods/Contribute.html" />
-        <option value="$PROJECT_DIR$/post_survey/templates/post_survey/LastPage.html" />
+        <option value="$PROJECT_DIR$/single_treatment/templates/single_treatment/Intro.html" />
+        <option value="$PROJECT_DIR$/single_treatment/templates/single_treatment/Intro_part2.html" />
+        <option value="$PROJECT_DIR$/single_treatment/templates/single_treatment/survey.html" />
         <option value="$PROJECT_DIR$/single_treatment/templates/single_treatment/SurveyResults.html" />
-        <option value="$PROJECT_DIR$/single_treatment/templates/single_treatment/surveyP2.html" />
-        <option value="$PROJECT_DIR$/post_survey/templates/post_survey/Final_page.html" />
-        <option value="$PROJECT_DIR$/post_survey/models.py" />
-        <option value="$PROJECT_DIR$/public_goods/templates/public_goods/Results_D.html" />
-        <option value="$PROJECT_DIR$/public_goods/templates/public_goods/Results_DTI.html" />
-        <option value="$PROJECT_DIR$/post_survey/templates/post_survey/Post_survey.html" />
         <option value="$PROJECT_DIR$/single_treatment/templates/single_treatment/SurveyResultsP2.html" />
+        <option value="$PROJECT_DIR$/single_treatment/templates/single_treatment/surveyP2.html" />
+        <option value="$PROJECT_DIR$/single_treatment/views.py" />
+        <option value="$PROJECT_DIR$/public_goods/templates/public_goods/Results_DTI.html" />
+        <option value="$PROJECT_DIR$/post_survey/templates/post_survey/Final_page.html" />
+        <option value="$PROJECT_DIR$/post_survey/templates/post_survey/Post_survey.html" />
+        <option value="$PROJECT_DIR$/public_goods/templates/public_goods/Results_D.html" />
+        <option value="$PROJECT_DIR$/post_survey/templates/post_survey/LastPage.html" />
+        <option value="$PROJECT_DIR$/single_treatment/models.py" />
+        <option value="$PROJECT_DIR$/post_survey/templates/post_survey/Post_surveyP3.html" />
+        <option value="$PROJECT_DIR$/post_survey/templates/post_survey/Post_surveyP4.html" />
+        <option value="$PROJECT_DIR$/post_survey/templates/post_survey/Post_surveyP2.html" />
+        <option value="$PROJECT_DIR$/post_survey/views.py" />
+        <option value="$PROJECT_DIR$/post_survey/models.py" />
       </list>
     </option>
   </component>
@@ -183,6 +219,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -213,43 +250,11 @@
               <item name="O-treegame1text" type="462c0819:PsiDirectoryNode" />
               <item name="public_goods" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="O-treegame1text" type="b2602c69:ProjectViewProjectNode" />
-              <item name="O-treegame1text" type="462c0819:PsiDirectoryNode" />
-              <item name="public_goods" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="O-treegame1text" type="b2602c69:ProjectViewProjectNode" />
-              <item name="O-treegame1text" type="462c0819:PsiDirectoryNode" />
-              <item name="public_goods" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="public_goods" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="O-treegame1text" type="b2602c69:ProjectViewProjectNode" />
-              <item name="O-treegame1text" type="462c0819:PsiDirectoryNode" />
-              <item name="single_treatment" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="O-treegame1text" type="b2602c69:ProjectViewProjectNode" />
-              <item name="O-treegame1text" type="462c0819:PsiDirectoryNode" />
-              <item name="single_treatment" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="O-treegame1text" type="b2602c69:ProjectViewProjectNode" />
-              <item name="O-treegame1text" type="462c0819:PsiDirectoryNode" />
-              <item name="single_treatment" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="single_treatment" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -259,15 +264,15 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/survey/templates/survey" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/single_treatment/templates/single_treatment" />
       <recent name="$PROJECT_DIR$/post_survey/templates/post_survey" />
+      <recent name="$PROJECT_DIR$/single_treatment/templates/single_treatment" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/survey/templates/survey" />
       <recent name="$PROJECT_DIR$/public_goods/templates/public_goods" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/survey/templates/survey" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -339,27 +344,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/manage.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/requirements.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/requirements_base.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/requirements_server.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -456,29 +440,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public_goods/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="12" column="14" lean-forward="false" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/single_treatment/templates/single_treatment/Intro.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="39" lean-forward="false" selection-start-line="17" selection-start-column="39" selection-end-line="17" selection-end-column="39" />
-          <folding>
-            <element signature="e#141#163#0#HTML" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public_goods/templates/public_goods/waiting_session.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="7" column="35" lean-forward="false" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -486,17 +451,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/single_treatment/templates/single_treatment/Intro_part2.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="4" lean-forward="false" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
-          <folding>
-            <element signature="e#141#163#0#HTML" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -504,7 +458,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1500">
           <caret line="135" column="4" lean-forward="false" selection-start-line="135" selection-start-column="4" selection-end-line="135" selection-end-column="4" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -512,18 +465,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="8" column="19" lean-forward="false" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
-          <folding>
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#span#1;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#span#2;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/post_survey/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="348">
-          <caret line="29" column="31" lean-forward="false" selection-start-line="29" selection-start-column="31" selection-end-line="29" selection-end-column="31" />
           <folding />
         </state>
       </provider>
@@ -536,122 +477,161 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/single_treatment/templates/single_treatment/survey.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="4" lean-forward="false" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/post_survey/templates/post_survey/Final_page.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="200" lean-forward="false" selection-start-line="19" selection-start-column="200" selection-end-line="19" selection-end-column="200" />
-          <folding>
-            <element signature="n#style#0;n#span#0;n#td#0;n#tr#0;n#table#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#span#0;n#td#1;n#tr#1;n#table#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#span#0;n#td#1;n#tr#2;n#table#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#span#0;n#td#1;n#tr#3;n#table#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/single_treatment/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1036">
-          <caret line="74" column="79" lean-forward="true" selection-start-line="74" selection-start-column="17" selection-end-line="74" selection-end-column="79" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/post_survey/templates/post_survey/LastPage.html">
+    <entry file="file://$PROJECT_DIR$/single_treatment/templates/single_treatment/Intro_part2.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
-          <caret line="11" column="17" lean-forward="true" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
-          <folding>
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public_goods/templates/public_goods/Results_D.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="35" column="234" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public_goods/templates/public_goods/Results_DTI.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="728">
-          <caret line="55" column="0" lean-forward="false" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/post_survey/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="811">
-          <caret line="60" column="8" lean-forward="false" selection-start-line="60" selection-start-column="8" selection-end-line="60" selection-end-column="8" />
-          <caret line="64" column="8" lean-forward="false" selection-start-line="64" selection-start-column="8" selection-end-line="64" selection-end-column="8" />
-          <caret line="68" column="8" lean-forward="false" selection-start-line="68" selection-start-column="8" selection-end-line="68" selection-end-column="8" />
-          <caret line="72" column="8" lean-forward="false" selection-start-line="72" selection-start-column="8" selection-end-line="72" selection-end-column="8" />
-          <caret line="76" column="8" lean-forward="false" selection-start-line="76" selection-start-column="8" selection-end-line="76" selection-end-column="8" />
-          <caret line="80" column="8" lean-forward="false" selection-start-line="80" selection-start-column="8" selection-end-line="80" selection-end-column="8" />
-          <caret line="84" column="8" lean-forward="false" selection-start-line="84" selection-start-column="8" selection-end-line="84" selection-end-column="8" />
-          <caret line="88" column="8" lean-forward="false" selection-start-line="88" selection-start-column="8" selection-end-line="88" selection-end-column="8" />
-          <caret line="92" column="8" lean-forward="false" selection-start-line="92" selection-start-column="8" selection-end-line="92" selection-end-column="8" />
-          <caret line="96" column="8" lean-forward="false" selection-start-line="96" selection-start-column="8" selection-end-line="96" selection-end-column="8" />
-          <caret line="100" column="8" lean-forward="false" selection-start-line="100" selection-start-column="8" selection-end-line="100" selection-end-column="8" />
-          <caret line="104" column="8" lean-forward="false" selection-start-line="104" selection-start-column="8" selection-end-line="104" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/post_survey/templates/post_survey/Post_survey.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="8" lean-forward="false" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="8" />
+          <caret line="11" column="947" lean-forward="false" selection-start-line="11" selection-start-column="947" selection-end-line="11" selection-end-column="947" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/single_treatment/templates/single_treatment/SurveyResults.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="13" column="82" lean-forward="false" selection-start-line="13" selection-start-column="82" selection-end-line="13" selection-end-column="82" />
+        <state relative-caret-position="375">
+          <caret line="27" column="253" lean-forward="true" selection-start-line="27" selection-start-column="253" selection-end-line="27" selection-end-column="279" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/single_treatment/templates/single_treatment/survey.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="291" lean-forward="true" selection-start-line="10" selection-start-column="228" selection-end-line="10" selection-end-column="291" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/single_treatment/templates/single_treatment/surveyP2.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="66" lean-forward="false" selection-start-line="10" selection-start-column="66" selection-end-line="10" selection-end-column="66" />
+        <state relative-caret-position="120">
+          <caret line="8" column="294" lean-forward="false" selection-start-line="8" selection-start-column="294" selection-end-line="8" selection-end-column="294" />
+          <folding>
+            <element signature="e#447#470#0#HTML" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/single_treatment/templates/single_treatment/Intro.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="11" lean-forward="false" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/single_treatment/models.py">
+    <entry file="file://$PROJECT_DIR$/single_treatment/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="132" column="269" lean-forward="true" selection-start-line="132" selection-start-column="15" selection-end-line="132" selection-end-column="269" />
+        <state relative-caret-position="172">
+          <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/single_treatment/templates/single_treatment/SurveyResultsP2.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="295" lean-forward="false" selection-start-line="20" selection-start-column="295" selection-end-line="20" selection-end-column="295" />
+        <state relative-caret-position="150">
+          <caret line="10" column="412" lean-forward="false" selection-start-line="10" selection-start-column="412" selection-end-line="10" selection-end-column="412" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/post_survey/templates/post_survey/Post_survey.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="90" column="6" lean-forward="false" selection-start-line="90" selection-start-column="6" selection-end-line="90" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_goods/templates/public_goods/Results_DTI.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="44" column="20" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/post_survey/templates/post_survey/Final_page.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="66" lean-forward="false" selection-start-line="22" selection-start-column="66" selection-end-line="22" selection-end-column="66" />
           <folding>
-            <element signature="e#167#190#0#HTML" expanded="true" />
-            <element signature="e#567#590#0#HTML" expanded="true" />
-            <element signature="e#660#683#0#HTML" expanded="true" />
-            <element signature="e#765#788#0#HTML" expanded="true" />
+            <element signature="n#style#0;n#td#1;n#tr#2;n#table#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#span#0;n#td#1;n#tr#2;n#table#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#p#0;n#span#0;n#td#1;n#tr#2;n#table#0;n#!!top" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/post_survey/templates/post_survey/LastPage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="81" lean-forward="false" selection-start-line="11" selection-start-column="81" selection-end-line="11" selection-end-column="81" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/single_treatment/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="65" column="144" lean-forward="false" selection-start-line="65" selection-start-column="144" selection-end-line="65" selection-end-column="144" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_goods/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-583">
+          <caret line="12" column="14" lean-forward="false" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_goods/templates/public_goods/Results_D.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="825">
+          <caret line="55" column="0" lean-forward="true" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/post_survey/templates/post_survey/Post_surveyP2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="58" lean-forward="false" selection-start-line="18" selection-start-column="58" selection-end-line="18" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/post_survey/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="388">
+          <caret line="35" column="15" lean-forward="false" selection-start-line="35" selection-start-column="15" selection-end-line="35" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/post_survey/templates/post_survey/Post_surveyP3.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="68" lean-forward="false" selection-start-line="17" selection-start-column="68" selection-end-line="17" selection-end-column="68" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/post_survey/templates/post_survey/Post_surveyP4.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/post_survey/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="477">
+          <caret line="133" column="17" lean-forward="false" selection-start-line="133" selection-start-column="17" selection-end-line="133" selection-end-column="17" />
+          <folding />
         </state>
       </provider>
     </entry>

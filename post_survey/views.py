@@ -26,10 +26,18 @@ class Final_page(Page):
 
 class Post_survey(Page):
     form_model = models.Player
-    form_fields = ["q1", "q2", "q3", "q4", "q5", "q6", "q7", "q8", "q9","q10", "q11","q12", 'q021', 'q031', 'q041','q042',
-                   'q051','q052', 'q061', 'q071', 'q081', 'q082', 'q091', 'q101', 'q111','q112', 'q121', 'q131', 'q141']
+    form_fields = ["q1", "q2", "q3", "q4", "q5", "q6", "q7", "q8", "q9","q10", "q11","q12"]
 
-
+class Post_surveyP2(Page):
+    form_model = models.Player
+    form_fields = ['q021', 'q031', 'q041','q042',
+                   'q051','q052']
+class Post_surveyP3(Page):
+    form_model = models.Player
+    form_fields = ['q061', 'q071', 'q081', 'q082', 'q091']
+class Post_surveyP4(Page):
+    form_model = models.Player
+    form_fields = [ 'q101', 'q111','q112', 'q121', 'q131', 'q141']
 class ResultsWaitPage(WaitPage):
     def after_all_players_arrive(self):
         pass
@@ -42,8 +50,12 @@ class LastPage(Page):
      return {'total': self.player.total_payment.to_real_world_currency(self.session),}
 
 
+
 page_sequence = [
     Final_page,
     Post_survey,
+    Post_surveyP2,
+    Post_surveyP3,
+    Post_surveyP4,
     LastPage
 ]

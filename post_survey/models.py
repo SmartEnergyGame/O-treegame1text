@@ -131,7 +131,7 @@ class Player(BasePlayer):
     )
     q042 = models.CharField(
         doc="Question 1",
-        label="If your last answer to the previous question was 'Other' please fill the box with the term that best describes your ethnic identity: ",blank=True
+        label="If the answer to the previous question was 'Other' please fill the box with the term that best describes your ethnic identity: ",blank=True
     )
     q051 = models.CharField(
         doc="Question 1", 
@@ -141,18 +141,14 @@ class Player(BasePlayer):
             ['CSA', "Central/South America"],
             ['ANZ', "Australia/New Zealand "],
             ['AFA', "Africa"],
-            ['SEA', "South-East Asia"],
-            ['SA', "South Asia"],
-            ['OA', "Other Asia"],
-            ['WE', "Western Europe"],
-            ['NE', "Northern Europe"],
-            ['EE', "Eastern Europe"],
+            ['Asia', "Asia"],
+            ['EU', "Europe"],
             ['O', "Other"]
         ]
     )
     q052 = models.CharField(
         doc="Question 1",
-        label="If your last answer to the previous question was 'Other' please fill the box with your country.",blank = True
+        label="If the answer to the previous question was 'Other' please fill the box with your country.",blank = True
     )
     q061 = models.CharField(
         doc="Question 1", 
@@ -191,7 +187,7 @@ class Player(BasePlayer):
     )
     q082 = models.CharField(
         doc="Question 1",
-        label="If your last answer to the previous question was 'Other' please fill the box with the other political party affiliation of your preference.",blank=True
+        label="If the answer to the previous question was 'Other' please fill the box with the other political party affiliation of your preference.",blank=True
 
     )
     q091 = models.CharField(
@@ -231,7 +227,7 @@ class Player(BasePlayer):
     )
     q112 = models.CharField(
         doc="Question 1",
-        label="If your last answer to the previous question was 'Other' please fill the box with the other main field of study at Purdue", blank=True
+        label="If the answer to the previous question was 'Other' please fill the box with the other main field of study at Purdue", blank=True
 
     )
     q121 = models.CharField(
