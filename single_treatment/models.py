@@ -129,7 +129,7 @@ class Player(BasePlayer):
     
     q5 = models.CharField(
         doc="Question 5",
-        label="5. Let's assume that the goal of $24 has NOT been contributed to the conservation account and you have invested a total of $5 in the 8 rounds, leaving $11 in your private account. How much money will you receive at the end of the experiment.  My payout is $"
+        label="5. Assume that the goal of $24 has NOT been contributed to the conservation account and you have invested a total of $5 in the 8 rounds, leaving $11 in your private account. How much money will you receive at the end of the experiment.  My payout is $"
         , choices=[
             "$ 5",
             "$ 11",
