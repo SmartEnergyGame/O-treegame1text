@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8eab24a8-9ccd-42ef-ba8c-440b6b2c2293" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/single_treatment/templates/single_treatment/SurveyResults.html" afterPath="$PROJECT_DIR$/single_treatment/templates/single_treatment/SurveyResults.html" />
-      <change beforePath="$PROJECT_DIR$/single_treatment/templates/single_treatment/SurveyResultsP2.html" afterPath="$PROJECT_DIR$/single_treatment/templates/single_treatment/SurveyResultsP2.html" />
+      <change beforePath="$PROJECT_DIR$/single_treatment/models.py" afterPath="$PROJECT_DIR$/single_treatment/models.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -72,18 +71,28 @@
       <file leaf-file-name="SurveyResults.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/single_treatment/templates/single_treatment/SurveyResults.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="614">
+            <state relative-caret-position="638">
               <caret line="43" column="8" lean-forward="false" selection-start-line="43" selection-start-column="8" selection-end-line="43" selection-end-column="8" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SurveyResultsP2.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SurveyResultsP2.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/single_treatment/templates/single_treatment/SurveyResultsP2.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="608">
               <caret line="46" column="8" lean-forward="false" selection-start-line="46" selection-start-column="8" selection-end-line="46" selection-end-column="8" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="models.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/single_treatment/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="713">
+              <caret line="75" column="360" lean-forward="false" selection-start-line="75" selection-start-column="360" selection-end-line="75" selection-end-column="360" />
               <folding />
             </state>
           </provider>
@@ -180,7 +189,6 @@
         <option value="$PROJECT_DIR$/post_survey/views.py" />
         <option value="$PROJECT_DIR$/post_survey/models.py" />
         <option value="$PROJECT_DIR$/single_treatment/templates/single_treatment/Intro.html" />
-        <option value="$PROJECT_DIR$/single_treatment/models.py" />
         <option value="$PROJECT_DIR$/single_treatment/templates/single_treatment/Intro_part2.html" />
         <option value="$PROJECT_DIR$/single_treatment/templates/single_treatment/surveyP2.html" />
         <option value="$PROJECT_DIR$/single_treatment/templates/single_treatment/survey.html" />
@@ -188,6 +196,7 @@
         <option value="$PROJECT_DIR$/public_goods/templates/public_goods/Results_DTI.html" />
         <option value="$PROJECT_DIR$/single_treatment/templates/single_treatment/SurveyResults.html" />
         <option value="$PROJECT_DIR$/single_treatment/templates/single_treatment/SurveyResultsP2.html" />
+        <option value="$PROJECT_DIR$/single_treatment/models.py" />
       </list>
     </option>
   </component>
@@ -557,14 +566,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/single_treatment/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="94" column="33" lean-forward="false" selection-start-line="94" selection-start-column="31" selection-end-line="94" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/single_treatment/templates/single_treatment/survey.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
@@ -630,18 +631,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/single_treatment/templates/single_treatment/SurveyResultsP2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="608">
+          <caret line="46" column="8" lean-forward="false" selection-start-line="46" selection-start-column="8" selection-end-line="46" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/single_treatment/templates/single_treatment/SurveyResults.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="614">
+        <state relative-caret-position="638">
           <caret line="43" column="8" lean-forward="false" selection-start-line="43" selection-start-column="8" selection-end-line="43" selection-end-column="8" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/single_treatment/templates/single_treatment/SurveyResultsP2.html">
+    <entry file="file://$PROJECT_DIR$/single_treatment/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="608">
-          <caret line="46" column="8" lean-forward="false" selection-start-line="46" selection-start-column="8" selection-end-line="46" selection-end-column="8" />
+        <state relative-caret-position="713">
+          <caret line="75" column="360" lean-forward="false" selection-start-line="75" selection-start-column="360" selection-end-line="75" selection-end-column="360" />
           <folding />
         </state>
       </provider>

@@ -41,12 +41,12 @@ class Player(BasePlayer):
             q4_feedback = [1,"Your answer was: "+ self.q4 , correct_answer]
 
         else:
-            q4_feedback = [0,"Your answer was: "+ self.q4 , "In this scenario, the group has met the threshold for the incentive from the conservation account. This means you get an equal share of the $ 90 group incentive ($ 30 x 3), or $15. In addition, you keep the $ 11 remaining in your private account. Your total payout is $ 15 + $ 11 = $ 26"]
+            q4_feedback = [0,"Your answer was: "+ self.q4 , "In this scenario, the group has met the threshold for the incentive from the conservation account. This means you get an equal share of the $90.00 group incentive ($30.00 x 3), or $15.00. In addition, you keep the $11.00 remaining in your private account. Your total payout is $15.00 + $11.00 = $26.00"]
         if self.q5 == "$11.00":
             q5_feedback = [1,"Your answer was: "+ self.q5 , correct_answer]
 
         else:
-            q5_feedback = [0,"Your answer was: "+ self.q5 , "Because the group did not reach the threshold in the conservation account for the group incentive, there is no group bonus. You will receive only the money remaining in your private account = $ 11."]
+            q5_feedback = [0,"Your answer was: "+ self.q5 , "Because the group did not reach the threshold in the conservation account for the group incentive, there is no group bonus. You will receive only the money remaining in your private account = $11.00."]
         if self.q6 == "Yes":
             q6_feedback = [1,"Your answer was: "+ self.q6 , correct_answer]
 
@@ -63,7 +63,7 @@ class Player(BasePlayer):
             q1_feedback = [1,"Your answer was: "+ self.q1 , correct_answer]
 
         else:
-            q1_feedback = [0,"Your answer was: "+ self.q1 , "The energy conservation goal is $ " + str(8*.5*(len(self.get_others_in_subsession())+1)) + ", so each player has to contribute $0.50 each round, on average, to meet the goal."]
+            q1_feedback = [0,"Your answer was: "+ self.q1 , "The energy conservation goal is $" + str(8*.5*(len(self.get_others_in_subsession())+1)) + ", so each player has to contribute $0.50 each round, on average, to meet the goal."]
         if self.q2 == 'Three times the total in the conservation account ':
             q2_feedback = [1,"Your answer was: "+ self.q2 , correct_answer]
 
@@ -73,7 +73,7 @@ class Player(BasePlayer):
             q3_feedback = [1,"Your answer was: "+ self.q3 , correct_answer]
 
         else:
-            q3_feedback = [0,"Your answer was: "+ self.q3 , "Because the 6 players have met the threshold for the conservation account, they will receive a share of the group incentive. Because the group incentive is equal to three times the account total, the total incentive payment is $72. Each player receives an equal share of that incentive, or $12 each."]
+            q3_feedback = [0,"Your answer was: "+ self.q3 , "Because the 6 players have met the threshold for the conservation account, they will receive a share of the group incentive. Because the group incentive is equal to three times the account total, the total incentive payment is $72.00. Each player receives an equal share of that incentive, or $12.00 each."]
 
         res = [q1_feedback,q2_feedback,q3_feedback]
         return res
