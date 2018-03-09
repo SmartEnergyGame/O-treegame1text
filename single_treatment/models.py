@@ -41,17 +41,17 @@ class Player(BasePlayer):
             q4_feedback = [1,"Your answer was: "+ self.q4 , correct_answer]
 
         else:
-            q4_feedback = [0,"Your answer was: "+ self.q4 , "In this scenario, the group has met the threshold for the incentive from the conservation account. This means you get an equal share of the $90 group incentive ($30 x 3), or $15. In addition, you keep the $11 remaining in your private account. Your total payout is $15 + $11 = $26"]
+            q4_feedback = [0,"Your answer was: "+ self.q4 , "In this scenario, the group has met the threshold for the incentive from the conservation account. This means you get an equal share of the $ 90 group incentive ($ 30 x 3), or $15. In addition, you keep the $ 11 remaining in your private account. Your total payout is $ 15 + $ 11 = $ 26"]
         if self.q5 == "$ 11":
             q5_feedback = [1,"Your answer was: "+ self.q5 , correct_answer]
 
         else:
-            q5_feedback = [0,"Your answer was: "+ self.q5 , "Because the group did not reach the threshold in the conservation account for the group incentive, there is no group bonus. You will receive only the money remaining in your private account = $11."]
+            q5_feedback = [0,"Your answer was: "+ self.q5 , "Because the group did not reach the threshold in the conservation account for the group incentive, there is no group bonus. You will receive only the money remaining in your private account = $ 11."]
         if self.q6 == "Yes":
             q6_feedback = [1,"Your answer was: "+ self.q6 , correct_answer]
 
         else:
-            q6_feedback = [0,"Your answer was: "+ self.q6 , "All players do not have to contribute to the conservation account to meet the goal. For example, if 1 player does not donate, the other players can still meet the goal by contributing slightly more than $.50 per round on average."]
+            q6_feedback = [0,"Your answer was: "+ self.q6 , "All players do not have to contribute to the conservation account to meet the goal. For example, if 1 player does not donate, the other players can still meet the goal by contributing slightly more than $0.50 per round on average."]
 
         res = [q4_feedback,q5_feedback,q6_feedback]
         return res
@@ -63,7 +63,7 @@ class Player(BasePlayer):
             q1_feedback = [1,"Your answer was: "+ self.q1 , correct_answer]
 
         else:
-            q1_feedback = [0,"Your answer was: "+ self.q1 , "The energy conservation goals is " + str(8*.5*(len(self.get_others_in_subsession())+1)) + ", so each player has to contribute $0.50 each round, on average, to meet the goal."]
+            q1_feedback = [0,"Your answer was: "+ self.q1 , "The energy conservation goal is $ " + str(8*.5*(len(self.get_others_in_subsession())+1)) + ", so each player has to contribute $ 0.50 each round, on average, to meet the goal."]
         if self.q2 == 'Three times the total in the conservation account ':
             q2_feedback = [1,"Your answer was: "+ self.q2 , correct_answer]
 
@@ -107,10 +107,7 @@ class Player(BasePlayer):
          )
     q3 = models.CharField(
         doc="Question 3", 
-        label="3. Please assume that the goal of $24 has been contributed to the conservation account."
-              " If there are 6 players in the game,"
-              " how much will each player receive as a bonus for meeting the conservation account goal?  "
-              "Each player will receive $",
+        label="3. Assume the 6 players in the game have contributed $24 to the conservation account, meeting the account goal. How much will each player receive as a bonus for meeting the conservation account goal?  Each player will receive $ ",
         choices=[
             "$ 11",
             "$ 12",
