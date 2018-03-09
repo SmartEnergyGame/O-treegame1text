@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="8eab24a8-9ccd-42ef-ba8c-440b6b2c2293" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/single_treatment/models.py" afterPath="$PROJECT_DIR$/single_treatment/models.py" />
+      <change beforePath="$PROJECT_DIR$/single_treatment/templates/single_treatment/survey.html" afterPath="$PROJECT_DIR$/single_treatment/templates/single_treatment/survey.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -91,8 +92,38 @@
       <file leaf-file-name="models.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/single_treatment/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="713">
-              <caret line="75" column="360" lean-forward="false" selection-start-line="75" selection-start-column="360" selection-end-line="75" selection-end-column="360" />
+            <state relative-caret-position="101">
+              <caret line="109" column="217" lean-forward="true" selection-start-line="109" selection-start-column="217" selection-end-line="109" selection-end-column="217" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Contribute.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public_goods/templates/public_goods/Contribute.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="8" column="19" lean-forward="false" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="survey.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/single_treatment/templates/single_treatment/survey.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="10" column="296" lean-forward="false" selection-start-line="10" selection-start-column="230" selection-end-line="10" selection-end-column="296" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public_goods/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="551">
+              <caret line="89" column="42" lean-forward="true" selection-start-line="89" selection-start-column="42" selection-end-line="89" selection-end-column="42" />
               <folding />
             </state>
           </provider>
@@ -191,11 +222,11 @@
         <option value="$PROJECT_DIR$/single_treatment/templates/single_treatment/Intro.html" />
         <option value="$PROJECT_DIR$/single_treatment/templates/single_treatment/Intro_part2.html" />
         <option value="$PROJECT_DIR$/single_treatment/templates/single_treatment/surveyP2.html" />
-        <option value="$PROJECT_DIR$/single_treatment/templates/single_treatment/survey.html" />
         <option value="$PROJECT_DIR$/public_goods/templates/public_goods/Results_D.html" />
         <option value="$PROJECT_DIR$/public_goods/templates/public_goods/Results_DTI.html" />
         <option value="$PROJECT_DIR$/single_treatment/templates/single_treatment/SurveyResults.html" />
         <option value="$PROJECT_DIR$/single_treatment/templates/single_treatment/SurveyResultsP2.html" />
+        <option value="$PROJECT_DIR$/single_treatment/templates/single_treatment/survey.html" />
         <option value="$PROJECT_DIR$/single_treatment/models.py" />
       </list>
     </option>
@@ -483,13 +514,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public_goods/templates/public_goods/Contribute.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="19" lean-forward="false" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/single_treatment/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="172">
@@ -510,13 +534,6 @@
         <state relative-caret-position="165">
           <caret line="11" column="81" lean-forward="false" selection-start-line="11" selection-start-column="81" selection-end-line="11" selection-end-column="81" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public_goods/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-583">
-          <caret line="12" column="14" lean-forward="false" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="14" />
         </state>
       </provider>
     </entry>
@@ -562,14 +579,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/single_treatment/templates/single_treatment/survey.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="4" lean-forward="false" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="4" />
           <folding />
         </state>
       </provider>
@@ -647,10 +656,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/public_goods/templates/public_goods/Contribute.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="19" lean-forward="false" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_goods/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="551">
+          <caret line="89" column="42" lean-forward="true" selection-start-line="89" selection-start-column="42" selection-end-line="89" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/single_treatment/templates/single_treatment/survey.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="296" lean-forward="false" selection-start-line="10" selection-start-column="230" selection-end-line="10" selection-end-column="296" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/single_treatment/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="713">
-          <caret line="75" column="360" lean-forward="false" selection-start-line="75" selection-start-column="360" selection-end-line="75" selection-end-column="360" />
+        <state relative-caret-position="101">
+          <caret line="109" column="217" lean-forward="true" selection-start-line="109" selection-start-column="217" selection-end-line="109" selection-end-column="217" />
           <folding />
         </state>
       </provider>
