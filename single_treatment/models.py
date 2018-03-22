@@ -82,7 +82,7 @@ class Player(BasePlayer):
     def total_correct_ans(self):
         res = self.check_answers()
         correct = sum([a[0] for a in res])
-        res2 = self.check_answers()
+        res2 = self.check_answersP2()
         correct2 = sum([a[0] for a in res2])
         print(correct)
         self.participant.vars['correct_answers'] = correct + correct2
