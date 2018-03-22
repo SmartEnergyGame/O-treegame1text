@@ -90,13 +90,13 @@ class Player(BasePlayer):
 
     correct_answers = models.IntegerField(initial=0)
     q1 = models.CharField(
-        doc="Question 1", 
+        doc="1. How much does each player have to invest into the conservation account, on average, for each round to meet the goal?",
         label="1. How much does each player have to invest into the conservation account, on average, for each round to meet the goal?",
         choices = ["$0.00", "$0.50", "$1.00"],
         widget=widgets.RadioSelectHorizontal,
     )
     q2 = models.CharField(
-         doc="Question 2",
+         doc="2. Assume the goal has been met, total payments from the conservation account are equal to what amount?",
          label="2. Assume the goal has been met, total payments from the conservation account are equal to what amount?",
          choices = [
              "The total in the conservation account ",
@@ -106,7 +106,7 @@ class Player(BasePlayer):
          widget=widgets.RadioSelect,
          )
     q3 = models.CharField(
-        doc="Question 3", 
+        doc="3. Assume the 6 players in the game have contributed $24.00 to the conservation account, meeting the account goal. How much will each player receive as a bonus for meeting the conservation account goal? Each player will receive: ",
         label="3. Assume the 6 players in the game have contributed $24.00 to the conservation account, meeting the account goal. How much will each player receive as a bonus for meeting the conservation account goal? Each player will receive: ",
         choices=[
             "$11.00",
@@ -117,7 +117,7 @@ class Player(BasePlayer):
     )
     
     q4 = models.CharField(
-        doc="Question 4",
+        doc="4. Assume there are 6 players in the game and they have contributed $30.00 to the conservation account by the end of the experiment, and you have personally invested a total of $5.00 over the 8 rounds, leaving $11.00 in your private account. How much money will you receive at the end of the experiment, after the conservation account bonus incentive has been paid? My payout is: ",
         label="4. Assume there are 6 players in the game and they have contributed $30.00 to the conservation account by the end of the experiment, and you have personally invested a total of $5.00 over the 8 rounds, leaving $11.00 in your private account. How much money will you receive at the end of the experiment, after the conservation account bonus incentive has been paid? My payout is: "
         , choices=[
             "$15.00",
@@ -128,7 +128,7 @@ class Player(BasePlayer):
 
     
     q5 = models.CharField(
-        doc="Question 5",
+        doc="5. Assume that the goal of $24.00 has NOT been contributed to the conservation account and you have invested a total of $5.00 in the 8 rounds, leaving $11.00 in your private account. How much money will you receive at the end of the experiment. My payout is $: ",
         label="5. Assume that the goal of $24.00 has NOT been contributed to the conservation account and you have invested a total of $5.00 in the 8 rounds, leaving $11.00 in your private account. How much money will you receive at the end of the experiment. My payout is $: "
         , choices=[
             "$5.00",
@@ -138,7 +138,7 @@ class Player(BasePlayer):
     )
     
     q6 = models.CharField(
-        doc = "Question 6", 
+        doc = "6. Is it possible to meet the conservation account goal even if one player does not contribute to the goal at all? ",
         label="6. Is it possible to meet the conservation account goal even if one player does not contribute to the goal at all? ",
         choices = ["Yes","No"],
         widget=widgets.RadioSelectHorizontal,
