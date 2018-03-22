@@ -30,7 +30,7 @@ class Post_survey(Page):
 
 class Post_surveyP2(Page):
     form_model = models.Player
-    form_fields = ['q142','q021', 'q031', 'q041','q042',
+    form_fields = ['q151','q021', 'q031', 'q041','q042',
                    'q051','q052']
 class Post_surveyP3(Page):
     form_model = models.Player
