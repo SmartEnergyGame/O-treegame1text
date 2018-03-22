@@ -59,58 +59,70 @@ class Player(BasePlayer):
     last_savings = models.CurrencyField(initial=0)
     q1 = models.IntegerField(
         min=1,max=7,
-        label="Plants"
+        label="Plants",doc = "People often express concern about environmental problems, but some people differ as to which consequences concern them the most. We are going to list different areas where environmental problems could have harmful consequences.  For each, please rate how concerned you are about their impact using a scale from 1 to 7. If you are not at all concerned, give the area a rating of 1. If you are extremely concerned, give it a rating of 7. Of course, you can choose any number between 1 and 7 for your answer. Answer:"
+                             "Plants"
     )
     q2 = models.IntegerField(
         min=1,max=7,
-        label="Marine life"
+        label="Marine life",doc = "People often express concern about environmental problems, but some people differ as to which consequences concern them the most. We are going to list different areas where environmental problems could have harmful consequences.  For each, please rate how concerned you are about their impact using a scale from 1 to 7. If you are not at all concerned, give the area a rating of 1. If you are extremely concerned, give it a rating of 7. Of course, you can choose any number between 1 and 7 for your answer. Answer:"
+                                  "Marine life"
     )
     q3 = models.IntegerField(
         min=1,max=7,
-        label="Birds"
+        label="Birds",doc = "People often express concern about environmental problems, but some people differ as to which consequences concern them the most. We are going to list different areas where environmental problems could have harmful consequences.  For each, please rate how concerned you are about their impact using a scale from 1 to 7. If you are not at all concerned, give the area a rating of 1. If you are extremely concerned, give it a rating of 7. Of course, you can choose any number between 1 and 7 for your answer. Answer:"
+                            "Birds"
     )
     q4 = models.IntegerField(
         min=1,max=7,
-        label="Animals"
+        label="Animals",doc = "People often express concern about environmental problems, but some people differ as to which consequences concern them the most. We are going to list different areas where environmental problems could have harmful consequences.  For each, please rate how concerned you are about their impact using a scale from 1 to 7. If you are not at all concerned, give the area a rating of 1. If you are extremely concerned, give it a rating of 7. Of course, you can choose any number between 1 and 7 for your answer. Answer:"
+                              "Animals"
     )
     q5 = models.IntegerField(
         min=1,max=7,
-        label="My prosperity"
+        label="My prosperity",doc = "People often express concern about environmental problems, but some people differ as to which consequences concern them the most. We are going to list different areas where environmental problems could have harmful consequences.  For each, please rate how concerned you are about their impact using a scale from 1 to 7. If you are not at all concerned, give the area a rating of 1. If you are extremely concerned, give it a rating of 7. Of course, you can choose any number between 1 and 7 for your answer. Answer:"
+                                    "My prosperity"
     )
     q6 = models.IntegerField(
         min=1,max=7,
-        label="My lifestyle"
+        label="My lifestyle",doc = "People often express concern about environmental problems, but some people differ as to which consequences concern them the most. We are going to list different areas where environmental problems could have harmful consequences.  For each, please rate how concerned you are about their impact using a scale from 1 to 7. If you are not at all concerned, give the area a rating of 1. If you are extremely concerned, give it a rating of 7. Of course, you can choose any number between 1 and 7 for your answer. Answer:"
+                                   "My lifestyle"
     )
     q7 = models.IntegerField(
         min=1,max=7,
-        label="My health"
+        label="My health",doc = "People often express concern about environmental problems, but some people differ as to which consequences concern them the most. We are going to list different areas where environmental problems could have harmful consequences.  For each, please rate how concerned you are about their impact using a scale from 1 to 7. If you are not at all concerned, give the area a rating of 1. If you are extremely concerned, give it a rating of 7. Of course, you can choose any number between 1 and 7 for your answer. Answer:"
+                                "My health"
     )
     q8 = models.IntegerField(
         min=1,max=7,
-        label="My future"
+        label="My future",doc = "People often express concern about environmental problems, but some people differ as to which consequences concern them the most. We are going to list different areas where environmental problems could have harmful consequences.  For each, please rate how concerned you are about their impact using a scale from 1 to 7. If you are not at all concerned, give the area a rating of 1. If you are extremely concerned, give it a rating of 7. Of course, you can choose any number between 1 and 7 for your answer. Answer:"
+                                "My future"
     )
     q9 = models.IntegerField(
         min=1,max=7,
-        label="People in my community"
+        label="People in my community",doc = "People often express concern about environmental problems, but some people differ as to which consequences concern them the most. We are going to list different areas where environmental problems could have harmful consequences.  For each, please rate how concerned you are about their impact using a scale from 1 to 7. If you are not at all concerned, give the area a rating of 1. If you are extremely concerned, give it a rating of 7. Of course, you can choose any number between 1 and 7 for your answer. Answer:"
+                                             "People in my community"
     )
     q10 = models.IntegerField(
         min=1,max=7,
-        label="The human race"
+        label="The human race",doc = "People often express concern about environmental problems, but some people differ as to which consequences concern them the most. We are going to list different areas where environmental problems could have harmful consequences.  For each, please rate how concerned you are about their impact using a scale from 1 to 7. If you are not at all concerned, give the area a rating of 1. If you are extremely concerned, give it a rating of 7. Of course, you can choose any number between 1 and 7 for your answer. Answer:"
+                                     "The human race"
     )
     q11 = models.IntegerField(
         min=1,max=7,
-        label="Children"
+        label="Children",doc = "People often express concern about environmental problems, but some people differ as to which consequences concern them the most. We are going to list different areas where environmental problems could have harmful consequences.  For each, please rate how concerned you are about their impact using a scale from 1 to 7. If you are not at all concerned, give the area a rating of 1. If you are extremely concerned, give it a rating of 7. Of course, you can choose any number between 1 and 7 for your answer. Answer:"
+                               "Children"
     )
     q12 = models.IntegerField(
         min=1,max=7,
-        label="People in the United States"
+        label="People in the United States",doc = "People often express concern about environmental problems, but some people differ as to which consequences concern them the most. We are going to list different areas where environmental problems could have harmful consequences.  For each, please rate how concerned you are about their impact using a scale from 1 to 7. If you are not at all concerned, give the area a rating of 1. If you are extremely concerned, give it a rating of 7. Of course, you can choose any number between 1 and 7 for your answer. Answer:"
+                                                  "People in the United States"
     )
     q021 = models.IntegerField(
-        doc="Question 1", 
+        doc="What is your year of birth?",
         label="What is your year of birth?",min=1918,max=2010
     )
     q031 = models.CharField(
-        doc="Question 1",
+        doc="What is your sex?",
         label="What is your sex? ",widget=widgets.RadioSelectHorizontal,
         choices=[
             ['M', "Male"],
@@ -118,140 +130,145 @@ class Player(BasePlayer):
         ]
     )
     q041 = models.CharField(
-        doc="Question 1", 
+        doc="What term best describes your ethnic identity?",
         label="What term best describes your ethnic identity?",
         choices=[
-            ['AFA', "African-American "], 
-            ['ASA', "Asian-American "],
-            ['H', "Hispanic"],
-            ['W', "White"],
-            ['NA', "Native American"],
-            ['O', "Other"]
+            "African-American ",
+            "Asian-American ",
+            "Hispanic",
+            "White",
+            "Native American",
+            "Other"
         ],widget=widgets.RadioSelectHorizontal,
     )
     q042 = models.CharField(
-        doc="Question 1",
+        doc="If the answer to the previous question was 'Other' please fill the box with the term that best describes your ethnic identity: ",
         label="If the answer to the previous question was 'Other' please fill the box with the term that best describes your ethnic identity: ",blank=True
     )
     q051 = models.CharField(
-        doc="Question 1", 
+        doc="What country or region were you born?",
         label="What country or region were you born?",
         choices=[
-            ['NA', "North America"],
-            ['CSA', "Central/South America"],
-            ['ANZ', "Australia/New Zealand "],
-            ['AFA', "Africa"],
-            ['Asia', "Asia"],
-            ['EU', "Europe"],
-            ['O', "Other"]
-        ]
+            "North America",
+            "Central/South America",
+            "Australia/New Zealand ",
+            "Africa",
+            "Asia",
+            "Europe",
+            "Other"
+        ],widget=widgets.RadioSelectHorizontal,
     )
     q052 = models.CharField(
-        doc="Question 1",
+        doc="If the answer to the previous question was 'Other' please fill the box with your country.",
         label="If the answer to the previous question was 'Other' please fill the box with your country.",blank = True
     )
     q061 = models.CharField(
-        doc="Question 1", 
+        doc="How long have you live in the United States?",
         label="How long have you live in the United States?",widget=widgets.RadioSelectHorizontal,
         choices=[
-            ['3', "More than 5 years"],
-            ['2', "2-5 years"],
-            ['1', "1-2 years"],
-            ['0', "Less than 1 year"]
+            "More than 5 years",
+            "2-5 years",
+            "1-2 years",
+            "Less than 1 year"
         ]
     )
     q071 = models.CharField(
-        doc="Question 1", 
+        doc="Where did you live when you were 15 years old?",
         label="Where did you live when you were 15 years old?",
         choices=[
-            ['1', "In the countryside but not on a farm"],
-            ['2', "On a farm"],
-            ['3', "Small city or town (under 50,000)"],
-            ['4', "Medium size city (50,000-250,000)"],
-            ['5', "Suburb near a large city"],
-            ['6', "Large city (250,000-3,000,000)"],
-            ['7', "Very large city (over 3,000,000)"]
+            "In the countryside but not on a farm",
+            "On a farm",
+            "Small city or town (under 50,000)",
+            "Medium size city (50,000-250,000)",
+            "Suburb near a large city",
+            "Large city (250,000-3,000,000)",
+            "Very large city (over 3,000,000)"
 
         ]
     )
     q081 = models.CharField(
-        doc="Question 1", 
+        doc="What is your political party affiliation, if any?",
         label="What is your political party affiliation, if any?",
         choices=[
-            ['1', "Democrat"],
-            ['2', "Independent"],
-            ['3', "Republican"],
-            ['4', "None"],
-            ['5', "Other"],
+            "Democrat",
+            "Independent",
+            "Republican",
+            "None",
+            "Other",
         ],widget=widgets.RadioSelectHorizontal,
     )
     q082 = models.CharField(
-        doc="Question 1",
+        doc="If the answer to the previous question was 'Other' please fill the box with the other political party affiliation of your preference.",
         label="If the answer to the previous question was 'Other' please fill the box with the other political party affiliation of your preference.",blank=True
 
     )
     q091 = models.CharField(
-        doc="Question 1", 
+        doc="Do you consider yourself an environmentalist?",
         label="Do you consider yourself an environmentalist?",
         choices=[
-            ['Y', "Yes"],
-            ['N', "No"]
+            "Yes",
+            "No"
         ],widget=widgets.RadioSelectHorizontal,
     )
     q101 = models.CharField(
-        doc="Question 1", 
+        doc="What year are you in your undergraduate studies?",
         label="What year are you in your undergraduate studies?",
         choices=[
-            ['1', "First"],
-            ['2', "Second"],
-            ['3', "Third"],
-            ['4', "Fourth"],
-            ['5', "Fifth or higher"],
+            "First",
+            "Second",
+            "Third",
+            "Fourth",
+            "Fifth or higher",
         ],widget=widgets.RadioSelectHorizontal,
     )
     q111 = models.CharField(
-        doc="Question 1", 
+        doc="What is your main field of study at Purdue?",
         label="What is your main field of study at Purdue?",
         choices=[
-            ['1', "Agriculture/Natural Resources"],
-            ['2', "Business/Economics"],
-            ['3', "Education"],
-            ['4', "Engineering"],
-            ['5', "Health Sciences"],
-            ['6', "Liberal Arts"],
-            ['7', "Science"],
-            ['8', "Technology"],
-            ['9', "Other"]
+            "Agriculture/Natural Resources",
+            "Business/Economics",
+            "Education",
+            "Engineering",
+            "Health Sciences",
+            "Liberal Arts",
+            "Science",
+            "Technology",
+            "Other"
 
         ]
     )
     q112 = models.CharField(
-        doc="Question 1",
+        doc="If the answer to the previous question was 'Other' please fill the box with the other main field of study at Purdue",
         label="If the answer to the previous question was 'Other' please fill the box with the other main field of study at Purdue", blank=True
 
     )
     q121 = models.CharField(
-        doc="Question 1",
+        doc="How many experiments have you participated in before this one?",
         label="How many experiments have you participated in before this one?",
         choices=[
-            ['1','None'],
-            ['2','1 - 2 previous'],
-            ['3','3 - 5 previous'],
-            ['4','More than 5 previous'],
+            'None',
+            '1 - 2 previous',
+            '3 - 5 previous',
+            'More than 5 previous',
         ],widget=widgets.RadioSelectHorizontal,
     )
     q131 = models.CharField(
-        doc="Question 1",
+        doc="Are you currently receiving some form of financial assistance for your educational expenses?",
         label="Are you currently receiving some form of financial assistance for your educational expenses?",
         choices=[
-            ['Y', "Yes"],
-            ['N', "No"]
+            "Yes",
+            "No"
         ],widget=widgets.RadioSelectHorizontal,
     )
     q141 = models.IntegerField(
-        doc="Question 1",
+        doc="Are you currently employed in a job while in school?  If so, please indicate how many hours per week on average you work.  If you study full time and do not work, enter 0.",
         label="Are you currently employed in a job while in school?  If so, please indicate how many hours per week on average you work.  If you study full time and do not work, enter 0.",min=0,max=168
 
     )
     treatment = models.CharField(doc="Treatment")
+
+    q151 = models.CharField( label = "During the experiment, which of the following reasons were you given to contribute to the conservation account?",choices = ["Reducing energy consumption reduces pollution and threat of global warming.",
+                                                                                                                                                                  "Reducing energy consumption reduces our reliance on imported fossil fuels.",
+                                                                                                                                                                  "Reducing energy consumption is important to improve the local economy."])
+
 
